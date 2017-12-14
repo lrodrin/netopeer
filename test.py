@@ -15,4 +15,7 @@ yang_model = "toaster"
 schema = n.get_schema(yang_model)
 print(schema.data)
 
+for capability in n.server_capabilities:
+    print(capability)
+
 n.close_session()
