@@ -7,14 +7,19 @@ from ncclient import manager
 
 
 def connect(host):
-    m = manager.connect(host=host, port=830, username='root', password='netlabN.', device_params={'name': 'csr'})  #
-    # device handler csr -> Cisco CSR
+    m = manager.connect(host=host, port=830, username='root', password='netlabN.', hostkey_verify=False,
+                        device_params={'name': 'csr'})  # device handler csr -> Cisco CSR
     return m
 
 
 def get_capabilities(m):
     for c in m.server_capabilities:  # display the NETCONF server capabilities
         print(c)
+
+
+def get_yang_schema(m, yang_model):  # obtain a YANG model specified by yang_model
+    schema = m.get_schema(yang_model)
+    print(schema.data)
 
 
 def get_config(m):
@@ -24,26 +29,12 @@ def get_config(m):
         file.write(c)
 
 
-def edit_config(m):
-    rpc = """
-        <input xmlns="urn:opendaylight:params:xml:ns:yang:hello">
-            <name>Laura</name>
-        </input>
-    """
-    print(m.rpc(rpc))
-
-
-def get_yang_schema(yang_model):  # obtain a YANG model specified by yang_model
-    schema = n.get_schema(yang_model)
-    print(schema)
-
-
 if __name__ == '__main__':
     h = '10.1.7.81'
     n = connect(h)
-    # get_capabilities(n)
-    # get_config(n)
-    # edit_config(n)
-    get_yang_schema('hello')
-
-    # n.close_session()
+    try:
+        # get_capabilities(n)
+        # get_yang_schema(n, 'hello')
+        get_config(n)
+    finally:
+        n.close_session()
