@@ -22,6 +22,12 @@ def get_yang_schema(m, yang_model):  # obtain a YANG model specified by yang_mod
     print(schema.data)
 
 
+# def get_config(m):
+#     # retrieve the running config from the NETCONF server using get-config and write the XML config to file
+#     c = m.get_config(source='running').data_xml
+#     with open("get_config.xml", 'w') as file:
+#         file.write(c)
+
 def get_config(m):
     # retrieve the running config from the NETCONF server using get-config and write the XML config to file
     c = m.get_config(source='running').data_xml
@@ -33,8 +39,8 @@ if __name__ == '__main__':
     h = '10.1.7.81'
     n = connect(h)
     try:
-        # get_capabilities(n)
-        # get_yang_schema(n, 'hello')
+        get_capabilities(n)
+        get_yang_schema(n, 'hello')
         get_config(n)
     finally:
         n.close_session()
