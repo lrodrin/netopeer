@@ -5,6 +5,8 @@
       <w>ncclient</w>
       <w>netconf</w>
       <w>netlab</w>
+      <w>opendaylight</w>
+      <w>xmlns</w>
     </words>
   </dictionary>
 </component>
