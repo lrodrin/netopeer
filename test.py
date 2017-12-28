@@ -3,8 +3,10 @@ This module implements some code about the class ncclient, a NETCONF Python clie
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
-from ncclient import manager
+import re
 import xml.etree.ElementTree as ET
+
+from ncclient import manager
 
 
 def connect(host):
@@ -16,7 +18,8 @@ def connect(host):
     :return: c
     """
     c = manager.connect(host=host, port=830, username='root', password='netlabN.', hostkey_verify=False,
-                        device_params={'name': 'csr'})  # support the device handler Cisco CSR
+                        device_params={'name': 'csr'}, allow_agent=False,
+                        look_for_keys=False)  # support the device handler Cisco CSR
     return c
 
 
@@ -28,6 +31,14 @@ def get_capabilities(c):
     """
     for capability in c.server_capabilities:
         print(capability)
+
+
+def get_capability(c, m):
+    # TODO description
+    for sc in c.server_capabilities:
+        model = re.search(m, sc)
+        if model is not None:
+            print(sc)
 
 
 def get_yang_schema(c, yang_model):
@@ -78,7 +89,8 @@ if __name__ == '__main__':
     connection = connect(ip_address)
     try:
         # get_capabilities(connection)
-        get_yang_schema(connection, 'hello')
+        get_capability(connection, 'hello')
+        # get_yang_schema(connection, 'hello')
         # get_config(connection)
         # edit_config(connection)
     finally:
