@@ -18,7 +18,7 @@ def connect(host):
     :return: c
     """
     c = manager.connect(host=host, port=830, username='root', password='netlabN.', hostkey_verify=False,
-                        device_params={'name': 'csr'}, allow_agent=False,
+                        device_params={'name': 'default'}, allow_agent=False,
                         look_for_keys=False)  # support the device handler Cisco CSR
     return c
 
@@ -34,7 +34,14 @@ def get_capabilities(c):
 
 
 def get_capability(c, m):
-    # TODO description
+    """
+    Display the capability from a model specified by m
+
+    :param c: connection
+    :param m: model
+    :type m: str
+    :return: capability
+    """
     for sc in c.server_capabilities:
         model = re.search(m, sc)
         if model is not None:
@@ -55,14 +62,15 @@ def get_yang_schema(c, yang_model):
     write_file(yang_text, yang_model + ".yang")
 
 
-def get_config(c):
+def get_config(c, f):
     """
     Retrieve the running config from the NETCONF server using get-config and write the XML config to a file
 
+    :param f: filter
     :param c: connection
     """
-    file = c.get_config(source='running').data_xml
-    write_file(file, "get_config.xml")
+    config = c.get_config(source='startup', filter=('subtree', f)).data_xml
+    print(config)
 
 
 def write_file(fi, fo):
@@ -71,27 +79,13 @@ def write_file(fi, fo):
     f.close()
 
 
-def edit_config(c):
+def edit_config(c, data):
     """
     Edit the running config from the NETCONF server using edit-config and write the XML config to a file
 
     :param c: connection
+    :param data: data
     """
-    template = """<input xmlns="urn:opendaylight:params:xml:ns:yang:hello">
-    <name>Laura</name></input>"""
-
-    file = c.edit_config(target='running', config=template).data_xml
-    write_file(file, "edit_config.xml")
-
-
-if __name__ == '__main__':
-    ip_address = '10.1.7.81'
-    connection = connect(ip_address)
-    try:
-        # get_capabilities(connection)
-        get_capability(connection, 'hello')
-        # get_yang_schema(connection, 'hello')
-        # get_config(connection)
-        # edit_config(connection)
-    finally:
-        connection.close_session()
+    c.locked(target='running')
+    c.edit_config(target='running', config=data)
+    c.commit()
