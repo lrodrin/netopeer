@@ -9,93 +9,88 @@ import xml.etree.ElementTree as ET
 from ncclient import manager
 
 
-def connect(host):
+def connect(host, port, username, password):
     """
     Connection to NETCONF server
 
     :param host: ip address
+    :param port: port number
     :type host: str
-    :return: c
+    :type port: int
+    :return: connection object
     """
-    c = manager.connect(host=host, port=830, username='root', password='netlabN.', hostkey_verify=False,
-                        device_params={'name': 'default'}, allow_agent=False,
-                        look_for_keys=False)  # support the device handler Cisco CSR
-    return c
+    connection = manager.connect(host=host, port=port, username=username, password=password, hostkey_verify=False,
+                                 device_params={'name': 'default'}, allow_agent=False, look_for_keys=False)
+    return connection
 
 
-def get_capabilities(c):
+def get_capabilities(connection):
     """
     Display the NETCONF server capabilities
-    
-    :param c: connection
+
+    :param connection: connection
     """
-    for capability in c.server_capabilities:
+    for capability in connection.server_capabilities:
         print(capability)
 
 
-def get_capability(c, m):
+def get_capability(connection, model_name):
     """
-    Display the capability from a model specified by m
+    Display the capability from a model specified by model_name
 
-    :param c: connection
-    :param m: model
-    :type m: str
-    :return: capability
+    :param connection: connection
+    :param model_name: model
+    :type model_name: str
+    :return: capability for model_name
     """
-    for sc in c.server_capabilities:
-        model = re.search(m, sc)
+    for server_capability in connection.server_capabilities:
+        model = re.search(model_name, server_capability)
         if model is not None:
-            print(sc)
+            print(server_capability)
 
 
-def get_yang_schema(c, yang_model):
+def get_yang_schema(connection, yang_model):
     """
     Obtain a YANG model specified by yang_model and write it into a file
 
-    :param c: connection
+    :param connection: connection
     :param yang_model: yang model
     :type yang_model: str
     """
-    schema = c.get_schema(yang_model)
-    root = ET.fromstring(schema.xml)
-    yang_text = list(root)[0].text
+    schema = connection.get_schema(yang_model)
+    aux = ET.fromstring(schema.xml)
+    yang_text = list(aux)[0].text
     write_file(yang_text, yang_model + ".yang")
 
 
-def get_config(c, f, s):
+def get_config(connection, filter, session):
     """
-    Retrieve the running config from the NETCONF server using get-config and write the XML config to a file
+    Retrieve the session config from the NETCONF server using a get-config operation
 
-    :param s: datastore session
-    :param f: filter
-    :param c: connection
-    :type s: str
-    :type f: str
+    :param connection: connection
+    :param filter: filter
+    :param session: datastore session
+    :type session: str
+    :type filter: str
     """
-    config = c.get_config(source=s, filter=('subtree', f)).data_xml
+    config = connection.get_config(source=session, filter=('subtree', filter)).data_xml
     print(config)
 
 
 def write_file(fi, fo):
-    f = open(fo, "w")
-    f.write(fi)
-    f.close()
+    file = open(fo, "w")
+    file.write(fi)
+    file.close()
 
 
-def edit_config(c, data, s):
+def edit_config(connection, data, session):
     """
-    Edit the running config from the NETCONF server using edit-config and write the XML config to a file
+    Edit the session config from the NETCONF server using edit-config operation
 
-    :param c: connection
+    :param connection: connection
     :param data: data
-    :param s: datastore session
+    :param session: datastore session
+    :type data: str
+    :type session: str
     """
-    # c.locked(target=s)
-    # c.edit_config(target=s, config=data)
-    # c.commit()
-    c.edit_config(target=s, config=data, format='xml')
-    # c.commit()
-
-
-def change_datastore_session():
-    pass
+    connection.edit_config(target=session, config=data, format='xml')
