@@ -62,14 +62,17 @@ def get_yang_schema(c, yang_model):
     write_file(yang_text, yang_model + ".yang")
 
 
-def get_config(c, f):
+def get_config(c, f, s):
     """
     Retrieve the running config from the NETCONF server using get-config and write the XML config to a file
 
+    :param s: datastore session
     :param f: filter
     :param c: connection
+    :type s: str
+    :type f: str
     """
-    config = c.get_config(source='startup', filter=('subtree', f)).data_xml
+    config = c.get_config(source=s, filter=('subtree', f)).data_xml
     print(config)
 
 
@@ -79,13 +82,20 @@ def write_file(fi, fo):
     f.close()
 
 
-def edit_config(c, data):
+def edit_config(c, data, s):
     """
     Edit the running config from the NETCONF server using edit-config and write the XML config to a file
 
     :param c: connection
     :param data: data
+    :param s: datastore session
     """
-    c.locked(target='running')
-    c.edit_config(target='running', config=data)
-    c.commit()
+    # c.locked(target=s)
+    # c.edit_config(target=s, config=data)
+    # c.commit()
+    c.edit_config(target=s, config=data, format='xml')
+    # c.commit()
+
+
+def change_datastore_session():
+    pass
