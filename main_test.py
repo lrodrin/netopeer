@@ -7,12 +7,10 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import test as t
 
 if __name__ == '__main__':
-    ip_address = '10.1.7.81'
-    connection = t.connect(ip_address)
+    connection = t.connect('10.1.7.81', 830, 'root', 'netlabN.')
 
     filter1 = '''<turing-machine xmlns="http://example.net/turing-machine">'''
     filter2 = '''<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">'''
-    filter3 = '''<toaster xmlns="http://netconfcentral.org/ns/toaster"/>'''
 
     session1 = 'startup'
     session2 = 'running'
@@ -48,23 +46,26 @@ if __name__ == '__main__':
     '''
 
     try:
+        model = 'ietf-interfaces'
         # t.get_capabilities(connection)
-        # t.get_capability(connection, 'turing-machine')
-        # t.get_yang_schema(connection, 'ietf-interfaces')
-        # print("startup session:")
-        # t.get_config(connection, filter1, session1)
-        # print("running session:")
-        # t.get_config(connection, filter1, session2)
-        # print("candidate session:")
-        # t.get_config(connection, filter1, session3)
-        # t.get_config(connection, filter2, session1)
-        # t.get_config(connection, f3)
+        # t.get_capability(connection, model)
+        # t.get_yang_schema(connection, model)
 
-        t.edit_config(connection, edit_data, session3)
+        # get_config
+        # print("startup session:")
+        # t.get_config(connection, filter2, session1)
+        print("running session:")
+        t.get_config(connection, filter2, session2)
+        # print("candidate session:")
+        # t.get_config(connection, filter2, session3)
+
+        # edit-config
+        # print("running session:")
+        # t.edit_config(connection, edit_data2, session2)
+        # t.get_config(connection, filter2, session2)
+        print("candidate session:")
         t.edit_config(connection, edit_data2, session3)
-        t.get_config(connection, filter1, session3)
         t.get_config(connection, filter2, session3)
-        t.get_config(connection, filter3, session3)
 
     finally:
         connection.close_session()
