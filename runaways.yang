@@ -1,0 +1,30 @@
+module runaways {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:runaways";
+    prefix runaways;
+
+    revision 2017-01-09 {
+        description
+            "Basic YANG model";
+    }
+
+    container runaways {
+        description
+            " Marvel Comics superhero team";
+        list hero {
+            key "name";
+            description
+                "The list of Runaways heroes";
+            leaf name {
+                type string;
+                description
+                    "A hero's name";
+            }
+            leaf description {
+                type string;
+                description
+                    "Powers";
+            }
+        }
+    }
+}
