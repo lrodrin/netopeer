@@ -24,7 +24,7 @@ if __name__ == '__main__':
                 <delta> 
                     <label>left summand</label> 
                         <input>
-                            <state>10</state>
+                            <state>0</state>
                             <symbol>1</symbol>
                         </input>      
                 </delta>
