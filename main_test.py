@@ -11,6 +11,7 @@ if __name__ == '__main__':
 
     filter1 = '''<turing-machine xmlns="http://example.net/turing-machine">'''
     filter2 = '''<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">'''
+    filter3 = '''<runaways xmlns="urn:opendaylight:params:xml:ns:yang:runaways"'''
 
     session1 = 'startup'
     session2 = 'running'
@@ -45,27 +46,43 @@ if __name__ == '__main__':
     </config>
     '''
 
+    edit_data3 = '''
+    <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+        <runaways xmlns="urn:opendaylight:params:xml:ns:yang:runaways">
+                <hero>
+                    <name>Karolina</name>                    
+                    <description>Fly</description>
+                </hero>
+        </runaways>
+    </config>
+    '''
+
     try:
-        model = 'ietf-interfaces'
+        model = 'runaways'
         # t.get_capabilities(connection)
         # t.get_capability(connection, model)
         # t.get_yang_schema(connection, model)
 
         # get_config
         # print("startup session:")
-        # t.get_config(connection, filter2, session1)
-        print("running session:")
-        t.get_config(connection, filter2, session2)
+        # t.get_config(connection, filter1, session1)
+        # print("running session:")
+        # t.get_config(connection, filter1, session2)
         # print("candidate session:")
-        # t.get_config(connection, filter2, session3)
+        # t.get_config(connection, filter1, session3)
 
         # edit-config
-        # print("running session:")
-        # t.edit_config(connection, edit_data2, session2)
-        # t.get_config(connection, filter2, session2)
+        t.edit_config(connection, edit_data, session3)
         print("candidate session:")
-        t.edit_config(connection, edit_data2, session3)
-        t.get_config(connection, filter2, session3)
+        t.get_config(connection, filter1, session3)
+        print("running session:")
+        t.get_config(connection, filter1, session2)
+
+        # t.edit_config(connection, edit_data3, session3)
+        # t.get_config(connection, filter3, session3)
+        # t.copy_config(connection, session3, session2)
+        # print("running session:")
+        # t.get_config(connection, filter3, session2)
 
     finally:
         connection.close_session()

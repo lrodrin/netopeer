@@ -6,7 +6,7 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import re
 import xml.etree.ElementTree as ET
 
-from ncclient import manager
+from ncclient import manager, operations
 
 
 def connect(host, port, username, password):
@@ -93,4 +93,17 @@ def edit_config(connection, data, session):
     :type data: str
     :type session: str
     """
-    connection.edit_config(target=session, config=data, format='xml')
+    connection.edit_config(target=session, config=data)
+
+
+def copy_config(connection, source_session, target_session):
+    """
+    Copy the configuration datastore from the NETCONF server to another configuration datastore
+
+    :param connection: connection
+    :param source_session: source datastore session
+    :param target_session: target datastore session
+    :type source_session: str
+    :type target_session: str
+    """
+    connection.copy_config(source=source_session, target=target_session)
