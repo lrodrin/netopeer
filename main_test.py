@@ -72,6 +72,7 @@ if __name__ == '__main__':
         # t.get_config(connection, filter1, session3)
 
         # edit-config
+        connection.locked(target=session2)  # running config not effected with the candidate change
         t.edit_config(connection, edit_data, session3)
         print("candidate session:")
         t.get_config(connection, filter1, session3)
