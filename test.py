@@ -6,17 +6,22 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import re
 import xml.etree.ElementTree as ET
 
-from ncclient import manager, operations
+from ncclient import manager
 
 
 def connect(host, port, username, password):
     """
     Connection to NETCONF server
 
+
     :param host: ip address
     :param port: port number
+    :param username: user name
+    :param password: password for username
     :type host: str
     :type port: int
+    :type username: str
+    :type password: str
     :return: connection object
     """
     connection = manager.connect(host=host, port=port, username=username, password=password, hostkey_verify=False,
@@ -107,3 +112,24 @@ def copy_config(connection, source_session, target_session):
     :type target_session: str
     """
     connection.copy_config(source=source_session, target=target_session)
+
+
+def lock_config(connection, session):
+    """
+    Lock the configuration for a session
+
+    :param connection: connection
+    :param session: datastore session
+    :type session: str
+    """
+    connection.locked(target=session)
+
+
+def unlock_config(connection, session):
+    """
+
+    :param connection: connection
+    :param session: datastore session
+    :type session: str
+    """
+    connection.unlock(target=session)

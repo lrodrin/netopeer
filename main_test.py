@@ -22,9 +22,9 @@ if __name__ == '__main__':
         <turing-machine xmlns="http://example.net/turing-machine">
             <transition-function> 
                 <delta> 
-                    <label>left summand</label> 
+                    <label>go home</label> 
                         <input>
-                            <state>0</state>
+                            <state>10</state>
                             <symbol>1</symbol>
                         </input>      
                 </delta>
@@ -64,22 +64,31 @@ if __name__ == '__main__':
         # t.get_yang_schema(connection, model)
 
         # get_config
-        # print("startup session:")
-        # t.get_config(connection, filter1, session1)
-        # print("running session:")
-        # t.get_config(connection, filter1, session2)
-        # print("candidate session:")
-        # t.get_config(connection, filter1, session3)
+        #
+        print("startup session:")
+        t.get_config(connection, filter3, session1)
+        print("running session:")
+        t.get_config(connection, filter3, session2)
+        print("candidate session:")
+        t.get_config(connection, filter3, session3)
 
         # edit-config
-        connection.locked(target=session2)  # running config not effected with the candidate change
-        t.edit_config(connection, edit_data, session3)
-        print("candidate session:")
-        t.get_config(connection, filter1, session3)
-        print("running session:")
-        t.get_config(connection, filter1, session2)
+        #
+        # t.lock_config(connection, session2)  # lock datastore running
+        # t.edit_config(connection, edit_data, session3)  # edit config in candidate datastore
+        # print("candidate session:")
+        # t.get_config(connection, filter1, session3)
+        # print("running session:")
+        # t.get_config(connection, filter1, session2)
+
+        # copy-config
+        #
+        # t.copy_config(connection, session3, session2)  # copy config from datastore candidate to running
+        # print("running session:")
+        # t.get_config(connection, filter1, session2)
 
         # t.edit_config(connection, edit_data3, session3)
+        # print("candidate session:")
         # t.get_config(connection, filter3, session3)
         # t.copy_config(connection, session3, session2)
         # print("running session:")
