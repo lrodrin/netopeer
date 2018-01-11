@@ -1,10 +1,10 @@
 """
-This module implements the main from test class
+This module implements the main from data implementation
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import test as t
+import data as t
 
 if __name__ == '__main__':
     connection = t.connect('10.1.7.81', 830, 'root', 'netlabN.')
@@ -66,11 +66,11 @@ if __name__ == '__main__':
         # get_config
         #
         print("startup session:")
-        t.get_config(connection, filter3, session1)
+        t.get_config(connection, filter2, session1)
         print("running session:")
-        t.get_config(connection, filter3, session2)
+        t.get_config(connection, filter2, session2)
         print("candidate session:")
-        t.get_config(connection, filter3, session3)
+        t.get_config(connection, filter2, session3)
 
         # edit-config
         #

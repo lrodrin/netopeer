@@ -1,5 +1,5 @@
 """
-This module implements some code about the class ncclient, a NETCONF Python client
+This module implements data modifications for a NETCONF server
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
