@@ -11,7 +11,6 @@ if __name__ == '__main__':
 
     filter1 = '''<turing-machine xmlns="http://example.net/turing-machine">'''
     filter2 = '''<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">'''
-    filter3 = '''<runaways xmlns="urn:opendaylight:params:xml:ns:yang:runaways"'''
 
     session1 = 'startup'
     session2 = 'running'
@@ -38,27 +37,24 @@ if __name__ == '__main__':
         <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
             <interface>
                 <name>eth0</name>
-                <description>HE CANVIAT LA DESCRIPTION HEHE</description>
+                <description>OLA K ASE</description>
                 <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
+                <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+                    <enabled>true</enabled>
+                    <mtu>1500</mtu>
+                    <address>
+                        <ip>10.10.1.5</ip>
+                        <prefix-length>16</prefix-length>
+                    </address>
+                </ipv4>
             </interface>
         </interfaces>
     </config>
     '''
 
-    edit_data3 = '''
-    <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
-        <runaways xmlns="urn:opendaylight:params:xml:ns:yang:runaways">
-                <hero>
-                    <name>Karolina</name>                    
-                    <description>Fly</description>
-                </hero>
-        </runaways>
-    </config>
-    '''
-
     try:
-        model = 'runaways'
+        model = 'turing-machine'
         # t.get_capabilities(connection)
         # t.get_capability(connection, model)
         # t.get_yang_schema(connection, model)
@@ -74,25 +70,22 @@ if __name__ == '__main__':
 
         # edit-config
         #
-        # t.lock_config(connection, session2)  # lock datastore running
         # t.edit_config(connection, edit_data, session3)  # edit config in candidate datastore
         # print("candidate session:")
         # t.get_config(connection, filter1, session3)
+        # t.edit_config(connection, edit_data, session2)  # edit config in running datastore
         # print("running session:")
         # t.get_config(connection, filter1, session2)
 
-        # copy-config
+        # edit-config
         #
-        # t.copy_config(connection, session3, session2)  # copy config from datastore candidate to running
-        # print("running session:")
-        # t.get_config(connection, filter1, session2)
+        t.edit_config(connection, edit_data2, session3)  # edit config in candidate datastore
+        print("candidate session:")
+        t.get_config(connection, filter2, session3)
+        t.edit_config(connection, edit_data2, session2)  # edit config in running datastore
+        print("running session:")
+        t.get_config(connection, filter2, session2)
 
-        # t.edit_config(connection, edit_data3, session3)
-        # print("candidate session:")
-        # t.get_config(connection, filter3, session3)
-        # t.copy_config(connection, session3, session2)
-        # print("running session:")
-        # t.get_config(connection, filter3, session2)
 
     finally:
         connection.close_session()
