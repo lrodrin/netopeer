@@ -7,7 +7,11 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import data as t
 
 if __name__ == '__main__':
-    connection = t.connect('10.1.7.81', 830, 'root', 'netlabN.')
+    host = '10.1.7.81'
+    port = 830
+    connection = t.connect(host, port, 'root', 'netlabN.')  # connection to NETCONF server
+    print('connected:', connection.connected, '.... to host', host, 'on port:', port)
+    print('session-id:', connection.session_id)
 
     filter1 = '''<turing-machine xmlns="http://example.net/turing-machine">'''  # model turing-machine
     filter2 = '''<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">'''  # model ietf-interfaces
@@ -56,38 +60,46 @@ if __name__ == '__main__':
 
     try:
         model = 'ietf-interfaces'
+        # print("server capabilities:")
         # t.get_capabilities(connection)
+        # print("model %s capability:" % model)
         # t.get_capability(connection, model)
+
         # t.get_yang_schema(connection, model)
+        # print("yang schema for model %s obtained" % model)
 
         # get_config
         #
-        # print("running session:")
+        # print("get all:")
         # print(connection.get())
-        # print("startup session:")
+
+        # print("get startup session:")
         # t.get_config(connection, filter1, session1)
         # t.get_config(connection, filter2, session1)
-        print("running session:")
-        t.get_config(connection, filter1, session2)
+
+        print("get running session:")
+        # t.get_config(connection, filter1, session2)
         t.get_config(connection, filter2, session2)
-        # print("candidate session:")
+
+        # print("get candidate session:")
         # t.get_config(connection, filter1, session3)
         # t.get_config(connection, filter2, session3)
 
         # edit-config datastore running
         #
-        # TODO create subscription
+        print("edit running session")
         # t.edit_config(connection, edit_data, session2)
         t.edit_config(connection, edit_data2, session2)
-        print("running session:")
+        print("get running session:")
         # t.get_config(connection, filter1, session2)
         t.get_config(connection, filter2, session2)
 
         # edit-config datastore candidate
         #
+        # print("edit candidate session")
         # t.edit_config(connection, edit_data, session3)
         # t.edit_config(connection, edit_data2, session3)
-        # print("candidate session:")
+        # print("get candidate session:")
         # t.get_config(connection, filter1, session3)
         # t.get_config(connection, filter2, session3)
 
