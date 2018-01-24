@@ -99,12 +99,3 @@ def edit_config(connection, data, session):
     :type session: str
     """
     connection.edit_config(target=session, config=data)
-
-
-def build_xml():
-    config = ET.Element("config")
-    configuration = ET.SubElement(config, "sdm-node", nsmap={None: 'urn:cttc:params:xml:ns:yang:sdm-node'})
-    sdm_node_cfg = ET.SubElement(configuration, "sdm-node")
-    node_id = ET.SubElement(sdm_node_cfg, "node-id").text = 'a'
-    port = ET.SubElement(sdm_node_cfg, "interface-name").text = 'GigabitEthernet0/0/0/0'
-    description = ET.SubElement(sdm_node_cfg, "description").text = 'NETCONF configured - '
