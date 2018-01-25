@@ -108,9 +108,9 @@ if __name__ == '__main__':
                     <port>
                         <port-id>3000</port>
                         <signal>
-                            <signal-id>0000</signal-id>
+                            <signal-id>3001</signal-id>
                             <wavelength>0</wavelength>
-                            <mode>00</mode>
+                            <mode>03</mode>
                         </signal>
                     </port>
                 </sdm-node>
