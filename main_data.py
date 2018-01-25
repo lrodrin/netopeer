@@ -7,9 +7,9 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import data as t
 
 if __name__ == '__main__':
-    host = '10.1.7.81'
+    host = '127.0.0.1'
     port = 830
-    connection = t.connect(host, port, 'root', 'netlabN.')  # connection to NETCONF server
+    connection = t.connect(host, port, 'root', 'Rod626020-2')  # connection to NETCONF server
     print('connected:', connection.connected, '.... to host', host, 'on port:', port)
     print('session-id:', connection.session_id)
 
@@ -21,6 +21,10 @@ if __name__ == '__main__':
     session1 = 'startup'
     session2 = 'running'
     session3 = 'candidate'
+
+    # operations
+    operation1 = 'merge'
+    operation2 = 'replace'
 
     edit_data = '''
     <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
@@ -102,7 +106,7 @@ if __name__ == '__main__':
                 <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
                     <node-id>c</node-id>
                     <port>
-                        <port-id>1000</port>
+                        <port-id>3000</port>
                         <signal>
                             <signal-id>0000</signal-id>
                             <wavelength>0</wavelength>
@@ -145,17 +149,17 @@ if __name__ == '__main__':
 
         # edit-config datastore running
         #
-        # print("edit running session")
+        print("edit running session")
         # t.edit_config(connection, edit_data, session2)
         # t.edit_config(connection, edit_data2, session2)
-        # t.edit_config(connection, edit_data3, session2)
-        # print("get running session:")
+        t.edit_config(connection, edit_data3, session2, operation1)
+        print("get running session:")
         # t.get_config(connection, filter1, session2)
         # t.get_config(connection, filter2, session2)
-        # t.get_config(connection, filter3, session2)
+        t.get_config(connection, filter3, session2)
 
         print("edit running session")
-        t.edit_config(connection, edit_data4, session2)
+        t.edit_config(connection, edit_data4, session2, operation2)
         print("get running session:")
         t.get_config(connection, filter3, session2)
 

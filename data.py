@@ -88,14 +88,16 @@ def write_file(fi, fo):
     file.close()
 
 
-def edit_config(connection, data, session):
+def edit_config(connection, data, session, operation):
     """
     Edit the session config from the NETCONF server using edit-config operation
 
     :param connection: connection
     :param data: data
     :param session: datastore session
+    :param operation: merge, replace or nonne
     :type data: str
     :type session: str
+    :type operation: str
     """
-    connection.edit_config(target=session, config=data)
+    connection.edit_config(target=session, config=data, default_operation=operation)
