@@ -145,14 +145,14 @@ if __name__ == '__main__':
 
         # edit-config datastore running
         #
-        print("edit running session")
+        # print("edit running session")
         # t.edit_config(connection, edit_data, session2)
         # t.edit_config(connection, edit_data2, session2)
-        t.edit_config(connection, edit_data3, session2)
-        print("get running session:")
+        # t.edit_config(connection, edit_data3, session2)
+        # print("get running session:")
         # t.get_config(connection, filter1, session2)
         # t.get_config(connection, filter2, session2)
-        t.get_config(connection, filter3, session2)
+        # t.get_config(connection, filter3, session2)
 
         print("edit running session")
         t.edit_config(connection, edit_data4, session2)
