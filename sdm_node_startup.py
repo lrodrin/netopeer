@@ -62,38 +62,12 @@ if __name__ == '__main__':
     </config>
     '''
 
-    edit_data2 = '''
-    <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
-        <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
-            <node-id>c</node-id>
-            <port>
-                <port-id>3000</port>
-                <signal>
-                    <signal-id>3001</signal-id>
-                    <wavelength>0</wavelength>
-                    <mode>03</mode>
-                </signal>
-            </port>
-        </sdm-node>
-    </config>
-    '''
-
     try:
-
-        # get-config
-        #
-        # print("get config from startup session:")
-        # t.get_config(connection, filter, session1)
-        #
-        # print("get config from running session:")
-        # t.get_config(connection, filter, session2)
-
         # edit-config
         #
         t.edit_config(connection, edit_data, session2, operation1)  # create configuration
         print("new node configuration created\nnew configuration:")
         t.get_config(connection, filter, session2)
-        # t.edit_config(connection, edit_data2, session2, operation2)   # edit configuration
 
     finally:
         connection.close_session()
