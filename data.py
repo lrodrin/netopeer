@@ -24,9 +24,15 @@ def connect(host, port, username, password):
     :type password: str
     :return: connection object
     """
-    connection = manager.connect(host=host, port=port, username=username, password=password, hostkey_verify=False,
-                                 device_params={'name': 'default'}, allow_agent=False, look_for_keys=False)
-    return connection
+    try:
+        connection = manager.connect(host=host, port=port, username=username, password=password, hostkey_verify=False,
+                                     device_params={'name': 'default'}, allow_agent=False, look_for_keys=False)
+        print('server connected:', connection.connected, '.... to host', host, 'on port:', port)
+        print('session-id:', connection.session_id)
+        return connection
+
+    except Exception as e:
+        print(e)
 
 
 def get_capabilities(connection):

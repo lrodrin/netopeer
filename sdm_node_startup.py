@@ -10,8 +10,6 @@ if __name__ == '__main__':
     host = '10.1.7.81'
     port = 830
     connection = t.connect(host, port, 'root', 'netlabN.')  # connection to NETCONF server
-    print('server connected:', connection.connected, '.... to host', host, 'on port:', port)
-    print('session-id:', connection.session_id)
 
     filter = '''<sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">'''
 
@@ -63,11 +61,12 @@ if __name__ == '__main__':
     '''
 
     try:
-        # edit-config
-        #
-        t.edit_config(connection, edit_data, session2, operation1)  # create configuration
+        t.edit_config(connection, edit_data, session2, operation1)  # create node configuration
         print("new node configuration created\nnew configuration:")
         t.get_config(connection, filter, session2)
+
+    except Exception as e:
+        print(e)
 
     finally:
         connection.close_session()
