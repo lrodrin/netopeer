@@ -22,46 +22,10 @@ if __name__ == '__main__':
     operation1 = 'merge'
     operation2 = 'replace'
 
-    edit_data = '''
-    <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
-        <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
-            <node-id>a</node-id>
-            <port>
-                <port-id>1000</port-id>
-                <signal>
-                    <signal-id>1001</signal-id>
-                    <wavelength>1</wavelength>
-                    <mode>01</mode>
-                </signal>
-            </port>
-        </sdm-node>
-        <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
-            <node-id>b</node-id>
-            <port>
-                <port-id>2000</port-id>
-                <signal>
-                    <signal-id>2001</signal-id>
-                    <wavelength>2</wavelength>
-                    <mode>02</mode>
-                </signal>
-            </port>
-        </sdm-node>
-        <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
-            <node-id>c</node-id>
-            <port>
-                <port-id>3000</port-id>
-                <signal>
-                    <signal-id>3001</signal-id>
-                    <wavelength>3</wavelength>
-                    <mode>03</mode>
-                </signal>
-            </port>
-        </sdm-node>
-    </config>
-    '''
-
     try:
-        t.edit_config(connection, edit_data, session2, operation1)  # create node configuration
+        filename = open('sdm_node_config.xml')  # open configuration file
+        t.edit_config(connection, filename.read(), session2, operation1)  # create node configuration
+        filename.close()
         print("new node configuration created\nnew configuration:")
         t.get_config(connection, filter, session2)  # get node configuration
 
