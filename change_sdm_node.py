@@ -3,7 +3,10 @@ This module implements change the node configuration
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
+import sys
+
 import data as t
+
 
 if __name__ == '__main__':
     host = '10.1.7.81'
@@ -28,7 +31,7 @@ if __name__ == '__main__':
         <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
             <node-id>c</node-id>
             <port>
-                <port-id>3000</port>
+                <port-id>3000</port-id>
                 <signal>
                     <signal-id>3001</signal-id>
                     <wavelength>0</wavelength>

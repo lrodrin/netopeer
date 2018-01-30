@@ -29,7 +29,7 @@ if __name__ == '__main__':
         <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
             <node-id>a</node-id>
             <port>
-                <port-id>1000</port>
+                <port-id>1000</port-id>
                 <signal>
                     <signal-id>1001</signal-id>
                     <wavelength>1</wavelength>
@@ -40,7 +40,7 @@ if __name__ == '__main__':
         <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
             <node-id>b</node-id>
             <port>
-                <port-id>2000</port>
+                <port-id>2000</port-id>
                 <signal>
                     <signal-id>2001</signal-id>
                     <wavelength>2</wavelength>
@@ -51,7 +51,7 @@ if __name__ == '__main__':
         <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
             <node-id>c</node-id>
             <port>
-                <port-id>3000</port>
+                <port-id>3000</port-id>
                 <signal>
                     <signal-id>3001</signal-id>
                     <wavelength>3</wavelength>
