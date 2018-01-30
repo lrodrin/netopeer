@@ -63,7 +63,7 @@ if __name__ == '__main__':
     try:
         t.edit_config(connection, edit_data, session2, operation1)  # create node configuration
         print("new node configuration created\nnew configuration:")
-        t.get_config(connection, filter, session2)
+        t.get_config(connection, filter, session2)  # get node configuration
 
     except Exception as e:
         print(e)
