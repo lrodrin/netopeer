@@ -91,7 +91,8 @@ if __name__ == '__main__':
         # edit-config
         #
         t.edit_config(connection, edit_data, session2, operation1)  # create configuration
-        print("node configuration created")
+        print("new node configuration created\nnew configuration:")
+        t.get_config(connection, filter, session2)
         # t.edit_config(connection, edit_data2, session2, operation2)   # edit configuration
 
     finally:
