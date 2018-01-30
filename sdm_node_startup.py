@@ -82,15 +82,16 @@ if __name__ == '__main__':
 
         # get-config
         #
-        print("get config from startup session:")
-        t.get_config(connection, filter, session1)
-
-        print("get config from running session:")
-        t.get_config(connection, filter, session2)
+        # print("get config from startup session:")
+        # t.get_config(connection, filter, session1)
+        #
+        # print("get config from running session:")
+        # t.get_config(connection, filter, session2)
 
         # edit-config
         #
-        # t.edit_config(connection, edit_data, session2, operation1)    # create configuration
+        t.edit_config(connection, edit_data, session2, operation1)  # create configuration
+        print("node configuration created")
         # t.edit_config(connection, edit_data2, session2, operation2)   # edit configuration
 
     finally:
