@@ -129,39 +129,39 @@ if __name__ == '__main__':
 
         # get_config
         #
-        # print("get all:")
-        # print(connection.get())
+        print("get all:")
+        print(connection.get())
 
-        # print("get startup session:")
+        print("get startup session:")
         # t.get_config(connection, filter1, session1)
         # t.get_config(connection, filter2, session1)
-        # t.get_config(connection, filter3, session1)
+        t.get_config(connection, filter3, session1)
 
         print("get running session:")
         # t.get_config(connection, filter1, session2)
         # t.get_config(connection, filter2, session2)
         t.get_config(connection, filter3, session2)
 
-        # print("get candidate session:")
+        print("get candidate session:")
         # t.get_config(connection, filter1, session3)
         # t.get_config(connection, filter2, session3)
-        # t.get_config(connection, filter3, session3)
+        t.get_config(connection, filter3, session3)
 
         # edit-config datastore running
         #
-        print("edit running session")
+        # print("edit running session")
         # t.edit_config(connection, edit_data, session2)
         # t.edit_config(connection, edit_data2, session2)
-        t.edit_config(connection, edit_data3, session2, operation1)
-        print("get running session:")
+        # t.edit_config(connection, edit_data3, session2, operation1)
+        # print("get running session:")
         # t.get_config(connection, filter1, session2)
         # t.get_config(connection, filter2, session2)
-        t.get_config(connection, filter3, session2)
+        # t.get_config(connection, filter3, session2)
 
-        print("edit running session")
-        t.edit_config(connection, edit_data4, session2, operation2)
-        print("get running session:")
-        t.get_config(connection, filter3, session2)
+        # print("edit running session")
+        # t.edit_config(connection, edit_data4, session2, operation2)
+        # print("get running session:")
+        # t.get_config(connection, filter3, session2)
 
         # edit-config datastore candidate
         #
