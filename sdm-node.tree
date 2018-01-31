@@ -1,0 +1,9 @@
+module: sdm-node
+    +--rw sdm-node* [node-id]
+       +--rw node-id    string
+       +--rw port* [port-id]
+          +--rw port-id    string
+          +--rw signal* [signal-id]
+             +--rw signal-id     string
+             +--rw wavelength?   uint8
+             +--rw mode?         uint8
