@@ -1,0 +1,7 @@
+<config>
+    <sdm-node>
+        <node_id>a</node_id>
+        <node_id>b</node_id>
+        <node_id>c</node_id>
+    </sdm-node>
+</config>
