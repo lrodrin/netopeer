@@ -4,32 +4,63 @@ This module implements change the node configuration
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import data as t
+import sys
 
-if __name__ == '__main__':
-    host = '10.1.7.81'
-    port = 830
-    connection = t.connect(host, port, 'root', 'netlabN.')  # connection to NETCONF server
+import data as d
 
-    filter = '''<sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">'''
+# datastore sessions
+session_startup = 'startup'
+session_running = 'running'
+session_candidate = 'candidate'
 
-    # datastore sessions
-    session1 = 'startup'
-    session2 = 'running'
-    session3 = 'candidate'
+# NETCONF operations
+operation_merge = 'merge'
+operation_replace = 'replace'
 
-    # operations
-    operation1 = 'merge'
-    operation2 = 'replace'
+
+def change_signal_config(host, port, login, password, nodeid, portid, signalid, wavelength, mode):
+    connection = d.connect(host, port, login, password)  # connection to NETCONF server
+
+    namespace = '''<sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">'''
+    signal_config = '''
+    <?xml version="1.0" encoding="UTF-8"?>
+    <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+        <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
+            <node-id>''' + nodeid + '''</node-id>
+            <port>
+                <port-id>''' + portid + '''</port-id>
+                <signal>
+                    <signal-id>''' + signalid + '''</signal-id>
+                    <wavelength>''' + wavelength + '''</wavelength>
+                    <mode>''' + mode + '''</mode>
+                </signal>
+            </port>
+        </sdm-node>
+    </config>
+    '''
 
     try:
-        filename = open('signal_config.xml')  # open configuration file
-        t.edit_config(connection, filename.read(), session2, operation2)  # edit configuration
+        d.edit_config(connection, signal_config, session_running, operation_replace)  # edit configuration
         print("node configuration edited\nnew configuration:")
-        t.get_config(connection, filter, session2)  # get node configuration
+        d.get_config(connection, namespace, session_running)  # get node configuration
 
     except Exception as e:
         print(e)
 
     finally:
         connection.close_session()
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 6:
+        print("Usage: python change_sdm_node.py [node-id] [port-id] [signal-id] [wavelength] [mode]")
+        print("Example: python change_sdm_node.py c 3000 3001 0 03")
+
+    else:
+        host = '10.1.7.81'
+        port = 830
+        login = 'root'
+        password = 'netlabN.'
+
+        change_signal_config(host, port, login, password, sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4],
+                             sys.argv[5])
