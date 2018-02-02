@@ -1,0 +1,71 @@
+module sdm-node-rpc {
+  yang-version 1;
+  namespace "urn:cttc:params:xml:ns:yang:sdm-node";
+  prefix sdm-node;
+
+  organization
+    "CTTC";
+  contact
+    "Laura Rodriguez <laura.rodriguez@cttc.es>";
+  description
+    "YANG version of the sdm-node.";
+
+  revision 2018-01-24 {
+    description
+      "SDM-node module in progress.";
+  }
+
+  grouping signal {
+    leaf signal-id {
+      type string;
+    }
+
+    leaf wavelength {
+      type uint8;
+    }
+
+    leaf mode {
+      type uint8;
+    }
+  }
+
+  grouping port {
+    leaf port-id {
+      type string;
+    }
+
+    list signal {
+      key "signal-id";
+      uses signal;
+    }
+  }
+
+  grouping node {
+    leaf node-id {
+      type string;
+    }
+
+    list port {
+      key "port-id";
+      uses port;
+    }
+  }
+
+  list sdm-node {
+    key "node-id";
+    uses node;
+  }
+
+  rpc hello {
+    input {
+        leaf name {
+            type string;
+        }
+    }
+    output {
+        leaf greeting {
+            type string;
+        }
+    }
+  }
+}
