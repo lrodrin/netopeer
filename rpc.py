@@ -5,6 +5,7 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
 import data as d
+from ncclient.xml_ import to_ele
 
 # datastore sessions
 session_startup = 'startup'
@@ -19,18 +20,14 @@ operation_replace = 'replace'
 def execute_rpc(host, port, login, password):
     connection = d.connect(host, port, login, password)  # connection to NETCONF server
 
-    rpc = ''''
-    <turing-machine xmlns="http://example.net/turing-machine">
-        <run-until>
-            <state>1</state>
-            <head-position>1</head-position>
-        </run-until>
-    </turing-machine>
+    rpc = '''
+    <hello xmlns="urn:cttc:params:xml:ns:yang:test">
+        <name>Laura</name>
+    </hello>
     '''
 
     try:
-        connection.rpc(rpc)
-        connection.execute(rpc)
+        connection.dispatch(to_ele(rpc))
 
     except Exception as e:
         print(e)

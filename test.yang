@@ -1,0 +1,29 @@
+module test {
+  yang-version 1;
+  namespace "urn:cttc:params:xml:ns:yang:test";
+  prefix test;
+
+  organization
+    "CTTC";
+  contact
+    "Laura Rodriguez <laura.rodriguez@cttc.es>";
+  description
+    "YANG version of test RPC.";
+
+  revision "2018-02-05" {
+    description "RPC test module";
+  }
+
+  rpc hello {
+    input {
+      leaf name {
+        type string;
+      }
+    }
+    output {
+      leaf greeting {
+        type string;
+      }
+    }
+  }
+}
