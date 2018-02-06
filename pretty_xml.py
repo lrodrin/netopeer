@@ -1,5 +1,5 @@
 """
-This module build a XML file
+This module build a pretty print XML
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -8,17 +8,17 @@ import xml.dom.minidom as md
 INDENT = ' ' * 4
 
 
-def pretty_print(fh):
+def pretty_print_from_file(fh):
     print('\n'.join(line for line in md.parse(fh).toprettyxml(indent=INDENT).split('\n') if line.strip()))
 
 
-def pretty_printt(fh):
+def pretty_print_from_string(fh):
     print('\n'.join(line for line in md.parseString(fh).toprettyxml(indent=INDENT).split('\n') if line.strip()))
 
 
 if __name__ == '__main__':
     with open("sdm_node_config.xml", 'rb') as f:
-        pretty_print(f)
+        pretty_print_from_file(f)
 
     data = '''
     <sdm-wdm>
@@ -35,4 +35,4 @@ if __name__ == '__main__':
     </sdm-wdm>
     '''
 
-    pretty_printt(data)
+    pretty_print_from_string(data)

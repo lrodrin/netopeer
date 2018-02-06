@@ -84,7 +84,6 @@ def get_config(connection, filter, session):
     :param connection: connection
     :param filter: filter
     :param session: datastore session
-    :param module: module name
     :type session: str
     :type filter: str
     """
