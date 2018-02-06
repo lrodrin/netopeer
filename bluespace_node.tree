@@ -1,0 +1,23 @@
+module: bluespace_node
+    +--rw bluespace-node
+       +--rw bluespace-node-id?   string
+       +--rw location?            string
+       +--rw components* [component-id]
+          +--rw component-id            string
+          +--rw analog-rof
+          |  +--rw param1?   string
+          +--rw digital-rof
+          |  +--rw param2?   string
+          +--rw optical-beam-forming
+          |  +--rw param3?   string
+          +--rw ethernet
+          |  +--rw param4?   string
+          +--rw sdm-wdm* [wdm-id]
+             +--rw wdm-id    string
+             +--rw port* [port-id]
+                +--rw port-id    string
+                +--rw signal* [signal-id]
+                   +--rw signal-id     string
+                   +--rw wavelength?   uint8
+                   +--rw mode?         uint8
+                   +--rw core?         string
