@@ -40,7 +40,7 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    config_file = 'sdm_node_config.xml'
-    namespace = '''<sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">'''
+    config_file = 'bluespace_node_config.xml'
+    namespace = '''<bluespace_node xmlns="urn:cttc:params:xml:ns:yang:bluespace_node">'''
 
     create_node_config(host, port, login, password, config_file, session_running, operation_merge, namespace)

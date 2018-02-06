@@ -44,6 +44,8 @@ def change_signal_config(host, port, login, password, nodeid, portid, signalid, 
         print("node configuration edited\nnew configuration:")
         d.get_config(connection, namespace, session_running)  # get node configuration
 
+        # TODO escriu bé
+
     except Exception as e:
         print(e)
 

@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
     <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
-        <node-id>a</node-id>
-        <port>
-            <port-id>1000</port-id>
-            <signal>
-                <signal-id>1001</signal-id>
-                <wavelength>1</wavelength>
-                <mode>01</mode>
-            </signal>
-        </port>
-    </sdm-node>
-    <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
-        <node-id>b</node-id>
-        <port>
-            <port-id>2000</port-id>
-            <signal>
-                <signal-id>2001</signal-id>
-                <wavelength>2</wavelength>
-                <mode>02</mode>
-            </signal>
-        </port>
-    </sdm-node>
-    <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
         <node-id>c</node-id>
         <port>
             <port-id>3000</port-id>
