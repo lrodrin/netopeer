@@ -18,7 +18,8 @@ operation_merge = 'merge'
 operation_replace = 'replace'
 
 
-def change_signal_config(host, port, login, password, componentid, param1, param2, param3, param4, wdmid, portid,
+def change_signal_config(host, port, login, password, nodeid, location, componentid, param1, param2, param3, param4,
+                         wdmid, portid,
                          signalid, wavelength, mode, core):
     connection = d.connect(host, port, login, password)  # connection to NETCONF server
 
@@ -27,6 +28,8 @@ def change_signal_config(host, port, login, password, componentid, param1, param
     <?xml version="1.0" encoding="UTF-8"?>
     <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
         <bluespace-node xmlns="urn:cttc:params:xml:ns:yang:bluespace_node">
+            <bluespace-node-id>''' + nodeid + '''</bluespace-node-id>
+            <location>''' + location + '''</location>
             <components>
                 <component-id>''' + componentid + '''</component-id>
                 <analog-rof>
@@ -73,10 +76,11 @@ def change_signal_config(host, port, login, password, componentid, param1, param
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 12:
+    if len(sys.argv) != 14:
         print(
-            "Usage: python change_bluespace_node.py [componentid] [param1] [param2] [param3] [param4] [wdm-id] [port-id] [signal-id] [wavelength] [mode] [core]")
-        print("Example: python change_bluespace_node.py 01 01 02 03 04 01 3000 3001 0 03 2")
+            "Usage: python change_bluespace_node.py [nodeid] [location] [componentid] [param1] [param2] [param3] ["
+            "param4] [wdm-id] [port-id] [signal-id] [wavelength] [mode] [core]")
+        print("Example: python change_bluespace_node.py a CO 01 01 02 03 04 01 3000 3001 2 03 3")
 
     else:
         host = '10.1.7.81'
@@ -86,4 +90,4 @@ if __name__ == '__main__':
 
         change_signal_config(host, port, login, password, sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4],
                              sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8], sys.argv[9], sys.argv[10],
-                             sys.argv[11])
+                             sys.argv[11], sys.argv[12], sys.argv[13])

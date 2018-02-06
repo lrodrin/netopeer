@@ -21,7 +21,7 @@ def create_node_config(host, port, login, password, config_file, session, operat
 
     try:
         f = open(config_file)  # open configuration file
-        d.edit_config(connection, f.read(), session, operation)  # create node configuration
+        # d.edit_config(connection, f.read(), session, operation)  # create node configuration
         f.close()
         print("new node configuration created\nnew configuration:")
         d.get_config(connection, namespace, session)  # get node configuration
@@ -41,6 +41,6 @@ if __name__ == '__main__':
     login = 'root'
     password = 'netlabN.'
     config_file = 'bluespace_node_config.xml'
-    namespace = '''<bluespace_node xmlns="urn:cttc:params:xml:ns:yang:bluespace_node">'''
+    namespace = '''<bluespace-node xmlns="urn:cttc:params:xml:ns:yang:bluespace_node">'''
 
     create_node_config(host, port, login, password, config_file, session_running, operation_merge, namespace)
