@@ -5,8 +5,11 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 import re
 import xml.etree.ElementTree as ET
+import xml.dom.minidom as md
 
 from ncclient import manager
+
+INDENT = ' ' * 4
 
 
 def connect(host, port, username, password):
@@ -81,11 +84,12 @@ def get_config(connection, filter, session):
     :param connection: connection
     :param filter: filter
     :param session: datastore session
+    :param module: module name
     :type session: str
     :type filter: str
     """
     config = connection.get_config(source=session, filter=('subtree', filter)).data_xml
-    print(config)
+    pretty_print(config)
 
 
 def write_file(fi, fo):
@@ -107,3 +111,7 @@ def edit_config(connection, data, session, operation):
     :type operation: str
     """
     connection.edit_config(target=session, config=data, default_operation=operation)
+
+
+def pretty_print(filename):
+    print('\n'.join(line for line in md.parseString(filename).toprettyxml(indent=INDENT).split('\n') if line.strip()))
