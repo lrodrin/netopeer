@@ -26,8 +26,6 @@ def create_node_config(host, port, login, password, config_file, session, operat
         print("new node configuration created\nnew configuration:")
         d.get_config(connection, namespace, session)  # get node configuration
 
-        # TODO pretty print
-
     except Exception as e:
         print(e)
 
