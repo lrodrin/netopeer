@@ -9,14 +9,14 @@ wget https://cmocka.org/files/1.0/cmocka-1.0.1.tar.xz
 tar -xJvf cmocka-1.0.1.tar.xz
 mv cmocka-1.0.1 cmocka
 cd cmocka && mkdir build && cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr .. && make -j8 && make install
+cmake .. && make -j8 && make install
 cd ../..
 rm cmocka-1.0.1.tar.xz
 
 echo "Building libyang library from source"
 git clone https://github.com/CESNET/libyang.git
 cd libyang; mkdir build; cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+cmake ..
 make -j8 && make install
 cd ../..
 
@@ -25,14 +25,14 @@ wget https://git.libssh.org/projects/libssh.git/snapshot/libssh-0.7.5.tar.gz
 tar -xzf libssh-0.7.5.tar.gz
 mv libssh-0.7.5 libssh
 cd libssh; mkdir build; cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr .. && make -j8 && make install
+cmake .. && make -j8 && make install
 cd ../..
 rm libssh-0.7.5.tar.gz
 
 echo "Building libnetconf2 library from source"
 git clone https://github.com/CESNET/libnetconf2.git
 cd libnetconf2; mkdir build; cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+cmake ..
 make -j8 && make install
 cd ../..
 
@@ -45,7 +45,7 @@ cd ..
 echo "Building sysrepo library from source"
 git clone https://github.com/sysrepo/sysrepo.git
 cd sysrepo; mkdir build; cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+cmake ..
 make -j8 && make install
 cd ../..
 
