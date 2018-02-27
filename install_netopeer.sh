@@ -39,7 +39,8 @@ cd ../..
 echo "Building protobuf library from source"
 git clone https://github.com/google/protobuf.git
 cd protobuf
-./autogen.sh && ./configure --prefix=/usr && make -j8 && make install
+./autogen.sh && ./configure
+make -j8 && make install
 cd ..
 
 echo "Building sysrepo library from source"
@@ -68,4 +69,3 @@ echo "Building client"
 cd cli && mkdir build && cd build
 cmake ..
 make -j8 && make install && cd
-
