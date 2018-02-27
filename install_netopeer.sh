@@ -2,7 +2,7 @@
 
 apt-get install zlib1g-dev libssl-dev libavl-dev libev-dev coreutils acl valgrind autoconf libtool
 apt-get install gcc make cmake doxygen swig python-dev lua5.2 git build-essential devscripts debhelper
-apt-get install bison flex libpcre3-dev libprotobuf-c-dev protobuf-c-compiler python-codecov
+apt-get install bison flex libpcre3-dev libprotobuf-c-dev protobuf-c-compiler
 
 echo "Building cmocka library from source"
 git clone git://git.cryptomilk.org/projects/cmocka.git
@@ -24,7 +24,7 @@ cmake .. && make -j8 && make install
 cd ../..
 
 echo "Building libnetconf2 library from source"
-git clone -b devel https://github.com/CESNET/libnetconf2.git
+git clone https://github.com/CESNET/libnetconf2.git
 cd libnetconf2; mkdir build; cd build
 cmake ..
 make -j8 && make install
