@@ -37,7 +37,7 @@ def execute_rpc(host, port, login, password):
 
 
 if __name__ == '__main__':
-    host = '10.1.7.81'
+    host = '10.1.7.84'
     port = 830
     login = 'root'
     password = 'netlabN.'
