@@ -1,5 +1,5 @@
 """
-This module build a pretty print XML
+This module build a pretty print for XML configurations
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
