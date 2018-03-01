@@ -4,7 +4,7 @@ This module create the node configuration
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-from bluespace import data as d
+import bluespace.data as d
 
 # datastore sessions
 session_startup = 'startup'
