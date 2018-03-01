@@ -1,18 +1,18 @@
-module sdm-node {
+module sdm_node {
   yang-version 1;
-  namespace "urn:cttc:params:xml:ns:yang:sdm-node";
-  prefix sdm-node;
+  namespace "urn:cttc:params:xml:ns:yang:sdm_node";
+  prefix sdm_node;
 
   organization
     "CTTC";
   contact
     "Laura Rodriguez <laura.rodriguez@cttc.es>";
   description
-    "YANG version of the sdm-node.";
+    "YANG version of the sdm_node.";
 
   revision 2018-01-24 {
     description
-      "SDM-node module in progress.";
+      "SDM node module in progress.";
   }
 
   grouping signal {
@@ -51,7 +51,7 @@ module sdm-node {
     }
   }
 
-  list sdm-node {
+  list sdm_node {
     key "node-id";
     uses node;
   }

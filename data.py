@@ -1,5 +1,5 @@
 """
-This module implements data modifications for a NETCONF server
+This module implements configuration methods to manipulate a NETCONF server
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -113,4 +113,10 @@ def edit_config(connection, data, session, operation):
 
 
 def pretty_print(filename):
+    """
+    Pretty print for XML specified by filename
+
+    :param filename: file name
+    :type filename: file
+    """
     print('\n'.join(line for line in md.parseString(filename).toprettyxml(indent=INDENT).split('\n') if line.strip()))

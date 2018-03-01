@@ -1,5 +1,5 @@
-module: sdm-node
-    +--rw sdm-node* [node-id]
+module: sdm_node
+    +--rw sdm_node* [node-id]
        +--rw node-id    string
        +--rw port* [port-id]
           +--rw port-id    string

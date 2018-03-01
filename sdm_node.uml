@@ -2,7 +2,7 @@
 'Generate png with java -jar plantuml.jar <file> 
 'Output in img/<module>.png 
 'If Java spits out memory error increase heap size with java -Xmx1024m  -jar plantuml.jar <file> 
-@startuml img/sdm-node.png 
+@startuml img/sdm_node.png 
 hide empty fields 
 hide empty methods 
 hide <<case>> circle
@@ -11,10 +11,10 @@ hide <<choice>> circle
 hide <<leafref>> stereotype
 hide <<leafref>> circle
 page 1x1 
-Title sdm-node 
-note top of sdm_node_sdm_node : <b>Namespace: </b> urn:cttc:params:xml:ns:yang:sdm-node \n<b>Prefix: </b> sdm-node \n<b>Organization : </b>\nCTTC \n<b>Contact : </b>\nLaura Rodriguez <laura.rodriguez@cttc.es> \n<b>Revision : </b> 2018-01-24 \n
-package "sdm-node:sdm-node" as sdm_node_sdm_node { 
-class "sdm-node" as sdm_node << (M, #33CCFF) module>> 
+Title sdm_node 
+note top of sdm_node_sdm_node : <b>Namespace: </b> urn:cttc:params:xml:ns:yang:sdm_node \n<b>Prefix: </b> sdm_node \n<b>Organization : </b>\nCTTC \n<b>Contact : </b>\nLaura Rodriguez <laura.rodriguez@cttc.es> \n<b>Revision : </b> 2018-01-24 \n
+package "sdm_node:sdm_node" as sdm_node_sdm_node { 
+class "sdm_node" as sdm_node << (M, #33CCFF) module>> 
 class "signal" as sdm_node_I_signal_grouping <<(G,Lime) grouping>> 
 sdm_node_I_signal_grouping : signal-id : string  
 sdm_node_I_signal_grouping : wavelength : uint8  
@@ -29,7 +29,7 @@ sdm_node_I_node_grouping : node-id : string
 class "port" as sdm_node_I_node_I_port << (L, #FF7700) list>> 
 sdm_node_I_node_grouping *-- "0..N" sdm_node_I_node_I_port 
 sdm_node_I_node_I_port : port {uses} 
-class "sdm-node" as sdm_node_I_sdm_node << (L, #FF7700) list>> 
+class "sdm_node" as sdm_node_I_sdm_node << (L, #FF7700) list>> 
 sdm_node *-- "0..N" sdm_node_I_sdm_node 
 sdm_node_I_sdm_node : node {uses} 
 } 
@@ -38,6 +38,6 @@ sdm_node_I_port_I_signal --> sdm_node_I_signal_grouping : uses
 sdm_node_I_node_I_port --> sdm_node_I_port_grouping : uses 
 sdm_node_I_sdm_node --> sdm_node_I_node_grouping : uses 
 center footer
- <size:20> UML Generated : 2018-01-31 12:17 </size>
+ <size:20> UML Generated : 2018-03-01 11:33 </size>
  endfooter 
 @enduml 
