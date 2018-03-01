@@ -29,24 +29,25 @@ __license__ = "Apache 2.0"
 import sys
 
 import libsysrepoPython2 as sr
+import six
 
 
 # Helper function for printing changes given operation, old and new value.
 def print_change(op, old_val, new_val):
     if op == sr.SR_OP_CREATED:
-        print("CREATED: ")
-        print(new_val.to_string())
+        six.print_("CREATED: ", end=" ")
+        six.print_(new_val.to_string())
     elif op == sr.SR_OP_DELETED:
-        print("DELETED: ")
-        print(old_val.to_string())
+        six.print_("DELETED: ", end=" ")
+        six.print_(old_val.to_string())
     elif op == sr.SR_OP_MODIFIED:
-        print("MODIFIED: ")
-        print("old value")
-        print(old_val.to_string())
-        print("new value")
-        print(new_val.to_string())
+        six.print_("MODIFIED: ")
+        six.print_("old value", end=" ")
+        six.print_(old_val.to_string())
+        six.print_("new value", end=" ")
+        six.print_(new_val.to_string())
     elif op == sr.SR_OP_MOVED:
-        print("MOVED: " + new_val.xpath() + " after " + old_val.xpath())
+        six.print_("MOVED: " + new_val.xpath() + " after " + old_val.xpath())
 
 
 # Helper function for printing events.
