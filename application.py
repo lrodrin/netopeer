@@ -27,8 +27,10 @@ __license__ = "Apache 2.0"
 # The original c implementation is also available in the source, so one can refer to it to evaluate trade-offs.
 
 
-import libsysrepoPython2 as sr
 import sys
+
+import libsysrepoPython2 as sr
+
 
 # Function to print current configuration state.
 # It does so by loading all the items of a session and printing them out.
@@ -39,25 +41,22 @@ def print_current_config(session, module_name):
 
     if values is not None:
         for i in range(values.val_cnt()):
-            print
-            values.val(i).to_string(),
+            print(values.val(i).to_string(), )
+
 
 # Function to be called for subscribed client of given session whenever configuration changes.
-def module_change_cb(sess, module_name, event, private_ctx):
-    print
-    "\n\n ========== CONFIG HAS CHANGED, CURRENT RUNNING CONFIG: ==========\n"
-
-    print_current_config(sess, module_name)
-
+def module_change_cb(session, module_name, event, private_ctx):
+    print("\n\n ========== CONFIG HAS CHANGED, CURRENT RUNNING CONFIG: ==========\n")
+    print_current_config(session, module_name)
     return sr.SR_ERR_OK
+
 
 # Notable difference between c implementation is using exception mechanism for open handling unexpected events.
 # Here it is useful because `Conenction`, `Session` and `Subscribe` could throw an exception.
 try:
     if len(sys.argv) < 2:
-        print
-        "Usage: python application.py [module-name]"
-    
+        print("Usage: python3 application.py [module-name]")
+
     else:
         module_name = sys.argv[1]
 
@@ -72,23 +71,19 @@ try:
         subscribe.module_change_subscribe(module_name, module_change_cb, None, 0,
                                           sr.SR_SUBSCR_DEFAULT | sr.SR_SUBSCR_APPLY_ONLY)
 
-        print
-        "\n\n ========== READING STARTUP CONFIG: ==========\n"
+        print("\n\n ========== READING STARTUP CONFIG: ==========\n")
+
         try:
             print_current_config(sess, module_name)
 
         except Exception as e:
-            print
-            e
+            print(e)
 
-        print
-        "\n\n ========== STARTUP CONFIG APPLIED AS RUNNING ==========\n"
+        print("\n\n ========== STARTUP CONFIG APPLIED AS RUNNING ==========\n")
 
         sr.global_loop()
 
-        print
-        "Application exit requested, exiting.\n";
+        print("Application exit requested, exiting.\n")
 
 except Exception as e:
-    print
-    e
+    print(e)
