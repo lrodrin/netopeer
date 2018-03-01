@@ -29,7 +29,6 @@ __license__ = "Apache 2.0"
 import libsysrepoPython2 as sr
 import sys
 
-
 # Helper function for printing changes given operation, old and new value.
 def print_change(op, old_val, new_val):
     if (op == sr.SR_OP_CREATED):
@@ -57,7 +56,6 @@ def print_change(op, old_val, new_val):
         print
         "MOVED: " + new_val.xpath() + " after " + old_val.xpath()
 
-
 # Helper function for printing events.
 def ev_to_str(ev):
     if (ev == sr.SR_EV_VERIFY):
@@ -69,7 +67,6 @@ def ev_to_str(ev):
     else:
         return "abort"
 
-
 # Function to print current configuration state.
 # It does so by loading all the items of a session and printing them out.
 def print_current_config(session, module_name):
@@ -77,10 +74,10 @@ def print_current_config(session, module_name):
 
     values = session.get_items(select_xpath)
 
-    for i in range(values.val_cnt()):
-        print
-        values.val(i).to_string(),
-
+    if values is not None:
+        for i in range(values.val_cnt()):
+            print
+            values.val(i).to_string(),
 
 # Function to be called for subscribed client of given session whenever configuration changes.
 def module_change_cb(sess, module_name, event, private_ctx):
@@ -116,14 +113,13 @@ def module_change_cb(sess, module_name, event, private_ctx):
 
     return sr.SR_ERR_OK
 
-
 # Notable difference between c implementation is using exception mechanism for open handling unexpected events.
 # Here it is useful because `Conenction`, `Session` and `Subscribe` could throw an exception.
 try:
     if len(sys.argv) < 2:
         print
         "Usage: python application_changes.py [module-name]"
-
+      
     else:
         module_name = sys.argv[1]
 
