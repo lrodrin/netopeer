@@ -26,46 +26,40 @@ __license__ = "Apache 2.0"
 #
 # The original c implementation is also available in the source, so one can refer to it to evaluate trade-offs.
 
-import libsysrepoPython2 as sr
 import sys
+
+import libsysrepoPython2 as sr
+
 
 # Helper function for printing changes given operation, old and new value.
 def print_change(op, old_val, new_val):
-    if (op == sr.SR_OP_CREATED):
-        print
-        "CREATED: ",
-        print
-        new_val.to_string(),
-    elif (op == sr.SR_OP_DELETED):
-        print
-        "DELETED: ",
-        print
-        old_val.to_string(),
-    elif (op == sr.SR_OP_MODIFIED):
-        print
-        "MODIFIED: ",
-        print
-        "old value",
-        print
-        old_val.to_string(),
-        print
-        "new value",
-        print
-        new_val.to_string(),
-    elif (op == sr.SR_OP_MOVED):
-        print
-        "MOVED: " + new_val.xpath() + " after " + old_val.xpath()
+    if op == sr.SR_OP_CREATED:
+        print("CREATED: ", )
+        print(new_val.to_string(), )
+    elif op == sr.SR_OP_DELETED:
+        print("DELETED: ", )
+        print(old_val.to_string(), )
+    elif op == sr.SR_OP_MODIFIED:
+        print("MODIFIED: ", )
+        print("old value", )
+        print(old_val.to_string(), )
+        print("new value", )
+        print(new_val.to_string(), )
+    elif op == sr.SR_OP_MOVED:
+        print("MOVED: " + new_val.xpath() + " after " + old_val.xpath())
+
 
 # Helper function for printing events.
 def ev_to_str(ev):
-    if (ev == sr.SR_EV_VERIFY):
+    if ev == sr.SR_EV_VERIFY:
         return "verify"
-    elif (ev == sr.SR_EV_APPLY):
+    elif ev == sr.SR_EV_APPLY:
         return "apply"
-    elif (ev == sr.SR_EV_ABORT):
+    elif ev == sr.SR_EV_ABORT:
         return "abort"
     else:
         return "abort"
+
 
 # Function to print current configuration state.
 # It does so by loading all the items of a session and printing them out.
@@ -76,55 +70,49 @@ def print_current_config(session, module_name):
 
     if values is not None:
         for i in range(values.val_cnt()):
-            print
-            values.val(i).to_string(),
+            print(values.val(i).to_string(), )
+
 
 # Function to be called for subscribed client of given session whenever configuration changes.
-def module_change_cb(sess, module_name, event, private_ctx):
+def module_change_cb(session, module_name, event, private_ctx):
     # print "\n\n ========== CONFIG HAS CHANGED, CURRENT RUNNING CONFIG: ==========\n"
 
     try:
-        print
-        "\n\n ========== Notification " + ev_to_str(event) + " =============================================\n"
-        if (sr.SR_EV_APPLY == event):
-            print
-            "\n ========== CONFIG HAS CHANGED, CURRENT RUNNING CONFIG: ==========\n"
-            print_current_config(sess, module_name);
+        print("\n\n ========== Notification " + ev_to_str(event) + " =============================================\n")
+        if sr.SR_EV_APPLY == event:
+            print("\n ========== CONFIG HAS CHANGED, CURRENT RUNNING CONFIG: ==========\n")
+            print_current_config(session, module_name)
 
-        print
-        "\n ========== CHANGES: =============================================\n"
+        print("\n ========== CHANGES: =============================================\n")
 
         change_path = "/" + module_name + ":*"
 
-        it = sess.get_changes_iter(change_path);
+        it = session.get_changes_iter(change_path)
 
         while True:
-            change = sess.get_change_next(it)
-            if change == None:
+            change = session.get_change_next(it)
+            if change is None:
                 break
             print_change(change.oper(), change.old_val(), change.new_val())
 
-        print
-        "\n\n ========== END OF CHANGES =======================================\n"
+        print("\n\n ========== END OF CHANGES =======================================\n")
 
     except Exception as e:
-        print
-        e
+        print(e)
 
     return sr.SR_ERR_OK
+
 
 # Notable difference between c implementation is using exception mechanism for open handling unexpected events.
 # Here it is useful because `Conenction`, `Session` and `Subscribe` could throw an exception.
 try:
     if len(sys.argv) < 2:
-        print
-        "Usage: python application_changes.py [module-name]"
-      
+        print("Usage: python application_changes.py [module-name]")
+
     else:
         module_name = sys.argv[1]
 
-        print
-        "Application will watch for changes in " + module_name + "\n"
+        print("Application will watch for changes in " + module_name + "\n")
 
         # connect to sysrepo
         conn = sr.Connection("example_application")
@@ -137,23 +125,18 @@ try:
         subscribe.module_change_subscribe(module_name, module_change_cb, None, 0,
                                           sr.SR_SUBSCR_DEFAULT | sr.SR_SUBSCR_APPLY_ONLY)
 
-        print
-        "\n\n ========== READING STARTUP CONFIG: ==========\n"
+        print("\n\n ========== READING STARTUP CONFIG: ==========\n")
         try:
-            print_current_config(sess, module_name);
+            print_current_config(sess, module_name)
 
         except Exception as e:
-            print
-            e
+            print(e)
 
-        print
-        "\n\n ========== STARTUP CONFIG APPLIED AS RUNNING ==========\n"
+        print("\n\n ========== STARTUP CONFIG APPLIED AS RUNNING ==========\n")
 
         sr.global_loop()
 
-        print
-        "Application exit requested, exiting.\n";
+        print("Application exit requested, exiting.\n")
 
 except Exception as e:
-    print
-    e
+    print(e)

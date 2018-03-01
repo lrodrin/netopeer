@@ -1,5 +1,5 @@
 """
-This module implements the main from data implementation
+This module implements the main test of configuration methods to manipulate a NETCONF server
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -15,16 +15,16 @@ if __name__ == '__main__':
 
     filter1 = '''<turing-machine xmlns="http://example.net/turing-machine">'''  # model turing-machine
     filter2 = '''<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">'''  # model ietf-interfaces
-    filter3 = '''<sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">'''
+    filter3 = '''<sdm_node xmlns="urn:cttc:params:xml:ns:yang:sdm_node">'''  # model sdm_node
 
     # datastore sessions
-    session1 = 'startup'
-    session2 = 'running'
-    session3 = 'candidate'
+    session_startup = 'startup'
+    session_running = 'running'
+    session_candidate = 'candidate'
 
     # operations
-    operation1 = 'merge'
-    operation2 = 'replace'
+    operation_merge = 'merge'
+    operation_replace = 'replace'
 
     edit_data = '''
     <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     edit_data3 = '''
         <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
-            <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
+            <sdm_node xmlns="urn:cttc:params:xml:ns:yang:sdm_node">
                 <node-id>a</node-id>
                 <port>
                     <port-id>1000</port>
@@ -75,8 +75,8 @@ if __name__ == '__main__':
                         <mode>01</mode>
                     </signal>
                 </port>
-            </sdm-node>
-            <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
+            </sdm_node>
+            <sdm_node xmlns="urn:cttc:params:xml:ns:yang:sdm_node">
                 <node-id>b</node-id>
                 <port>
                     <port-id>2000</port>
@@ -86,8 +86,8 @@ if __name__ == '__main__':
                         <mode>02</mode>
                     </signal>
                 </port>
-            </sdm-node>
-            <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
+            </sdm_node>
+            <sdm_node xmlns="urn:cttc:params:xml:ns:yang:sdm_node">
                 <node-id>c</node-id>
                 <port>
                     <port-id>3000</port>
@@ -97,13 +97,13 @@ if __name__ == '__main__':
                         <mode>03</mode>
                     </signal>
                 </port>
-            </sdm-node>
+            </sdm_node>
         </config>
         '''
 
     edit_data4 = '''
             <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
-                <sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">
+                <sdm_node xmlns="urn:cttc:params:xml:ns:yang:sdm_node">
                     <node-id>c</node-id>
                     <port>
                         <port-id>3000</port>
@@ -113,66 +113,63 @@ if __name__ == '__main__':
                             <mode>03</mode>
                         </signal>
                     </port>
-                </sdm-node>
+                </sdm_node>
             </config>
         '''
 
     try:
-        model = 'sdm-node'
-        # print("server capabilities:")
-        # t.get_capabilities(connection)
-        # print("model %s capability:" % model)
-        # t.get_capability(connection, model)
+        model = 'sdm_node'
+        print("server capabilities:")
+        t.get_capabilities(connection)
 
-        # t.get_yang_schema(connection, model)
-        # print("yang schema for model %s obtained" % model)
+        print("model %s capability:" % model)
+        t.get_capability(connection, model)
+
+        t.get_yang_schema(connection, model)
+        print("yang schema for model %s obtained" % model)
 
         # get_config
-        #
         print("get all:")
         print(connection.get())
 
         print("get startup session:")
-        # t.get_config(connection, filter1, session1)
-        # t.get_config(connection, filter2, session1)
-        t.get_config(connection, filter3, session1)
+        t.get_config(connection, filter1, session_startup)
+        t.get_config(connection, filter2, session_startup)
+        t.get_config(connection, filter3, session_startup)
 
         print("get running session:")
-        # t.get_config(connection, filter1, session2)
-        # t.get_config(connection, filter2, session2)
-        t.get_config(connection, filter3, session2)
+        t.get_config(connection, filter1, session_running)
+        t.get_config(connection, filter2, session_running)
+        t.get_config(connection, filter3, session_running)
 
         print("get candidate session:")
-        # t.get_config(connection, filter1, session3)
-        # t.get_config(connection, filter2, session3)
-        t.get_config(connection, filter3, session3)
+        t.get_config(connection, filter1, session_candidate)
+        t.get_config(connection, filter2, session_candidate)
+        t.get_config(connection, filter3, session_candidate)
 
-        # edit-config datastore running
+        # edit-config
         #
-        # print("edit running session")
-        # t.edit_config(connection, edit_data, session2)
-        # t.edit_config(connection, edit_data2, session2)
-        # t.edit_config(connection, edit_data3, session2, operation1)
-        # print("get running session:")
-        # t.get_config(connection, filter1, session2)
-        # t.get_config(connection, filter2, session2)
-        # t.get_config(connection, filter3, session2)
+        print("edit running session")
+        t.edit_config(connection, edit_data, session_running, operation_merge)
+        t.edit_config(connection, edit_data2, session_running, operation_merge)
+        t.edit_config(connection, edit_data3, session_running, operation_merge)
+        t.edit_config(connection, edit_data4, session_running, operation_merge)
 
-        # print("edit running session")
-        # t.edit_config(connection, edit_data4, session2, operation2)
-        # print("get running session:")
-        # t.get_config(connection, filter3, session2)
+        t.edit_config(connection, edit_data, session_running, operation_replace)
+        t.edit_config(connection, edit_data2, session_running, operation_replace)
+        t.edit_config(connection, edit_data3, session_running, operation_replace)
+        t.edit_config(connection, edit_data4, session_running, operation_replace)
 
-        # edit-config datastore candidate
-        #
-        # print("edit candidate session")
-        # t.edit_config(connection, edit_data, session3)
-        # t.edit_config(connection, edit_data2, session3)
-        # t.edit_config(connection, edit_data3, session3)
-        # print("get candidate session:")
-        # t.get_config(connection, filter1, session3)
-        # t.get_config(connection, filter2, session3)
-        # t.get_config(connection, filter3, session3)
+        print("edit candidate session")
+        t.edit_config(connection, edit_data, session_candidate, operation_merge)
+        t.edit_config(connection, edit_data2, session_candidate, operation_merge)
+        t.edit_config(connection, edit_data3, session_candidate, operation_merge)
+        t.edit_config(connection, edit_data4, session_candidate, operation_merge)
+
+        t.edit_config(connection, edit_data, session_candidate, operation_replace)
+        t.edit_config(connection, edit_data2, session_candidate, operation_replace)
+        t.edit_config(connection, edit_data3, session_candidate, operation_replace)
+        t.edit_config(connection, edit_data4, session_candidate, operation_replace)
 
     finally:
         connection.close_session()

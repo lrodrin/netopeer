@@ -55,7 +55,7 @@ def module_change_cb(session, module_name, event, private_ctx):
 # Here it is useful because `Conenction`, `Session` and `Subscribe` could throw an exception.
 try:
     if len(sys.argv) < 2:
-        print("Usage: python3 application.py [module-name]")
+        print("Usage: python application.py [module-name]")
 
     else:
         module_name = sys.argv[1]
