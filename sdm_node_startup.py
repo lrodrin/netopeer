@@ -1,5 +1,5 @@
 """
-This module create the node configuration
+This module create the sdm_node configuration
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -26,8 +26,6 @@ def create_node_config(host, port, login, password, config_file, session, operat
         print("new node configuration created\nnew configuration:")
         d.get_config(connection, namespace, session)  # get node configuration
 
-        # TODO pretty print
-
     except Exception as e:
         print(e)
 
@@ -36,11 +34,11 @@ def create_node_config(host, port, login, password, config_file, session, operat
 
 
 if __name__ == '__main__':
-    host = '10.1.7.81'
+    host = '10.1.7.84'
     port = 830
     login = 'root'
     password = 'netlabN.'
     config_file = 'sdm_node_config.xml'
-    namespace = '''<sdm-node xmlns="urn:cttc:params:xml:ns:yang:sdm-node">'''
+    namespace = '''<sdm_node xmlns="urn:cttc:params:xml:ns:yang:sdm_node">'''
 
     create_node_config(host, port, login, password, config_file, session_running, operation_merge, namespace)

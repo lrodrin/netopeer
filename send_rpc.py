@@ -1,5 +1,5 @@
 """
-This module executes a RPC
+This module send a RPC to the NETCONF server
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """

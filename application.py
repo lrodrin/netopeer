@@ -41,7 +41,7 @@ def print_current_config(session, module_name):
 
     if values is not None:
         for i in range(values.val_cnt()):
-            print(values.val(i).to_string(), )
+            print(values.val(i).to_string())
 
 
 # Function to be called for subscribed client of given session whenever configuration changes.

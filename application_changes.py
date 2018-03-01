@@ -34,17 +34,17 @@ import libsysrepoPython2 as sr
 # Helper function for printing changes given operation, old and new value.
 def print_change(op, old_val, new_val):
     if op == sr.SR_OP_CREATED:
-        print("CREATED: ", )
-        print(new_val.to_string(), )
+        print("CREATED: ")
+        print(new_val.to_string())
     elif op == sr.SR_OP_DELETED:
-        print("DELETED: ", )
-        print(old_val.to_string(), )
+        print("DELETED: ")
+        print(old_val.to_string())
     elif op == sr.SR_OP_MODIFIED:
-        print("MODIFIED: ", )
-        print("old value", )
-        print(old_val.to_string(), )
-        print("new value", )
-        print(new_val.to_string(), )
+        print("MODIFIED: ")
+        print("old value")
+        print(old_val.to_string())
+        print("new value")
+        print(new_val.to_string())
     elif op == sr.SR_OP_MOVED:
         print("MOVED: " + new_val.xpath() + " after " + old_val.xpath())
 
@@ -70,7 +70,7 @@ def print_current_config(session, module_name):
 
     if values is not None:
         for i in range(values.val_cnt()):
-            print(values.val(i).to_string(), )
+            print(values.val(i).to_string())
 
 
 # Function to be called for subscribed client of given session whenever configuration changes.

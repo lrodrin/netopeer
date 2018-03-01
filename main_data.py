@@ -7,11 +7,9 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import data as t
 
 if __name__ == '__main__':
-    host = '10.1.7.81'
+    host = '10.1.7.84'
     port = 830
     connection = t.connect(host, port, 'root', 'netlabN.')  # connection to NETCONF server
-    print('connected:', connection.connected, '.... to host', host, 'on port:', port)
-    print('session-id:', connection.session_id)
 
     filter1 = '''<turing-machine xmlns="http://example.net/turing-machine">'''  # model turing-machine
     filter2 = '''<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">'''  # model ietf-interfaces

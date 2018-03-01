@@ -17,76 +17,56 @@ __license__ = "Apache 2.0"
 # limitations under the License.
 
 import libsysrepoPython2 as sr
+import six
 
 
 def print_value(value):
-    print
-    value.xpath() + " ",
+    six.print_(value.xpath() + " ", end=" ")
 
     if value.type() == sr.SR_CONTAINER_T:
-        print
-        "(container)"
+        six.print_("(container)")
     elif value.type() == sr.SR_CONTAINER_PRESENCE_T:
-        print
-        "(container)"
+        six.print_("(container)")
     elif value.type() == sr.SR_LIST_T:
-        print
-        "(list instance)"
+        six.print_("(list instance)")
     elif value.type() == sr.SR_STRING_T:
-        print
-        "= " + value.data().get_string()
+        six.print_("= " + value.data().get_string())
     elif value.type() == sr.SR_BOOL_T:
         if value.data().get_bool():
-            print
-            "= true"
+            six.print_("= true")
         else:
-            print
-            "= false"
+            six.print_("= false")
     elif value.type() == sr.SR_ENUM_T:
-        print
-        "= " + value.data().get_enum()
+        six.print_("= " + value.data().get_enum())
     elif value.type() == sr.SR_UINT8_T:
-        print
-        "= " + repr(value.data().get_uint8())
+        six.print_("= " + repr(value.data().get_uint8()))
     elif value.type() == sr.SR_UINT16_T:
-        print
-        "= " + repr(value.data().get_uint16())
+        six.print_("= " + repr(value.data().get_uint16()))
     elif value.type() == sr.SR_UINT32_T:
-        print
-        "= " + repr(value.data().get_uint32())
+        six.print_("= " + repr(value.data().get_uint32()))
     elif value.type() == sr.SR_UINT64_T:
-        print
-        "= " + repr(value.data().get_uint64())
+        six.print_("= " + repr(value.data().get_uint64()))
     elif value.type() == sr.SR_INT8_T:
-        print
-        "= " + repr(value.data().get_int8())
+        six.print_("= " + repr(value.data().get_int8()))
     elif value.type() == sr.SR_INT16_T:
-        print
-        "= " + repr(value.data().get_int16())
+        six.print_("= " + repr(value.data().get_int16()))
     elif value.type() == sr.SR_INT32_T:
-        print
-        "= " + repr(value.data().get_int32())
+        six.print_("= " + repr(value.data().get_int32()))
     elif value.type() == sr.SR_INT64_T:
-        print
-        "= " + repr(value.data().get_int64())
+        six.print_("= " + repr(value.data().get_int64()))
     elif value.type() == sr.SR_IDENTITYREF_T:
-        print
-        "= " + repr(value.data().get_identityref())
+        six.print_("= " + repr(value.data().get_identityref()))
     elif value.type() == sr.SR_BITS_T:
-        print
-        "= " + repr(value.data().get_bits())
+        six.print_("= " + repr(value.data().get_bits()))
     elif value.type() == sr.SR_BINARY_T:
-        print
-        "= " + repr(value.data().get_binary())
+        six.print_("= " + repr(value.data().get_binary()))
     else:
-        print
-        "(unprintable)"
+        six.print_("(unprintable)")
 
 
 def test_rpc_cb(xpath, in_vals, holder, private_ctx):
     try:
-        print
-        "\n\n ========== RPC CALLED =========="
+        six.print_("\n\n ========== RPC CALLED ==========")
         out_vals = holder.allocate(1)
 
         if in_vals is None or out_vals is None:
@@ -98,8 +78,7 @@ def test_rpc_cb(xpath, in_vals, holder, private_ctx):
         out_vals.val(0).set(xpath + "/greeting", "Hello nerd!", sr.SR_STRING_T)
 
     except Exception as e:
-        print
-        e
+        six.print_(e)
 
 
 try:
@@ -115,25 +94,20 @@ try:
     # subscribe for changes in running config */
     subscribe = sr.Subscribe(sess)
 
-    print
-    "\n ========== SUBSCRIBE TO RPC CALL =========="
+    six.print_("\n ========== SUBSCRIBE TO RPC CALL ==========")
     subscribe.rpc_subscribe(xpath, test_rpc_cb)
 
     in_vals = sr.Vals(1)
     in_vals.val(0).set(xpath + "/name", "Laura", sr.SR_STRING_T)
 
-    print
-    "\n ========== START RPC CALL =========="
+    six.print_("\n ========== START RPC CALL ==========")
     out_vals = sess.rpc_send(xpath, in_vals)
 
-    print
-    "\n ========== PRINT RETURN VALUE =========="
+    six.print_("\n ========== PRINT RETURN VALUE ==========")
     for n in range(out_vals.val_cnt()):
         print_value(out_vals.val(n))
 
-    print
-    "\n ========== END PROGRAM ==========\n"
+        six.print_("\n ========== END PROGRAM ==========\n")
 
 except Exception as e:
-    print
-    e
+    six.print_(e)

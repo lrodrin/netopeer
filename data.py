@@ -6,7 +6,7 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import re
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as md
-
+import six
 from ncclient import manager
 
 INDENT = ' ' * 4
@@ -30,12 +30,12 @@ def connect(host, port, username, password):
     try:
         connection = manager.connect(host=host, port=port, username=username, password=password, hostkey_verify=False,
                                      device_params={'name': 'default'}, allow_agent=False, look_for_keys=False)
-        print('server connected:', connection.connected, '.... to host', host, 'on port:', port)
-        print('session-id:', connection.session_id)
+        six.print_('server connected to host ', host, ' on port:', port)
+        six.print_('session-id:', connection.session_id)
         return connection
 
     except Exception as e:
-        print(e)
+        six.print_(e)
 
 
 def get_capabilities(connection):
@@ -45,7 +45,7 @@ def get_capabilities(connection):
     :param connection: connection
     """
     for capability in connection.server_capabilities:
-        print(capability)
+        six.print_(capability)
 
 
 def get_capability(connection, model_name):
@@ -60,7 +60,7 @@ def get_capability(connection, model_name):
     for server_capability in connection.server_capabilities:
         model = re.search(model_name, server_capability)
         if model is not None:
-            print(server_capability)
+            six.print_(server_capability)
 
 
 def get_yang_schema(connection, yang_model):
@@ -119,4 +119,5 @@ def pretty_print(filename):
     :param filename: file name
     :type filename: file
     """
-    print('\n'.join(line for line in md.parseString(filename).toprettyxml(indent=INDENT).split('\n') if line.strip()))
+    six.print_(
+        '\n'.join(line for line in md.parseString(filename).toprettyxml(indent=INDENT).split('\n') if line.strip()))

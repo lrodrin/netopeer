@@ -70,20 +70,13 @@ cmake .. && make -j8 && make install
 cd ../..
 
 # BUG sysrepo
-cp ietf-keystore@2016-10-31.yang /root/sysrepo/build/repository/yang/ &&
-cp ietf-netconf-server@2016-11-02.yang /root/sysrepo/build/repository/yang/ &&
-cp ietf-x509-cert-to-name@2014-12-10.yang /root/sysrepo/build/repository/yang/ &&
-cp ietf-ssh-server@2016-11-02.yang /root/sysrepo/build/repository/yang/ &&
-cp ietf-tls-server@2016-11-02.yang /root/sysrepo/build/repository/yang/ &&
-cp ietf-system@2014-08-06.yang /root/sysrepo/build/repository/yang/ &&
-cp iana-crypt-hash@2014-08-06.yang /root/sysrepo/build/repository/yang/ &&
-cp ietf-keystore.persist /root/sysrepo/build/repository/data/ &&
-cp ietf-keystore.running /root/sysrepo/build/repository/data/ &&
-cp ietf-keystore.running.lock /root/sysrepo/build/repository/data/ &&
-cp ietf-keystore.startup /root/sysrepo/build/repository/data/ &&
-cp ietf-keystore.startup.lock /root/sysrepo/build/repository/data/ &&
-cp test@2018-02-05.yang /root/sysrepo/build/repository/yang/ &&
-cp bluespace_node@2018-02-06.yang /root/sysrepo/build/repository/yang/ &&
+cp /root/YANG/ietf-keystore@2016-10-31.yang /root/sysrepo/build/repository/yang/ &&
+cp /root/YANG/ietf-netconf-server@2016-11-02.yang /root/sysrepo/build/repository/yang/ &&
+cp /root/YANG/ietf-x509-cert-to-name@2014-12-10.yang /root/sysrepo/build/repository/yang/ &&
+cp /root/YANG/ietf-ssh-server@2016-11-02.yang /root/sysrepo/build/repository/yang/ &&
+cp /root/YANG/ietf-tls-server@2016-11-02.yang /root/sysrepo/build/repository/yang/ &&
+cp /root/YANG/ietf-system@2014-08-06.yang /root/sysrepo/build/repository/yang/ &&
+cp /root/YANG/iana-crypt-hash@2014-08-06.yang /root/sysrepo/build/repository/yang/ &&
 cp ietf-keystore.persist /root/sysrepo/build/repository/data/ &&
 cp ietf-keystore.running /root/sysrepo/build/repository/data/ &&
 cp ietf-keystore.running.lock /root/sysrepo/build/repository/data/ &&
@@ -91,9 +84,12 @@ cp ietf-keystore.startup /root/sysrepo/build/repository/data/ &&
 cp ietf-keystore.startup.lock /root/sysrepo/build/repository/data/ 
 
 sysrepoctl --install --yang=/root/sysrepo/build/repository/yang/ietf-keystore@2016-10-31.yang --owner=root:root --permissions=666 &&
-sysrepoctl --install --yang=/root/sysrepo/build/repository/yang/ietf-netconf-server@2016-11-02.yang --owner=root:root --permissions=666 &&
-sysrepoctl --install --yang=/root/sysrepo/build/repository/yang/test@2018-02-05.yang --owner=root:root --permissions=644 &&
-sysrepoctl --install --yang=/root/sysrepo/build/repository/yang/bluespace_node@2018-02-06.yang --owner=root:root --permissions=644
+sysrepoctl --install --yang=/root/sysrepo/build/repository/yang/ietf-netconf-server@2016-11-02.yang --owner=root:root --permissions=666
+#
+
+sysrepoctl --install --yang=/root/sysrepo/build/repository/yang/test.yang --owner=root:root --permissions=644 &&
+sysrepoctl --install --yang=/root/sysrepo/build/repository/yang/bluespace_node.yang --owner=root:root --permissions=644 &&
+sysrepoctl --install --yang=/root/sysrepo/build/repository/yang/sdm_node.yang --owner=root:root --permissions=644
 #
 
 echo "Building Netopeer2 from source"
