@@ -4,8 +4,9 @@ This module send a RPC to the NETCONF server
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import data as d
 from ncclient.xml_ import to_ele
+
+from bluespace import data as d
 
 # datastore sessions
 session_startup = 'startup'

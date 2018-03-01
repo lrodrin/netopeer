@@ -4,7 +4,7 @@ This module implements the main test of configuration methods to manipulate a NE
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import data as t
+from bluespace import data as t
 
 if __name__ == '__main__':
     host = '10.1.7.84'

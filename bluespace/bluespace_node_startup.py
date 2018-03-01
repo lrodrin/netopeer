@@ -1,5 +1,5 @@
 """
-This module create the sdm_node configuration
+This module create the node configuration
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    config_file = 'sdm_node_config.xml'
-    namespace = '''<sdm_node xmlns="urn:cttc:params:xml:ns:yang:sdm_node">'''
+    config_file = 'bluespace_node_config.xml'
+    namespace = '''<bluespace-node xmlns="urn:cttc:params:xml:ns:yang:bluespace_node">'''
 
     create_node_config(host, port, login, password, config_file, session_running, operation_merge, namespace)

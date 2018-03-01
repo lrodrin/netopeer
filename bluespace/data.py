@@ -4,8 +4,9 @@ This module implements configuration methods to manipulate a NETCONF server
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 import re
-import xml.etree.ElementTree as ET
 import xml.dom.minidom as md
+import xml.etree.ElementTree as ET
+
 import six
 from ncclient import manager
 
