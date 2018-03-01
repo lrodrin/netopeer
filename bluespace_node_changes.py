@@ -6,7 +6,7 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 
 import sys
 
-import bluespace.data as d
+import data as d
 
 # datastore sessions
 session_startup = 'startup'
@@ -76,9 +76,9 @@ def change_signal_config(host, port, login, password, nodeid, location, componen
 if __name__ == '__main__':
     if len(sys.argv) != 14:
         print(
-            "Usage: python change_bluespace_node.py [nodeid] [location] [componentid] [param1] [param2] [param3] ["
+            "Usage: python bluespace_node_changes.py [nodeid] [location] [componentid] [param1] [param2] [param3] ["
             "param4] [wdm-id] [port-id] [signal-id] [wavelength] [mode] [core]")
-        print("Example: python change_bluespace_node.py a CO 01 01 02 03 04 01 3000 3001 2 03 3")
+        print("Example: python bluespace_node_changes.py a CO 01 01 02 03 04 01 3000 3001 2 03 3")
 
     else:
         host = '10.1.7.84'

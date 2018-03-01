@@ -71,35 +71,34 @@ def print_current_config(session, module_name):
 
     if values is not None:
         for i in range(values.val_cnt()):
-            print(values.val(i).to_string())
+            six.print_(values.val(i).to_string())
 
 
 # Function to be called for subscribed client of given session whenever configuration changes.
-def module_change_cb(session, module_name, event, private_ctx):
-    # print "\n\n ========== CONFIG HAS CHANGED, CURRENT RUNNING CONFIG: ==========\n"
-
+def module_change_cb(sess, module_name, event, private_ctx):
     try:
-        print("\n\n ========== Notification " + ev_to_str(event) + " =============================================\n")
+        six.print_(
+            "\n\n ========== Notification " + ev_to_str(event) + " =============================================\n")
         if sr.SR_EV_APPLY == event:
-            print("\n ========== CONFIG HAS CHANGED, CURRENT RUNNING CONFIG: ==========\n")
-            print_current_config(session, module_name)
+            six.print_("\n ========== CONFIG HAS CHANGED, CURRENT RUNNING CONFIG: ==========\n")
+            print_current_config(sess, module_name)
 
-        print("\n ========== CHANGES: =============================================\n")
+        six.print_("\n ========== CHANGES: =============================================\n")
 
         change_path = "/" + module_name + ":*"
 
-        it = session.get_changes_iter(change_path)
+        it = sess.get_changes_iter(change_path)
 
         while True:
-            change = session.get_change_next(it)
+            change = sess.get_change_next(it)
             if change is None:
                 break
             print_change(change.oper(), change.old_val(), change.new_val())
 
-        print("\n\n ========== END OF CHANGES =======================================\n")
+        six.print_("\n\n ========== END OF CHANGES =======================================\n")
 
     except Exception as e:
-        print(e)
+        six.print_(e)
 
     return sr.SR_ERR_OK
 
@@ -108,12 +107,12 @@ def module_change_cb(session, module_name, event, private_ctx):
 # Here it is useful because `Conenction`, `Session` and `Subscribe` could throw an exception.
 try:
     if len(sys.argv) < 2:
-        print("Usage: python application_changes.py [module-name]")
+        six.print_("Usage: python application_changes.py [module-name]")
 
     else:
         module_name = sys.argv[1]
 
-        print("Application will watch for changes in " + module_name + "\n")
+        six.print_("Application will watch for changes in " + module_name + "\n")
 
         # connect to sysrepo
         conn = sr.Connection("example_application")
@@ -126,18 +125,18 @@ try:
         subscribe.module_change_subscribe(module_name, module_change_cb, None, 0,
                                           sr.SR_SUBSCR_DEFAULT | sr.SR_SUBSCR_APPLY_ONLY)
 
-        print("\n\n ========== READING STARTUP CONFIG: ==========\n")
+        six.print_("\n\n ========== READING STARTUP CONFIG: ==========\n")
         try:
             print_current_config(sess, module_name)
 
         except Exception as e:
-            print(e)
+            six.print_(e)
 
-        print("\n\n ========== STARTUP CONFIG APPLIED AS RUNNING ==========\n")
+        six.print_("\n\n ========== STARTUP CONFIG APPLIED AS RUNNING ==========\n")
 
         sr.global_loop()
 
-        print("Application exit requested, exiting.\n")
+        six.print_("Application exit requested, exiting.\n")
 
 except Exception as e:
-    print(e)
+    six.print_(e)
