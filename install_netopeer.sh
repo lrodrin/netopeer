@@ -9,14 +9,13 @@ echo "Building cmocka library from source"
 if [ ! -d "cmocka/build" ]; then
 	wget https://cmocka.org/files/1.0/cmocka-1.0.1.tar.xz
 	tar -xJvf cmocka-1.0.1.tar.xz
-	mv cmocka-1.0.1 cmocka
-	cd cmocka && mkdir build && cd build
-	cmake .. && make -j8 && make install
+	cd cmocka-1.0.1 && mkdir build && cd build
+	cmake .. && make -j8 && sudo make install
 	cd ../..
 	rm cmocka-1.0.1.tar.xz
 else
-	cd cmocka/build
-    make install
+    cd cmocka/build
+    sudo make install
     cd ../..
 fi
 
