@@ -2,8 +2,7 @@
 
 apt-get install zlib1g-dev libssl-dev libavl-dev libev-dev coreutils acl valgrind autoconf libtool
 apt-get install gcc make cmake doxygen swig python-dev lua5.2 git build-essential devscripts debhelper
-apt-get install bison flex libpcre3-dev 
-# libprotobuf-c-dev protobuf-c-compiler
+apt-get install bison flex libpcre3-dev libprotobuf-c-dev protobuf-c-compiler
 
 echo "Building cmocka library from source"
 if [ ! -d "cmocka/build" ]; then
