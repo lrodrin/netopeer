@@ -8,11 +8,12 @@ echo "Building cmocka library from source"
 if [ ! -d "cmocka/build" ]; then
 	wget https://cmocka.org/files/1.0/cmocka-1.0.1.tar.xz
 	tar -xJvf cmocka-1.0.1.tar.xz
-	cd cmocka-1.0.1 && mkdir build && cd build
-	cmake .. && make -j8 && sudo make install
+	cd cmocka-1.0.1; mkdir build; cd build
+	cmake .. &&	make -j8 &&	sudo make install
 	cd ../..
-	rm cmocka-1.0.1.tar.xz
+
 else
+	echo "Using cmocka from cache"
     cd cmocka-1.0.1/build
     sudo make install
     cd ../..
@@ -31,9 +32,10 @@ if [ ! -d "libssh-/build" ]; then
 	cd libssh-0.7.5; mkdir build; cd build
 	cmake .. && make -j8 && sudo make install	
 	cd ../..
-	rm libssh-0.7.5.tar.gz
+
 else
-    cd ibssh-0.7.5/build
+	echo "Using libssh from cache"
+    cd libssh-0.7.5/build
     sudo make install
     cd ../..
 fi
@@ -51,10 +53,11 @@ if [ ! -f "protobuf/Makefile" ]; then
 	cd protobuf-3.2.0
 	./autogen.sh
 	./configure
-	make -j8 && make sudo install
+	make -j8 && sudo make install
 	cd ..
-	rm v3.2.0.tar.gz
+
 else
+	echo "Using protobuf from cache"
     cd protobuf-3.2.0
     sudo make install
     cd ..
