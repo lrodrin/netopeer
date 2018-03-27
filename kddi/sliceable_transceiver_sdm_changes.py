@@ -81,7 +81,7 @@ if __name__ == '__main__':
         print("Example: python sliceable_transceiver_sdm_changes.py a CO 01 01 02 03 04 01 3000 3001 2 03 3")
 
     else:
-        host = '10.1.7.65'
+        host = '10.1.7.84'
         port = 830
         login = 'root'
         password = 'netlabN.'
