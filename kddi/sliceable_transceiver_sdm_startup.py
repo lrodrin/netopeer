@@ -23,7 +23,7 @@ def create_node_config(host, port, login, password, config_file, session, operat
         f = open(config_file)  # open configuration file
         d.edit_config(connection, f.read(), session, operation)  # create node configuration
         f.close()
-        print("new node configuration created\nnew configuration:")
+        print("new sliceable-transceiver-sdm configuration created\nnew configuration:")
         d.get_config(connection, namespace, session)  # get node configuration
 
     except Exception as e:
