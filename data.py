@@ -1,7 +1,7 @@
 """
 This module implements configuration methods to manipulate a NETCONF server
 
-Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 import re
 import xml.dom.minidom as md

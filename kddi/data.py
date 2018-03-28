@@ -120,5 +120,4 @@ def pretty_print(filename):
     :param filename: file name
     :type filename: file
     """
-    six.print_(
-        '\n'.join(line for line in md.parseString(filename).toprettyxml(indent=INDENT).split('\n') if line.strip()))
+    return '\n'.join(line for line in md.parseString(filename).toprettyxml(indent=INDENT).split('\n') if line.strip())

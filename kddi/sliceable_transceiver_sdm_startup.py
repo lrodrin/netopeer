@@ -1,7 +1,7 @@
 """
-This module create the node configuration
+This module create the sliceable transceiver sdm configuration
 
-Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
 import data as d
@@ -34,11 +34,11 @@ def create_node_config(host, port, login, password, config_file, session, operat
 
 
 if __name__ == '__main__':
-    host = '10.1.7.84'
+    host = '10.1.7.67'
     port = 830
     login = 'root'
     password = 'netlabN.'
-    config_file = 'sliceable_transceiver_sdm_config.xml'
-    namespace = '''<bluespace-node xmlns="urn:cttc:params:xml:ns:yang:bluespace_node">'''
+    config_file = 'slice1_add.xml'
+    namespace = '''<transceiver xmlns="urn:sliceable-transceiver-sdm">'''
 
     create_node_config(host, port, login, password, config_file, session_running, operation_merge, namespace)
