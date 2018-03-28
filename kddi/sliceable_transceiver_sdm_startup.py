@@ -4,7 +4,7 @@ This module create the sliceable transceiver sdm configuration
 Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import data as d
+import kddi.data as d
 
 # datastore sessions
 session_startup = 'startup'
@@ -24,7 +24,8 @@ def create_node_config(host, port, login, password, config_file, session, operat
         d.edit_config(connection, f.read(), session, operation)  # create node configuration
         f.close()
         print("new sliceable-transceiver-sdm configuration created\nnew configuration:")
-        print(connection.get_config(source=session_running, filter=('subtree', filter)))
+        print(d.get_config(connection, filter, session))
+
 
     except Exception as e:
         print(e)
