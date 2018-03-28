@@ -90,7 +90,7 @@ def generate(filename, id_slice):
     transceiver.append(slice)
     config.append(transceiver)
     # pretty string
-    xml = etree.tostring(transceiver)
+    xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
     with open(filename, "w") as f:
         f.write(pretty_xml)
