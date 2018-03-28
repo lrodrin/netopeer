@@ -1,12 +1,10 @@
 """
-This module implements change the node configuration
+This module create the sliceable transceiver sdm configuration
 
-Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import sys
-
-import data as d
+import kddi.data as d
 
 # datastore sessions
 session_startup = 'startup'
@@ -18,53 +16,19 @@ operation_merge = 'merge'
 operation_replace = 'replace'
 
 
-def change_signal_config(host, port, login, password, nodeid, location, componentid, param1, param2, param3, param4,
-                         wdmid, portid,
-                         signalid, wavelength, mode, core):
+def change_node_config(host, port, login, password, config_file, session, operation, filter):
     connection = d.connect(host, port, login, password)  # connection to NETCONF server
 
-    namespace = '''<bluespace-node xmlns="urn:cttc:params:xml:ns:yang:bluespace_node">'''
-    component_config = '''
-    <?xml version="1.0" encoding="UTF-8"?>
-    <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-        <bluespace-node xmlns="urn:cttc:params:xml:ns:yang:bluespace_node">
-            <bluespace-node-id>''' + nodeid + '''</bluespace-node-id>
-            <location>''' + location + '''</location>
-            <components>
-                <component-id>''' + componentid + '''</component-id>
-                <analog-rof>
-                    <param1>''' + param1 + '''</param1>
-                </analog-rof>
-                <digital-rof>
-                    <param2>''' + param2 + '''</param2>
-                </digital-rof>
-                <optical-beam-forming>
-                    <param3>''' + param3 + '''</param3>
-                </optical-beam-forming>
-                <ethernet>
-                    <param4>''' + param4 + '''</param4>
-                </ethernet>
-                <sdm-wdm>
-                    <wdm-id>''' + wdmid + '''</wdm-id>
-                    <port>
-                        <port-id>''' + portid + '''</port-id>
-                        <signal>
-                            <signal-id>''' + signalid + '''</signal-id>
-                            <wavelength>''' + wavelength + '''</wavelength>
-                            <mode>''' + mode + '''</mode>
-                            <core>''' + core + '''</core>
-                        </signal>
-                    </port>
-                </sdm-wdm>
-            </components>
-        </bluespace-node>
-    </config>
-    '''
+    snippet = """<config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+          <transceiver xmlns="urn:sliceable-transceiver-sdm">
+            <slice> <sliceid> <optical-channel>
+            <coreid>%s</coreid> <uid>%s</uid> <gid>%s</gid>
+            <password>*</password> <ssh_keydir/> <homedir/>
+          </optical-channel></sliceid></slice></transceiver></config>""" % ("Core19", uid, gid)
 
     try:
-        d.edit_config(connection, component_config, session_running, operation_replace)  # edit configuration
-        print("node configuration edited\nnew configuration:")
-        d.get_config(connection, namespace, session_running)  # get node configuration
+        print(d.get_config(connection, filter, session))
+
 
     except Exception as e:
         print(e)
@@ -74,18 +38,11 @@ def change_signal_config(host, port, login, password, nodeid, location, componen
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 14:
-        print(
-            "Usage: python sliceable_transceiver_sdm_changes.py [nodeid] [location] [componentid] [param1] [param2] [param3] ["
-            "param4] [wdm-id] [port-id] [signal-id] [wavelength] [mode] [core]")
-        print("Example: python sliceable_transceiver_sdm_changes.py a CO 01 01 02 03 04 01 3000 3001 2 03 3")
+    host = '10.1.7.67'
+    port = 830
+    login = 'root'
+    password = 'netlabN.'
+    config_file = 'slice1_add.xml'
+    filter = "</coreid>"
 
-    else:
-        host = '10.1.7.84'
-        port = 830
-        login = 'root'
-        password = 'netlabN.'
-
-        change_signal_config(host, port, login, password, sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4],
-                             sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8], sys.argv[9], sys.argv[10],
-                             sys.argv[11], sys.argv[12], sys.argv[13])
+    change_node_config(host, port, login, password, config_file, session_running, operation_merge, filter)

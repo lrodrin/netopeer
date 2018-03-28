@@ -47,7 +47,7 @@ def generate(filename, id_slice):
             frequency_slot = etree.Element('frequency-slot')
             # frequency_slot parameters
             ncf = etree.Element('ncf')
-            ncf.text = '39'
+            ncf.text = '41'
             frequency_slot.append(ncf)
             slot_width = etree.Element('slot-width')
             slot_width.text = '1'

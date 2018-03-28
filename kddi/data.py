@@ -93,6 +93,21 @@ def get_config(connection, filter, session):
     return pretty_print(config)
 
 
+def get_config_path(connection, filter, session):
+    """
+    Retrieve the session config from the NETCONF server using a get-config operation
+
+    :param connection: connection
+    :param filter: filter
+    :param session: datastore session
+    :type session: str
+    :type filter: str
+    :return configuration
+    """
+    config = connection.get_config(source=session, filter=('xpath', filter)).data_xml
+    return pretty_print(config)
+
+
 def write_file(fi, fo):
     file = open(fo, "w")
     file.write(fi)
