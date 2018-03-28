@@ -16,7 +16,7 @@ operation_merge = 'merge'
 operation_replace = 'replace'
 
 
-def create_node_config(host, port, login, password, config_file, session, operation, namespace):
+def create_node_config(host, port, login, password, config_file, session, operation, filter):
     connection = d.connect(host, port, login, password)  # connection to NETCONF server
 
     try:
@@ -24,7 +24,7 @@ def create_node_config(host, port, login, password, config_file, session, operat
         d.edit_config(connection, f.read(), session, operation)  # create node configuration
         f.close()
         print("new sliceable-transceiver-sdm configuration created\nnew configuration:")
-        d.get_config(connection, namespace, session)  # get node configuration
+        print(connection.get_config(source=session_running, filter=('subtree', filter)))
 
     except Exception as e:
         print(e)
@@ -39,6 +39,6 @@ if __name__ == '__main__':
     login = 'root'
     password = 'netlabN.'
     config_file = 'slice1_add.xml'
-    namespace = '''<transceiver xmlns="urn:sliceable-transceiver-sdm">'''
+    filter = "<transceiver/>"
 
-    create_node_config(host, port, login, password, config_file, session_running, operation_merge, namespace)
+    create_node_config(host, port, login, password, config_file, session_running, operation_merge, filter)

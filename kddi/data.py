@@ -87,9 +87,10 @@ def get_config(connection, filter, session):
     :param session: datastore session
     :type session: str
     :type filter: str
+    :return configuration
     """
     config = connection.get_config(source=session, filter=('subtree', filter)).data_xml
-    pretty_print(config)
+    return pretty_print(config)
 
 
 def write_file(fi, fo):

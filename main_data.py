@@ -7,13 +7,14 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import data as t
 
 if __name__ == '__main__':
-    host = '10.1.7.84'
+    host = '10.1.7.67'
     port = 830
     connection = t.connect(host, port, 'root', 'netlabN.')  # connection to NETCONF server
 
     filter1 = '''<turing-machine xmlns="http://example.net/turing-machine">'''  # model turing-machine
     filter2 = '''<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">'''  # model ietf-interfaces
     filter3 = '''<sdm_node xmlns="urn:cttc:params:xml:ns:yang:sdm_node">'''  # model sdm_node
+    filter4 = '''<transceiver xmlns="urn:sliceable-transceiver-sdm">'''  # model sliceable-transceiver-sdm
 
     # datastore sessions
     session_startup = 'startup'
@@ -116,58 +117,60 @@ if __name__ == '__main__':
         '''
 
     try:
-        model = 'sdm_node'
-        print("server capabilities:")
-        t.get_capabilities(connection)
-
-        print("model %s capability:" % model)
-        t.get_capability(connection, model)
-
-        t.get_yang_schema(connection, model)
-        print("yang schema for model %s obtained" % model)
+        # model = 'sdm_node'
+        # print("server capabilities:")
+        # t.get_capabilities(connection)
+        #
+        # print("model %s capability:" % model)
+        # t.get_capability(connection, model)
+        #
+        # t.get_yang_schema(connection, model)
+        # print("yang schema for model %s obtained" % model)
 
         # get_config
         print("get all:")
-        print(connection.get())
+        # print(connection.get())
+        # print(connection.get(filter=('subtree', "<transceiver/>")))
+        print(connection.get_config(source=session_running, filter=('subtree', "<transceiver/>")))
 
-        print("get startup session:")
-        t.get_config(connection, filter1, session_startup)
-        t.get_config(connection, filter2, session_startup)
-        t.get_config(connection, filter3, session_startup)
+        # print("get startup session:")
+        # t.get_config(connection, filter1, session_startup)
+        # t.get_config(connection, filter2, session_startup)
+        # t.get_config(connection, filter3, session_startup)
 
-        print("get running session:")
-        t.get_config(connection, filter1, session_running)
-        t.get_config(connection, filter2, session_running)
-        t.get_config(connection, filter3, session_running)
+        # print("get running session:")
+        # t.get_config(connection, filter1, session_running)
+        # t.get_config(connection, filter2, session_running)
+        # t.get_config(connection, filter3, session_running)
 
-        print("get candidate session:")
-        t.get_config(connection, filter1, session_candidate)
-        t.get_config(connection, filter2, session_candidate)
-        t.get_config(connection, filter3, session_candidate)
+        # print("get candidate session:")
+        # t.get_config(connection, filter1, session_candidate)
+        # t.get_config(connection, filter2, session_candidate)
+        # t.get_config(connection, filter3, session_candidate)
 
         # edit-config
         #
-        print("edit running session")
-        t.edit_config(connection, edit_data, session_running, operation_merge)
-        t.edit_config(connection, edit_data2, session_running, operation_merge)
-        t.edit_config(connection, edit_data3, session_running, operation_merge)
-        t.edit_config(connection, edit_data4, session_running, operation_merge)
-
-        t.edit_config(connection, edit_data, session_running, operation_replace)
-        t.edit_config(connection, edit_data2, session_running, operation_replace)
-        t.edit_config(connection, edit_data3, session_running, operation_replace)
-        t.edit_config(connection, edit_data4, session_running, operation_replace)
-
-        print("edit candidate session")
-        t.edit_config(connection, edit_data, session_candidate, operation_merge)
-        t.edit_config(connection, edit_data2, session_candidate, operation_merge)
-        t.edit_config(connection, edit_data3, session_candidate, operation_merge)
-        t.edit_config(connection, edit_data4, session_candidate, operation_merge)
-
-        t.edit_config(connection, edit_data, session_candidate, operation_replace)
-        t.edit_config(connection, edit_data2, session_candidate, operation_replace)
-        t.edit_config(connection, edit_data3, session_candidate, operation_replace)
-        t.edit_config(connection, edit_data4, session_candidate, operation_replace)
+        # print("edit running session")
+        # t.edit_config(connection, edit_data, session_running, operation_merge)
+        # t.edit_config(connection, edit_data2, session_running, operation_merge)
+        # t.edit_config(connection, edit_data3, session_running, operation_merge)
+        # t.edit_config(connection, edit_data4, session_running, operation_merge)
+        #
+        # t.edit_config(connection, edit_data, session_running, operation_replace)
+        # t.edit_config(connection, edit_data2, session_running, operation_replace)
+        # t.edit_config(connection, edit_data3, session_running, operation_replace)
+        # t.edit_config(connection, edit_data4, session_running, operation_replace)
+        #
+        # print("edit candidate session")
+        # t.edit_config(connection, edit_data, session_candidate, operation_merge)
+        # t.edit_config(connection, edit_data2, session_candidate, operation_merge)
+        # t.edit_config(connection, edit_data3, session_candidate, operation_merge)
+        # t.edit_config(connection, edit_data4, session_candidate, operation_merge)
+        #
+        # t.edit_config(connection, edit_data, session_candidate, operation_replace)
+        # t.edit_config(connection, edit_data2, session_candidate, operation_replace)
+        # t.edit_config(connection, edit_data3, session_candidate, operation_replace)
+        # t.edit_config(connection, edit_data4, session_candidate, operation_replace)
 
     finally:
         connection.close_session()
