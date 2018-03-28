@@ -8,7 +8,7 @@
                 <coreid>Core19</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -17,7 +17,7 @@
                 <coreid>Core19</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -26,7 +26,7 @@
                 <coreid>Core19</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -35,7 +35,7 @@
                 <coreid>Core19</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -44,7 +44,7 @@
                 <coreid>Core19</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -53,7 +53,7 @@
                 <coreid>Core19</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -62,7 +62,7 @@
                 <coreid>Core18</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -71,7 +71,7 @@
                 <coreid>Core18</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -80,7 +80,7 @@
                 <coreid>Core18</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -89,7 +89,7 @@
                 <coreid>Core18</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -98,7 +98,7 @@
                 <coreid>Core18</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -107,7 +107,7 @@
                 <coreid>Core18</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -116,7 +116,7 @@
                 <coreid>Core17</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -125,7 +125,7 @@
                 <coreid>Core17</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -134,7 +134,7 @@
                 <coreid>Core17</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -143,7 +143,7 @@
                 <coreid>Core17</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -152,7 +152,7 @@
                 <coreid>Core17</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -161,7 +161,7 @@
                 <coreid>Core17</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -170,7 +170,7 @@
                 <coreid>Core16</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -179,7 +179,7 @@
                 <coreid>Core16</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -188,7 +188,7 @@
                 <coreid>Core16</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -197,7 +197,7 @@
                 <coreid>Core16</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -206,7 +206,7 @@
                 <coreid>Core16</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -215,7 +215,7 @@
                 <coreid>Core16</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -224,7 +224,7 @@
                 <coreid>Core15</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -233,7 +233,7 @@
                 <coreid>Core15</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -242,7 +242,7 @@
                 <coreid>Core15</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -251,7 +251,7 @@
                 <coreid>Core15</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -260,7 +260,7 @@
                 <coreid>Core15</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -269,7 +269,7 @@
                 <coreid>Core15</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -278,7 +278,7 @@
                 <coreid>Core14</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -287,7 +287,7 @@
                 <coreid>Core14</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -296,7 +296,7 @@
                 <coreid>Core14</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -305,7 +305,7 @@
                 <coreid>Core14</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -314,7 +314,7 @@
                 <coreid>Core14</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -323,7 +323,7 @@
                 <coreid>Core14</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -332,7 +332,7 @@
                 <coreid>Core13</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -341,7 +341,7 @@
                 <coreid>Core13</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -350,7 +350,7 @@
                 <coreid>Core13</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -359,7 +359,7 @@
                 <coreid>Core13</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -368,7 +368,7 @@
                 <coreid>Core13</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -377,7 +377,7 @@
                 <coreid>Core13</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -386,7 +386,7 @@
                 <coreid>Core12</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -395,7 +395,7 @@
                 <coreid>Core12</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -404,7 +404,7 @@
                 <coreid>Core12</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -413,7 +413,7 @@
                 <coreid>Core12</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -422,7 +422,7 @@
                 <coreid>Core12</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -431,7 +431,7 @@
                 <coreid>Core12</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -440,7 +440,7 @@
                 <coreid>Core11</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -449,7 +449,7 @@
                 <coreid>Core11</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -458,7 +458,7 @@
                 <coreid>Core11</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -467,7 +467,7 @@
                 <coreid>Core11</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -476,7 +476,7 @@
                 <coreid>Core11</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -485,7 +485,7 @@
                 <coreid>Core11</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -494,7 +494,7 @@
                 <coreid>Core10</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -503,7 +503,7 @@
                 <coreid>Core10</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -512,7 +512,7 @@
                 <coreid>Core10</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -521,7 +521,7 @@
                 <coreid>Core10</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -530,7 +530,7 @@
                 <coreid>Core10</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -539,7 +539,7 @@
                 <coreid>Core10</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -548,7 +548,7 @@
                 <coreid>Core9</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -557,7 +557,7 @@
                 <coreid>Core9</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -566,7 +566,7 @@
                 <coreid>Core9</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -575,7 +575,7 @@
                 <coreid>Core9</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -584,7 +584,7 @@
                 <coreid>Core9</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -593,7 +593,7 @@
                 <coreid>Core9</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -602,7 +602,7 @@
                 <coreid>Core8</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -611,7 +611,7 @@
                 <coreid>Core8</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -620,7 +620,7 @@
                 <coreid>Core8</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -629,7 +629,7 @@
                 <coreid>Core8</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -638,7 +638,7 @@
                 <coreid>Core8</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -647,7 +647,7 @@
                 <coreid>Core8</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -656,7 +656,7 @@
                 <coreid>Core7</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -665,7 +665,7 @@
                 <coreid>Core7</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -674,7 +674,7 @@
                 <coreid>Core7</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -683,7 +683,7 @@
                 <coreid>Core7</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -692,7 +692,7 @@
                 <coreid>Core7</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -701,7 +701,7 @@
                 <coreid>Core7</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -710,7 +710,7 @@
                 <coreid>Core6</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -719,7 +719,7 @@
                 <coreid>Core6</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -728,7 +728,7 @@
                 <coreid>Core6</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -737,7 +737,7 @@
                 <coreid>Core6</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -746,7 +746,7 @@
                 <coreid>Core6</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -755,7 +755,7 @@
                 <coreid>Core6</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -764,7 +764,7 @@
                 <coreid>Core5</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -773,7 +773,7 @@
                 <coreid>Core5</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -782,7 +782,7 @@
                 <coreid>Core5</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -791,7 +791,7 @@
                 <coreid>Core5</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -800,7 +800,7 @@
                 <coreid>Core5</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -809,7 +809,7 @@
                 <coreid>Core5</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -818,7 +818,7 @@
                 <coreid>Core4</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -827,7 +827,7 @@
                 <coreid>Core4</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -836,7 +836,7 @@
                 <coreid>Core4</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -845,7 +845,7 @@
                 <coreid>Core4</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -854,7 +854,7 @@
                 <coreid>Core4</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -863,7 +863,7 @@
                 <coreid>Core4</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -872,7 +872,7 @@
                 <coreid>Core3</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -881,7 +881,7 @@
                 <coreid>Core3</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -890,7 +890,7 @@
                 <coreid>Core3</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -899,7 +899,7 @@
                 <coreid>Core3</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -908,7 +908,7 @@
                 <coreid>Core3</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -917,7 +917,7 @@
                 <coreid>Core3</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -926,7 +926,7 @@
                 <coreid>Core2</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -935,7 +935,7 @@
                 <coreid>Core2</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -944,7 +944,7 @@
                 <coreid>Core2</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -953,7 +953,7 @@
                 <coreid>Core2</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -962,7 +962,7 @@
                 <coreid>Core2</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -971,7 +971,7 @@
                 <coreid>Core2</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -980,7 +980,7 @@
                 <coreid>Core1</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -989,7 +989,7 @@
                 <coreid>Core1</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -998,7 +998,7 @@
                 <coreid>Core1</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -1007,7 +1007,7 @@
                 <coreid>Core1</coreid>
                 <modeid>LP21a</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -1016,7 +1016,7 @@
                 <coreid>Core1</coreid>
                 <modeid>LP21b</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
@@ -1025,7 +1025,7 @@
                 <coreid>Core1</coreid>
                 <modeid>LP02</modeid>
                 <frequency-slot>
-                    <ncf>39</ncf>
+                    <ncf>41</ncf>
                     <slot-width>1</slot-width>
                 </frequency-slot>
             </optical-channel>
