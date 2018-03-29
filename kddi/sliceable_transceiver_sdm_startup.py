@@ -21,11 +21,10 @@ def create_node_config(host, port, login, password, config_file, session, operat
 
     try:
         f = open(config_file)  # open configuration file
-        d.edit_config(connection, f.read(), session, operation)  # create node configuration
+        d.edit_config(connection, f.read(), session, operation)  # create sliceable transceiver sdm configuration
         f.close()
         print("new sliceable-transceiver-sdm configuration created\nnew configuration:")
         print(d.get_config(connection, filter, session))
-
 
     except Exception as e:
         print(e)
@@ -39,7 +38,7 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    config_file = 'slice1_add.xml'
+    config_file = 'test1_edit_config.xml'
     filter = "<transceiver/>"
 
     create_node_config(host, port, login, password, config_file, session_running, operation_merge, filter)

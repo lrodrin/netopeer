@@ -1037,7 +1037,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1048,7 +1048,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1059,7 +1059,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1070,7 +1070,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1081,7 +1081,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1092,7 +1092,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1103,7 +1103,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1114,7 +1114,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1125,7 +1125,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1136,7 +1136,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1147,7 +1147,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1158,7 +1158,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1169,7 +1169,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1180,7 +1180,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1191,7 +1191,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1202,7 +1202,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1213,7 +1213,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1224,7 +1224,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1235,7 +1235,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1246,7 +1246,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1257,7 +1257,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1268,7 +1268,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1279,7 +1279,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1290,7 +1290,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1301,7 +1301,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1312,7 +1312,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1323,7 +1323,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1334,7 +1334,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1345,7 +1345,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1356,7 +1356,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1367,7 +1367,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1378,7 +1378,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1389,7 +1389,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1400,7 +1400,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1411,7 +1411,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1422,7 +1422,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1433,7 +1433,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1444,7 +1444,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1455,7 +1455,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1466,7 +1466,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1477,7 +1477,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1488,7 +1488,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1499,7 +1499,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1510,7 +1510,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1521,7 +1521,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1532,7 +1532,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1543,7 +1543,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1554,7 +1554,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1565,7 +1565,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1576,7 +1576,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1587,7 +1587,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1598,7 +1598,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1609,7 +1609,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1620,7 +1620,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1631,7 +1631,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1642,7 +1642,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1653,7 +1653,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1664,7 +1664,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1675,7 +1675,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1686,7 +1686,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1697,7 +1697,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1708,7 +1708,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1719,7 +1719,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1730,7 +1730,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1741,7 +1741,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1752,7 +1752,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1763,7 +1763,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1774,7 +1774,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1785,7 +1785,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1796,7 +1796,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1807,7 +1807,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1818,7 +1818,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1829,7 +1829,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1840,7 +1840,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1851,7 +1851,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1862,7 +1862,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1873,7 +1873,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1884,7 +1884,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1895,7 +1895,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1906,7 +1906,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1917,7 +1917,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1928,7 +1928,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1939,7 +1939,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1950,7 +1950,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1961,7 +1961,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1972,7 +1972,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1983,7 +1983,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -1994,7 +1994,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2005,7 +2005,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2016,7 +2016,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2027,7 +2027,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2038,7 +2038,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2049,7 +2049,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2060,7 +2060,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2071,7 +2071,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2082,7 +2082,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2093,7 +2093,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2104,7 +2104,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2115,7 +2115,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2126,7 +2126,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2137,7 +2137,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2148,7 +2148,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2159,7 +2159,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2170,7 +2170,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2181,7 +2181,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2192,7 +2192,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2203,7 +2203,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2214,7 +2214,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2225,7 +2225,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2236,7 +2236,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2247,7 +2247,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2258,7 +2258,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2269,7 +2269,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
@@ -2280,7 +2280,7 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
         </slice>

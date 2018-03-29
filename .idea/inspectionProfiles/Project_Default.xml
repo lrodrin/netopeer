@@ -24,6 +24,7 @@
       <option name="ignoredNames">
         <list>
           <option value="filter" />
+          <option value="slice" />
         </list>
       </option>
     </inspection_tool>
