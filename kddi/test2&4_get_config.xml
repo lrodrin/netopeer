@@ -47,3 +47,15 @@
         </slice>
     </transceiver>
 </config>
+
+<transceiver xmlns="urn:sliceable-transceiver-sdm">
+<slice>
+    <optical-signal>
+        <opticalchannelid>1</opticalchannelid>
+        <monitor>
+            <ber></ber>
+            <osnr></osnr>
+        </monitor>
+    </optical-signal>
+</slice>
+</transceiver>
