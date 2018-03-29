@@ -65,6 +65,18 @@ def generate(filename, id_slice, conste, fs, bw):
         num_taps = etree.SubElement(equalization, 'num_taps')
         num_taps.text = '200'
 
+        monitor = etree.SubElement(optical_signal, 'monitor')
+        # monitor parameters
+        ber = etree.SubElement(monitor, 'ber')
+        ber.text = 'ber'
+        channel_power = etree.SubElement(monitor, 'channel-power')
+        channel_power.text = 'channel-power'
+        noise_level = etree.SubElement(monitor, 'noise-level')
+        noise_level.text = 'noise-level'
+        osnr = etree.SubElement(monitor, 'osnr')
+        osnr.text = 'osnr'
+
+
     xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
     with open(filename, "w") as f:
@@ -74,4 +86,4 @@ def generate(filename, id_slice, conste, fs, bw):
 if __name__ == '__main__':
     generate("test1_edit_config.xml", 1, 'qam16', 1, '12000000000')
 
-    generate("test5_edit_config.xml", 1, 'qam16', 1, '12000000000')
+    # generate("test5_edit_config.xml", 1, 'qam16', 1, '12000000000')
