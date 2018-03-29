@@ -34,7 +34,7 @@ def create_node_config(host, port, login, password, config_file, session, operat
 
 
 if __name__ == '__main__':
-    host = '10.1.7.67'
+    host = '10.1.7.83'
     port = 830
     login = 'root'
     password = 'netlabN.'
