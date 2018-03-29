@@ -38,8 +38,8 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    # config_file = 'test1_edit_config.xml'
-    config_file = 'test5_edit_config.xml'
+    config_file = 'test1_edit_config.xml'
+    # config_file = 'test5_edit_config.xml'
     filter = "<transceiver/>"
 
     create_node_config(host, port, login, password, config_file, session_running, operation_merge, filter)
