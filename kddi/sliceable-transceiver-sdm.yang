@@ -33,6 +33,10 @@ module sliceable-transceiver-sdm {
   identity "qam4" {
     base constellation;
   }
+
+  identity "qpsk" {
+    base constellation;
+  }
   
   identity fec {
     description "fec base";
