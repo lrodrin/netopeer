@@ -17,7 +17,7 @@ cores = ["Core19", "Core18", "Core17", "Core16", "Core15",
          "Core4", "Core3", "Core2", "Core1"]
 
 
-def generate(filename, id_slice):
+def generate(filename, id_slice, conste, fs, bw):
     config = etree.Element('config', xmlns="urn:ietf:params:xml:ns:netconf:base:1.0")
     transceiver = etree.SubElement(config, 'transceiver', xmlns="urn:sliceable-transceiver-sdm")
     slice = etree.SubElement(transceiver, 'slice')
@@ -40,7 +40,7 @@ def generate(filename, id_slice):
             ncf = etree.SubElement(frequency_slot, 'ncf')
             ncf.text = '41'
             slot_width = etree.SubElement(frequency_slot, 'slot-width')
-            slot_width.text = '1'
+            slot_width.text = '%s' % fs
             frequency_slot.append(slot_width)
             counter += 1
 
@@ -50,9 +50,9 @@ def generate(filename, id_slice):
         opticalchannelid = etree.SubElement(optical_signal, 'opticalchannelid')
         opticalchannelid.text = '%s' % i
         constellation = etree.SubElement(optical_signal, 'constellation')
-        constellation.text = 'qam16'
+        constellation.text = '%s' % conste
         bandwidth = etree.SubElement(optical_signal, 'bandwidth')
-        bandwidth.text = '12000000000'
+        bandwidth.text = '%s' % bw
         fec = etree.SubElement(optical_signal, 'fec')
         fec.text = 'sd-fec'
 
@@ -72,4 +72,6 @@ def generate(filename, id_slice):
 
 
 if __name__ == '__main__':
-    generate("test1_edit_config.xml", 1)
+    generate("test1_edit_config.xml", 1, 'qam16', 1, '12000000000')
+
+    generate("test5_edit_config.xml", 1, 'qpsk', 1, '24000000000')
