@@ -1,5 +1,5 @@
 """
-This module create the sliceable transceiver sdm configuration
+This module create the configuration of one spectral super channel (slice)
 
 Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
