@@ -20,8 +20,15 @@ def get_ber_and_osnr_parameters(host, port, login, password):
         </slice>
         </transceiver>"""
 
-    config = connection.get_config(source='running', filter=('subtree', template))
-    print(config)
+    try:
+        config = connection.get_config(source='running', filter=('subtree', template))
+        print(config)
+
+    except Exception as e:
+        print(e)
+
+    finally:
+        connection.close_session()
 
 
 if __name__ == '__main__':
@@ -29,4 +36,5 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
+
     get_ber_and_osnr_parameters(host, port, login, password)

@@ -1,13 +1,13 @@
 """
-This module create the configuration of one spectral super channel (slice)
+This module implements the reconfiguration of the optical channels
 
-Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
 import kddi.data as d
 
 
-def create_configuration(host, port, login, password, config_file, session, operation, filter):
+def set_parameters(host, port, login, password, config_file, session, operation, filter):
     connection = d.connect(host, port, login, password)
 
     try:
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    config_file = 'test1_edit_config.xml'
+    config_file = 'test5_edit_config.xml'
     filter = "<transceiver/>"
 
-    create_configuration(host, port, login, password, config_file, 'running', 'merge', filter)
+    set_parameters(host, port, login, password, config_file, 'running', 'merge', filter)
