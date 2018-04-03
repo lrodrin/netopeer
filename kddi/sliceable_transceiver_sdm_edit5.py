@@ -4,7 +4,7 @@ This module implements the reconfiguration of the optical channels
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import kddi.data as d
+import data as d
 
 
 def set_parameters(host, port, login, password, config_file, session, operation, filter):

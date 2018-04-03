@@ -4,7 +4,7 @@ This module implements the measurement of the OSNR and BER for slice 1
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import kddi.data as d
+import data as d
 
 
 def get_ber_and_osnr_parameters(host, port, login, password):
