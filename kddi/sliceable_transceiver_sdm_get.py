@@ -1,5 +1,5 @@
 """
-This module implements ...
+This module implements the measurement of the OSNR and BER for slice 1
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -7,16 +7,8 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import kddi.data as d
 
 
-def get_interface_state(host, port, login, password):
+def get_ber_and_osnr_parameters(host, port, login, password):
     connection = d.connect(host, port, login, password)
-
-    # template = """<transceiver xmlns="urn:sliceable-transceiver-sdm">
-    #     <slice><optical-signal><opticalchannelid>%s</opticalchannelid><monitor><ber></ber><osnr></osnr></monitor></optical-signal></slice>
-    #     </transceiver>"""
-    #
-    # for i in range(0, 7):
-    #     config = connection.get_config(source='running', filter=('subtree', template % str(i)))
-    #     print(config)
 
     template = """<transceiver xmlns="urn:sliceable-transceiver-sdm">
         <slice><optical-signal><opticalchannelid>1</opticalchannelid><monitor><ber></ber><osnr></osnr></monitor></optical-signal>
@@ -37,4 +29,4 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    get_interface_state(host, port, login, password)
+    get_ber_and_osnr_parameters(host, port, login, password)

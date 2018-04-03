@@ -76,7 +76,6 @@ def generate(filename, id_slice, conste, fs, bw):
         osnr = etree.SubElement(monitor, 'osnr')
         osnr.text = 'osnr'
 
-
     xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
     with open(filename, "w") as f:
@@ -85,5 +84,3 @@ def generate(filename, id_slice, conste, fs, bw):
 
 if __name__ == '__main__':
     generate("test1_edit_config.xml", 1, 'qam16', 1, '12000000000')
-
-    # generate("test5_edit_config.xml", 1, 'qam16', 1, '12000000000')
