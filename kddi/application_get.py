@@ -87,10 +87,10 @@ def module_change_cb(sess, module_name, event, private_ctx):
 
         change_path = "/" + module_name + ":*"
 
-        it = sess.get_items_iter(change_path)
+        it = sess.get_changes_iter(change_path)
 
         while True:
-            change = sess.get_get_next(it)
+            change = sess.get_change_next(it)
             if change is None:
                 break
             print_change(change.oper(), change.old_val(), change.new_val())
@@ -104,15 +104,19 @@ def module_change_cb(sess, module_name, event, private_ctx):
 
 
 # Notable difference between c implementation is using exception mechanism for open handling unexpected events.
-# Here it is useful because `Conenction`, `Session` and `Subscribe` could throw an exception.
+# Here it is useful because `Conennction`, `Session` and `Subscribe` could throw an exception.
+def data_provider(sess):
+    pass
+
+
 try:
     if len(sys.argv) < 2:
-        six.print_("Usage: python application_changes.py [module-name]")
+        six.print_("Usage: python application_get.py [module-name]")
 
     else:
         module_name = sys.argv[1]
 
-        six.print_("Application will watch for changes in " + module_name + "\n")
+        six.print_("Application will watch in" + module_name + "\n")
 
         # connect to sysrepo
         conn = sr.Connection("example_application")
@@ -120,12 +124,9 @@ try:
         # start session
         sess = sr.Session(conn)
 
-        # subscribe for changes in running config */
-        subscribe = sr.Subscribe(sess)
-        subscribe.module_get_subscribe(module_name, module_change_cb, None, 0,
-                                       sr.SR_SUBSCR_DEFAULT | sr.SR_SUBSCR_APPLY_ONLY)
+        # run as a data provider
+        rc = data_provider(sess)
 
-        six.print_("\n\n ========== READING STARTUP CONFIG: ==========\n")
         try:
             print_current_config(sess, module_name)
 

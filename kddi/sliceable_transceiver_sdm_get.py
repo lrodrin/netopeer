@@ -20,8 +20,12 @@ def get_ber_and_osnr_parameters(host, port, login, password):
         </slice>
         </transceiver>"""
 
+    template2 = """<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+        <interface><name>eth0</name></interface>
+        </interfaces/>"""
+
     try:
-        config = connection.get_config(source='running', filter=('subtree', template))
+        config = connection.get_config(source='running', filter=('subtree', template2))
         print(config)
 
     except Exception as e:

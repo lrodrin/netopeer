@@ -75,7 +75,7 @@ def print_current_config(session, module):
 
 
 # Function to be called for subscribed client of given session whenever configuration changes.
-def module_change_cb(session, module, event):
+def module_change_cb(session, module, event, private_ctx):
     try:
         six.print_(
             "\n\n ========== Notification " + ev_to_str(event) + " =============================================\n")
