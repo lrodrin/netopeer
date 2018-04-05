@@ -15,8 +15,6 @@
                 </equalization>
                 <monitor>
                     <ber>hehe</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>haha</osnr>
                 </monitor>
             </optical-signal>
@@ -32,8 +30,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -49,8 +45,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -66,8 +60,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -83,8 +75,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -100,8 +90,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -117,8 +105,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -134,8 +120,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -151,8 +135,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -168,8 +150,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -185,8 +165,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -202,8 +180,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -219,8 +195,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -236,8 +210,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -253,8 +225,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -270,8 +240,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -287,8 +255,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -304,8 +270,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -321,8 +285,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -338,8 +300,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -355,8 +315,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -372,8 +330,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -389,8 +345,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -406,8 +360,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -423,8 +375,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -440,8 +390,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -457,8 +405,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -474,8 +420,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -491,8 +435,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -508,8 +450,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -525,8 +465,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -542,8 +480,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -559,8 +495,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -576,8 +510,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -593,8 +525,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -610,8 +540,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -627,8 +555,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -644,8 +570,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -661,8 +585,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -678,8 +600,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -695,8 +615,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -712,8 +630,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -729,8 +645,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -746,8 +660,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -763,8 +675,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -780,8 +690,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -797,8 +705,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -814,8 +720,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -831,8 +735,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -848,8 +750,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -865,8 +765,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -882,8 +780,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -899,8 +795,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -916,8 +810,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -933,8 +825,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -950,8 +840,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -967,8 +855,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -984,8 +870,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1001,8 +885,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1018,8 +900,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1035,8 +915,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1052,8 +930,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1069,8 +945,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1086,8 +960,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1103,8 +975,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1120,8 +990,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1137,8 +1005,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1154,8 +1020,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1171,8 +1035,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1188,8 +1050,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1205,8 +1065,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1222,8 +1080,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1239,8 +1095,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1256,8 +1110,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1273,8 +1125,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1290,8 +1140,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1307,8 +1155,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1324,8 +1170,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1341,8 +1185,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1358,8 +1200,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1375,8 +1215,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1392,8 +1230,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1409,8 +1245,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1426,8 +1260,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1443,8 +1275,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1460,8 +1290,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1477,8 +1305,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1494,8 +1320,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1511,8 +1335,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1528,8 +1350,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1545,8 +1365,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1562,8 +1380,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1579,8 +1395,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1596,8 +1410,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1613,8 +1425,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1630,8 +1440,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1647,8 +1455,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1664,8 +1470,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1681,8 +1485,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1698,8 +1500,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1715,8 +1515,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1732,8 +1530,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1749,8 +1545,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1766,8 +1560,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1783,8 +1575,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1800,8 +1590,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1817,8 +1605,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1834,8 +1620,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1851,8 +1635,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1868,8 +1650,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1885,8 +1665,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1902,8 +1680,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1919,8 +1695,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -1936,8 +1710,6 @@
                 </equalization>
                 <monitor>
                     <ber>ber</ber>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>

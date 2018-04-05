@@ -24,8 +24,13 @@ def get_ber_and_osnr_parameters(host, port, login, password):
         <interface><name>eth0</name></interface>
         </interfaces/>"""
 
+    template3 = """<transceiver-state xmlns="urn:sliceable-transceiver-sdm">
+        <slice></slice>
+        </transceiver-state/>"""
+
     try:
         config = connection.get_config(source='running', filter=('subtree', template2))
+        connection.get()
         print(config)
 
     except Exception as e:
