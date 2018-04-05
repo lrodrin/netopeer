@@ -10,27 +10,17 @@ import data as d
 def get_ber_and_osnr_parameters(host, port, login, password):
     connection = d.connect(host, port, login, password)
 
-    template = """<transceiver xmlns="urn:sliceable-transceiver-sdm">
-        <slice><optical-signal><opticalchannelid>1</opticalchannelid><monitor><ber></ber><osnr></osnr></monitor></optical-signal>
-        <optical-signal><opticalchannelid>2</opticalchannelid><monitor><ber></ber><osnr></osnr></monitor></optical-signal>
-        <optical-signal><opticalchannelid>3</opticalchannelid><monitor><ber></ber><osnr></osnr></monitor></optical-signal>
-        <optical-signal><opticalchannelid>4</opticalchannelid><monitor><ber></ber><osnr></osnr></monitor></optical-signal>
-        <optical-signal><opticalchannelid>5</opticalchannelid><monitor><ber></ber><osnr></osnr></monitor></optical-signal>
-        <optical-signal><opticalchannelid>6</opticalchannelid><monitor><ber></ber><osnr></osnr></monitor></optical-signal>
-        </slice>
-        </transceiver>"""
-
-    template2 = """<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-        <interface><name>eth0</name></interface>
-        </interfaces/>"""
-
-    template3 = """<transceiver-state xmlns="urn:sliceable-transceiver-sdm">
-        <slice></slice>
-        </transceiver-state/>"""
-
     try:
-        config = connection.get_config(source='running', filter=('subtree', template2))
-        connection.get()
+        config = connection.get(
+            filter='<nc:filter type="xpath" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" '
+                   'xmlns:sliceable-transceiver-sdm="urn:sliceable-transceiver-sdm" '
+                   'select="/sliceable-transceiver-sdm:transceiver-state"/>')
+
+        # config = connection.get(
+        #     filter='<nc:filter type="xpath" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" '
+        #            'xmlns:ietf-interfaces="urn:ietf:params:xml:ns:yang:ietf-interfaces" '
+        #            'select="/ietf-interfaces:interfaces-state"/interface>')
+
         print(config)
 
     except Exception as e:

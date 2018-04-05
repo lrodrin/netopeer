@@ -156,6 +156,13 @@ module sliceable-transceiver-sdm {
   
   container transceiver {
     uses transceiver;
-  } 
+  }
 
+  container transceiver-state {
+    config false;
+    list slice{
+      key "sliceid";
+      uses slice;
+    }
+  }
 }
