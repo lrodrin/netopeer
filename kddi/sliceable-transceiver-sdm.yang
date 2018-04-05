@@ -105,8 +105,8 @@ module sliceable-transceiver-sdm {
     container monitor {
       //config false;
       leaf ber { type string; }
-      leaf channel-power { type string; }
-      leaf noise-level { type string; }
+      //leaf channel-power { type string; }
+      //leaf noise-level { type string; }
       leaf osnr { type string; }
     }
   }
