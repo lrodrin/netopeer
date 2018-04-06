@@ -72,48 +72,48 @@ data_provider_cb(const char *xpath, sr_val_t **values, size_t *values_cnt, void 
         sr_val_set_xpath(&v[10], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='5']/monitor/osnr");
 
         sr_val_set_xpath(&v[11], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[11], SR_STRING_T, "6"); ;
+        sr_val_set_str_data(&v[11], SR_STRING_T, "6");
         sr_val_set_xpath(&v[12], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='6']/monitor/osnr");
 
         sr_val_set_xpath(&v[13], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[13], SR_STRING_T, "7"); ;
+        sr_val_set_str_data(&v[13], SR_STRING_T, "7");
         sr_val_set_xpath(&v[14], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='7']/monitor/osnr");
 
         sr_val_set_xpath(&v[15], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[15], SR_STRING_T, "8"); ;
+        sr_val_set_str_data(&v[15], SR_STRING_T, "8");
         sr_val_set_xpath(&v[16], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='8']/monitor/osnr");
 
         sr_val_set_xpath(&v[17], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[17], SR_STRING_T, "9"); ;
+        sr_val_set_str_data(&v[17], SR_STRING_T, "9");
         sr_val_set_xpath(&v[18], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='9']/monitor/osnr");
         sr_val_set_xpath(&v[19], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='9']/monitor/ber");
 
         sr_val_set_xpath(&v[20], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[20], SR_STRING_T, "10"); ;
+        sr_val_set_str_data(&v[20], SR_STRING_T, "10");
         sr_val_set_xpath(&v[21], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='10']/monitor/osnr");
 
         sr_val_set_xpath(&v[22], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[22], SR_STRING_T, "11"); ;
+        sr_val_set_str_data(&v[22], SR_STRING_T, "11");
         sr_val_set_xpath(&v[23], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='11']/monitor/osnr");
 
         sr_val_set_xpath(&v[24], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[24], SR_STRING_T, "12"); ;
+        sr_val_set_str_data(&v[24], SR_STRING_T, "12");
         sr_val_set_xpath(&v[25], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='12']/monitor/osnr");
 
         sr_val_set_xpath(&v[26], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[26], SR_STRING_T, "13"); ;
+        sr_val_set_str_data(&v[26], SR_STRING_T, "13");
         sr_val_set_xpath(&v[27], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='13']/monitor/osnr");
 
         sr_val_set_xpath(&v[28], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[28], SR_STRING_T, "14"); ;
+        sr_val_set_str_data(&v[28], SR_STRING_T, "14");
         sr_val_set_xpath(&v[29], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='14']/monitor/osnr");
 
         sr_val_set_xpath(&v[30], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[30], SR_STRING_T, "15"); ;
+        sr_val_set_str_data(&v[30], SR_STRING_T, "15");
         sr_val_set_xpath(&v[31], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='15']/monitor/osnr");
 
         sr_val_set_xpath(&v[32], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal/opticalchannelid");
-        sr_val_set_str_data(&v[32], SR_STRING_T, "16"); ;
+        sr_val_set_str_data(&v[32], SR_STRING_T, "16");
         sr_val_set_xpath(&v[33], "/sliceable-transceiver-sdm:transceiver-state/slice[sliceid='1']/optical-signal[opticalchannelid='16']/monitor/osnr");
 
         *values = v;
