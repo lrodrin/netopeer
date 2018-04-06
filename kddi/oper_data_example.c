@@ -169,7 +169,6 @@ main(int argc, char **argv)
 
     /* run as a data provider */
     printf("This application will be a data provider for state data of sliceable-transceiver-sdm.\n");
-    printf("Run the same executable with one (any) argument to request some data.\n");
     rc = data_provider(session);
 
 cleanup:

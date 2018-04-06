@@ -32,33 +32,8 @@ import libsysrepoPython2 as sr
 import six
 
 
-# Helper function for printing events.
-def ev_to_str(ev):
-    if ev == sr.SR_EV_VERIFY:
-        return "verify"
-    elif ev == sr.SR_EV_APPLY:
-        return "apply"
-    elif ev == sr.SR_EV_ABORT:
-        return "abort"
-    else:
-        return "abort"
-
-
-def data_provider_cb(xpath, session, module, event, private_ctx):
-    six.print_("Data for '%s' requested.\n", xpath)
-    # data_requester(session, module)
-
-    return sr.SR_ERR_OK
-
-
-def data_requester(session, module):
-    select_xpath = "/" + module + ":transceiver/slice[sliceid='1']/optical-signal/monitor//*"
-
-    values = session.get_items(select_xpath)
-
-    if values is not None:
-        for i in range(0, 12):
-            six.print_(values.val(i).to_string())
+def data_provider_cb():
+    six.print_("\n\n ========== HELLO: ==========\n\n")
 
 
 # Notable difference between c implementation is using exception mechanism for open handling unexpected events.
@@ -78,24 +53,17 @@ try:
         # start session
         sess = sr.Session(conn)
 
-        try:
-            # subscribe for get in running config
-            subs = sr.Subscribe(sess)
-            subs.dp_get_items_subscribe("/sliceable-transceiver-sdm:transceiver-state", data_provider_cb, 0,
-                                        sr.SR_SUBSCR_DEFAULT)
+        # subscribe for providing operational data
+        subs = sr.Subscribe(sess)
+        subs.dp_get_items_subscribe("/ietf-interfaces:interfaces-state", data_provider_cb, None,
+                                    sr.SR_SUBSCR_DEFAULT | sr.SR_SUBSCR_APPLY_ONLY)
 
-            six.print_("This application will be a data provider for state data of sliceable-transceiver-sdm.\n")
-            six.print_("Run the same executable with one (any) argument to request some data.\n")
-            six.print_("\n\n ========== SUBSCRIBED FOR PROVIDING OPER DATA ==========\n\n")
+        six.print_("This application will be a data provider for state data of " + module_name + ".\n")
+        six.print_("\n\n ========== SUBSCRIBED FOR PROVIDING OPER DATA ==========\n\n")
 
-        except Exception as e:
-            six.print_(e)
+        sr.global_loop()
 
-        # six.print_("\n\n ========== STARTUP CONFIG APPLIED AS RUNNING ==========\n")
-        #
-        # sr.global_loop()
-        #
-        # six.print_("Application exit requested, exiting.\n")
+        six.print_("Application exit requested, exiting.\n")
 
 except Exception as e:
     six.print_(e)
