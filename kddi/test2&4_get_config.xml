@@ -3,1715 +3,1205 @@
     <transceiver xmlns="urn:sliceable-transceiver-sdm">
         <slice>
             <sliceid>1</sliceid>
+            <optical-channel>
+                <opticalchannelid>1</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>137</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>2</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>129</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>3</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>121</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>4</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>113</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>5</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>105</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>6</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>97</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>7</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>89</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>8</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>81</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>9</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>73</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>10</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>65</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>11</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>57</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>12</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>49</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>13</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>41</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>14</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>33</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>15</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>25</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>16</opticalchannelid>
+                <coreid>Core1</coreid>
+                <modeid>LP01</modeid>
+                <frequency-slot>
+                    <ncf>17</ncf>
+                    <slot-width>4</slot-width>
+                </frequency-slot>
+            </optical-channel>
             <optical-signal>
                 <opticalchannelid>1</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>hehe</ber>
-                    <osnr>haha</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>2</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>3</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>4</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>5</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>6</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>7</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>8</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>9</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>10</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>11</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>12</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>13</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>14</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>15</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>16</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>17</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>18</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>19</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>20</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>21</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>22</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>23</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>24</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>25</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>26</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>27</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>28</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>29</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>30</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>31</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>32</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>33</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>34</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>35</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>36</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>37</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>38</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>39</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>40</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>41</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>42</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>43</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>44</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>45</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>46</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>47</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>48</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>49</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>50</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>51</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>52</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>53</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>54</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>55</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>56</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>57</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>58</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>59</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>60</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>61</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>62</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>63</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>64</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>65</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>66</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>67</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>68</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>69</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>70</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>71</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>72</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>73</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>74</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>75</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>76</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>77</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>78</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>79</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>80</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>81</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>82</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>83</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>84</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>85</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>86</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>87</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>88</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>89</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>90</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>91</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>92</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>93</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>94</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>95</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>96</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
+                <constellation>qpsk</constellation>
+                <bandwidth>24000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>true</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>97</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>98</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>99</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>100</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>101</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>102</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>103</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>104</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>105</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>106</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>107</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>108</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>109</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>110</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>111</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>112</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>113</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
-            </optical-signal>
-            <optical-signal>
-                <opticalchannelid>114</opticalchannelid>
-                <constellation>qam16</constellation>
-                <bandwidth>12000000000</bandwidth>
-                <fec>sd-fec</fec>
-                <equalization>
-                    <equalizationid>1</equalizationid>
-                    <mimo>true</mimo>
-                    <num_taps>200</num_taps>
-                </equalization>
-                <monitor>
-                    <ber>ber</ber>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
         </slice>
     </transceiver>
