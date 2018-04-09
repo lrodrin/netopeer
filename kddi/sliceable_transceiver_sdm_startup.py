@@ -26,6 +26,7 @@ def create_configuration(host, port, login, password, config_file, session, oper
 
 if __name__ == '__main__':
     host = '10.1.7.83'
+    host2 = '10.1.7.83'
     port = 830
     login = 'root'
     password = 'netlabN.'
@@ -33,3 +34,4 @@ if __name__ == '__main__':
     filter = "<transceiver/>"
 
     create_configuration(host, port, login, password, config_file, 'running', 'merge', filter)
+    create_configuration(host2, port, login, password, config_file, 'running', 'merge', filter)
