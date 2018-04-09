@@ -17,7 +17,6 @@ def create_configuration(connection, config_file, session, operation, filter):
         f = open(config_file)
         d.edit_config(connection, f.read(), session, operation)
         f.close()
-        print("new sliceable-transceiver-sdm configuration created\nnew configuration:")
         print(d.get_config(connection, filter, session))
 
     except Exception as e:
