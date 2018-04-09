@@ -76,9 +76,9 @@ def change_signal_config(host, port, login, password, nodeid, location, componen
 if __name__ == '__main__':
     if len(sys.argv) != 14:
         print(
-            "Usage: python sliceable_transceiver_sdm_edit5.py [nodeid] [location] [componentid] [param1] [param2] [param3] ["
+            "Usage: python sliceable_transceiver_sdm_edit.py [nodeid] [location] [componentid] [param1] [param2] [param3] ["
             "param4] [wdm-id] [port-id] [signal-id] [wavelength] [mode] [core]")
-        print("Example: python sliceable_transceiver_sdm_edit5.py a CO 01 01 02 03 04 01 3000 3001 2 03 3")
+        print("Example: python sliceable_transceiver_sdm_edit.py a CO 01 01 02 03 04 01 3000 3001 2 03 3")
 
     else:
         host = '10.1.7.65'
