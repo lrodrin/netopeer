@@ -28,10 +28,9 @@ if __name__ == '__main__':
     filter = "<transceiver/>"
 
     connectionTX = d.connect(host, port, login, password)
-    connectionRX = d.connect(host2, port, login, password)
-
     set_parameters(connectionTX, config_file, 'running', 'merge', filter)
-    set_parameters(connectionRX, config_file, 'running', 'merge', filter)
-
     connectionTX.close_session()
+
+    connectionRX = d.connect(host2, port, login, password)
+    set_parameters(connectionRX, config_file, 'running', 'merge', filter)
     connectionRX.close_session()
