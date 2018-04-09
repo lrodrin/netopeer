@@ -15,36 +15,35 @@ def get_ber_and_osnr_parameters(connection):
         #            'select="/sliceable-transceiver-sdm:transceiver-state"/>')
 
         template = """<transceiver xmlns="urn:sliceable-transceiver-sdm">
-                <slice>
-                <optical-signal><opticalchannelid>1</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>2</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>3</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>4</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>5</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>6</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>7</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>8</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>9</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>10</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>11</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>12</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>13</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>14</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>15</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                <optical-signal><opticalchannelid>16</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
-                
-                <optical-signal><opticalchannelid>9</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
-                <optical-signal><opticalchannelid>25</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
-                <optical-signal><opticalchannelid>41</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
-                <optical-signal><opticalchannelid>57</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
-                <optical-signal><opticalchannelid>73</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
-                <optical-signal><opticalchannelid>89</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
-                
-                </slice>
-                </transceiver>"""
+            <slice>
+            <optical-signal><opticalchannelid>1</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>2</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>3</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>4</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>5</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>6</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>7</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>8</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>9</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>10</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>11</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>12</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>13</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>14</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>15</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            <optical-signal><opticalchannelid>16</opticalchannelid><monitor><osnr></osnr></monitor></optical-signal>
+            
+            <optical-signal><opticalchannelid>9</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
+            <optical-signal><opticalchannelid>25</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
+            <optical-signal><opticalchannelid>41</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
+            <optical-signal><opticalchannelid>57</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
+            <optical-signal><opticalchannelid>73</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
+            <optical-signal><opticalchannelid>89</opticalchannelid><monitor><ber></ber></monitor></optical-signal>
+            
+            </slice>
+            </transceiver>"""
 
-        config = connection.get_config(source='running', filter=('subtree', template))
-        print(config)
+        print(d.get_config(connection, template, 'running'))
 
     except Exception as e:
         print(e)
