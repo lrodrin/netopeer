@@ -26,6 +26,7 @@ def set_parameters(host, port, login, password, config_file, session, operation,
 
 if __name__ == '__main__':
     host = '10.1.7.83'
+    host2 = '10.1.7.83'
     port = 830
     login = 'root'
     password = 'netlabN.'
@@ -33,3 +34,4 @@ if __name__ == '__main__':
     filter = "<transceiver/>"
 
     set_parameters(host, port, login, password, config_file, 'running', 'merge', filter)
+    set_parameters(host2, port, login, password, config_file, 'running', 'merge', filter)
