@@ -17,7 +17,7 @@ login = 'root'
 password = 'netlabN.'
 filter = "<transceiver/>"
 
-# OPEN CONNECTION
+# INIT
 connectionTX = startup.init_connection(host, port, login, password)
 connectionRX = startup.init_connection(host2, port, login, password)
 
