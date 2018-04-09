@@ -7,19 +7,12 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 import data as d
 
 
-def get_ber_and_osnr_parameters(host, port, login, password):
-    connection = d.connect(host, port, login, password)
-
+def get_ber_and_osnr_parameters(connection):
     try:
         # config = connection.get(
         #     filter='<nc:filter type="xpath" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" '
         #            'xmlns:sliceable-transceiver-sdm="urn:sliceable-transceiver-sdm" '
         #            'select="/sliceable-transceiver-sdm:transceiver-state"/>')
-
-        # config = connection.get(
-        #     filter='<nc:filter type="xpath" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" '
-        #            'xmlns:ietf-interfaces="urn:ietf:params:xml:ns:yang:ietf-interfaces" '
-        #            'select="/ietf-interfaces:interfaces-state"/interface>')
 
         template = """<transceiver xmlns="urn:sliceable-transceiver-sdm">
                 <slice>
@@ -53,12 +46,8 @@ def get_ber_and_osnr_parameters(host, port, login, password):
         config = connection.get_config(source='running', filter=('subtree', template))
         print(config)
 
-
     except Exception as e:
         print(e)
-
-    finally:
-        connection.close_session()
 
 
 if __name__ == '__main__':
@@ -67,4 +56,6 @@ if __name__ == '__main__':
     login = 'root'
     password = 'netlabN.'
 
-    get_ber_and_osnr_parameters(host, port, login, password)
+    connection = d.connect(host, port, login, password)
+    get_ber_and_osnr_parameters(connection)
+    connection.close_session()
