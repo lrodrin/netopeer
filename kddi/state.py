@@ -4,7 +4,7 @@ This module implements the measurement of the OSNR and BER for slice 1
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import data as d
+import kddi.data as d
 
 
 def get_ber_and_osnr_parameters(connection):
@@ -14,7 +14,7 @@ def get_ber_and_osnr_parameters(connection):
                    'xmlns:sliceable-transceiver-sdm="urn:sliceable-transceiver-sdm" '
                    'select="/sliceable-transceiver-sdm:transceiver-state"/>')
 
-        print(d.get_config(connection, config, 'running'))
+        print(config)
 
     except Exception as e:
         print(e)

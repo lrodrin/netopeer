@@ -129,11 +129,11 @@ def edit_config(connection, data, session, operation):
     connection.edit_config(target=session, config=data, default_operation=operation)
 
 
-def pretty_print(filename):
+def pretty_print(s):
     """
-    Pretty print for XML specified by filename
+    Pretty print for XML specified by s
 
-    :param filename: file name
-    :type filename: file
+    :param s: configuration
+    :type s: str
     """
-    return '\n'.join(line for line in md.parseString(filename).toprettyxml(indent=INDENT).split('\n') if line.strip())
+    return '\n'.join(line for line in md.parseString(s).toprettyxml(indent=INDENT).split('\n') if line.strip())

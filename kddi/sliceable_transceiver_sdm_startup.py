@@ -4,7 +4,7 @@ This module create the configuration of one spectral super channel (slice)
 Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import data as d
+import kddi.data as d
 
 
 def init_connection(host, port, login, password):
