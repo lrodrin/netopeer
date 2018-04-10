@@ -89,7 +89,7 @@ def get_config(connection, filter, session):
     :type filter: str
     """
     config = connection.get_config(source=session, filter=('subtree', filter)).data_xml
-    return pretty_print(config)
+    return pretty_print_from_string(config)
 
 
 def write_file(fi, fo):
@@ -113,12 +113,11 @@ def edit_config(connection, data, session, operation):
     connection.edit_config(target=session, config=data, default_operation=operation)
 
 
-def pretty_print(filename):
+def pretty_print_from_string(s):
     """
-    Pretty print for XML specified by filename
+    Pretty print for XML specified by str
 
-    :param filename: file name
-    :type filename: file
+    :param s: string
+    :type s: str
     """
-    six.print_(
-        '\n'.join(line for line in md.parseString(filename).toprettyxml(indent=INDENT).split('\n') if line.strip()))
+    six.print_('\n'.join(line for line in md.parseString(s).toprettyxml(indent=INDENT).split('\n') if line.strip()))
