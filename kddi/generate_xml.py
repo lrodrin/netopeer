@@ -66,10 +66,10 @@ def generate(filename, id_slice, conste, fs, bw):
         # monitor parameters
         ber = etree.SubElement(monitor, 'ber')
         ber.text = 'ber'
-        # channel_power = etree.SubElement(monitor, 'channel-power')
-        # channel_power.text = 'channel-power'
-        # noise_level = etree.SubElement(monitor, 'noise-level')
-        # noise_level.text = 'noise-level'
+        channel_power = etree.SubElement(monitor, 'channel-power')
+        channel_power.text = 'channel-power'
+        noise_level = etree.SubElement(monitor, 'noise-level')
+        noise_level.text = 'noise-level'
         osnr = etree.SubElement(monitor, 'osnr')
         osnr.text = 'osnr'
 
