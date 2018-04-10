@@ -9,10 +9,6 @@ import data as d
 
 def get_ber_and_osnr_parameters(connection):
     try:
-        # config = connection.get(
-        #     filter='<nc:filter type="xpath" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" '
-        #            'xmlns:sliceable-transceiver-sdm="urn:sliceable-transceiver-sdm" '
-        #            'select="/sliceable-transceiver-sdm:transceiver-state"/>')
 
         template = """<transceiver xmlns="urn:sliceable-transceiver-sdm">
             <slice>
