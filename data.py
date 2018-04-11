@@ -1,7 +1,7 @@
 """
 This module implements configuration methods to manipulate a NETCONF server
 
-Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 import re
 import xml.dom.minidom as md
@@ -87,9 +87,25 @@ def get_config(connection, filter, session):
     :param session: datastore session
     :type session: str
     :type filter: str
+    :return configuration
     """
     config = connection.get_config(source=session, filter=('subtree', filter)).data_xml
-    return pretty_print_from_string(config)
+    return pretty_print(config)
+
+
+def get_config_path(connection, filter, session):
+    """
+    Retrieve the session config from the NETCONF server using a get-config operation
+
+    :param connection: connection
+    :param filter: filter
+    :param session: datastore session
+    :type session: str
+    :type filter: str
+    :return configuration
+    """
+    config = connection.get_config(source=session, filter=('xpath', filter)).data_xml
+    return pretty_print(config)
 
 
 def write_file(fi, fo):
@@ -113,11 +129,11 @@ def edit_config(connection, data, session, operation):
     connection.edit_config(target=session, config=data, default_operation=operation)
 
 
-def pretty_print_from_string(s):
+def pretty_print(s):
     """
-    Pretty print for XML specified by str
+    Pretty print for XML specified by s
 
-    :param s: string
+    :param s: configuration
     :type s: str
     """
-    six.print_('\n'.join(line for line in md.parseString(s).toprettyxml(indent=INDENT).split('\n') if line.strip()))
+    return '\n'.join(line for line in md.parseString(s).toprettyxml(indent=INDENT).split('\n') if line.strip())
