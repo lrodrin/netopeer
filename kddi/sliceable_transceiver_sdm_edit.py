@@ -19,8 +19,8 @@ def set_parameters(connection, config_file, session, operation, filter):
 
 
 if __name__ == '__main__':
-    host = '10.1.7.67'
-    host2 = '10.1.7.83'
+    host = '10.1.7.65'
+    host2 = '10.1.7.66'
     port = 830
     login = 'root'
     password = 'netlabN.'
