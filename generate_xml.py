@@ -82,4 +82,4 @@ def generate(filename, id_slice, conste, fs, bw):
 if __name__ == '__main__':
     generate("test1_edit_config.xml", 1, 'qam16', 2, '12000000000')
 
-    generate("test5_edit_config.xml", 1, 'qpsk', 4, '24000000000')
+    generate("test5_edit_all_config.xml", 1, 'qpsk', 4, '24000000000')

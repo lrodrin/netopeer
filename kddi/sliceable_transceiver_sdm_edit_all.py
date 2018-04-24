@@ -1,5 +1,5 @@
 """
-This module implements the reconfiguration for one part of the optical channels
+This module implements the reconfiguration of the optical channels
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    config_file = 'test5_edit_config.xml'
+    config_file = 'test5_edit_all_config.xml'
     filter = "<transceiver/>"
 
     connectionTX = d.connect(host, port, login, password)

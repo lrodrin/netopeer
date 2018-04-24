@@ -6,7 +6,7 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 
 import time
 
-import kddi.sliceable_transceiver_sdm_edit as edit
+import kddi.sliceable_transceiver_sdm_edit_all as edit
 import kddi.sliceable_transceiver_sdm_get as get
 import kddi.sliceable_transceiver_sdm_startup as startup
 
