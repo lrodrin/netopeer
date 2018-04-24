@@ -103,7 +103,7 @@ module sliceable-transceiver-sdm {
       uses equalization;
     } 
     container monitor {
-      //config false;
+      config false;
       leaf ber { type string; }
       leaf channel-power { type string; }
       leaf noise-level { type string; }
