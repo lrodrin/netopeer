@@ -10,8 +10,8 @@ import kddi.sliceable_transceiver_sdm_edit as edit
 import kddi.sliceable_transceiver_sdm_get as get
 import kddi.sliceable_transceiver_sdm_startup as startup
 
-host = '10.1.7.67'
-host2 = '10.1.7.83'
+host = '10.1.7.65'
+host2 = '10.1.7.66'
 port = 830
 login = 'root'
 password = 'netlabN.'

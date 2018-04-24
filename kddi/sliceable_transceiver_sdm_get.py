@@ -46,7 +46,7 @@ def get_ber_and_osnr_parameters(connection):
 
 
 if __name__ == '__main__':
-    host = '10.1.7.83'
+    host = '10.1.7.66'
     port = 830
     login = 'root'
     password = 'netlabN.'
