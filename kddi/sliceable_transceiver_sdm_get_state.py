@@ -14,7 +14,7 @@ def get_ber_and_osnr_parameters(connection):
                    'xmlns:sliceable-transceiver-sdm="urn:sliceable-transceiver-sdm" '
                    'select="/sliceable-transceiver-sdm:transceiver-state"/>')
 
-        print(config)
+        print(d.pretty_print(config.xml))
 
     except Exception as e:
         print(e)
