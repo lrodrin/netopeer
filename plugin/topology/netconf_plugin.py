@@ -40,8 +40,7 @@ class NETCONF_plugin(object):
             del d['data']['@xmlns']
             del d['data']['@xmlns:nc']
 
-        print(d)
-        configuration_parsed = json.dumps(d)
+        configuration_parsed = json.dumps(d.pop('data'))
         return configuration_parsed
 
 
