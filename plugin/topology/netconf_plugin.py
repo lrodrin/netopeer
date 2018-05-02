@@ -1,7 +1,7 @@
+import json
 import logging
 import os
 
-import json
 import xmltodict
 
 from plugin.topology.netconf_api import NetopeerAPIaccessor
@@ -30,18 +30,22 @@ class NETCONF_plugin(object):
 
     @staticmethod
     def createConfiguration():
-        api = NetopeerAPIaccessor()
-        configuration = api.retrieveConfiguration()
+        configuration = NetopeerAPIaccessor().retrieveConfiguration()
         return configuration
 
-    def parseConfiguration(self, configuration):
-        pass
+    @staticmethod
+    def parseConfiguration(old_configuration):
+        configuration_parsed = json.dumps(xmltodict.parse(old_configuration))
+        return configuration_parsed
 
 
 # TEST
-config = NETCONF_plugin().createConfiguration()
-config_parse = (xmltodict.parse(config))
-print(json.dumps(config_parse))
+plugin = NETCONF_plugin()
+config = plugin.createConfiguration()
+print(plugin.parseConfiguration(config))
+
+# config_parse = (xmltodict.parse(config))
+# print(json.dumps(config_parse))
 
 # def parseTopology(self, topology):
 #     try:
