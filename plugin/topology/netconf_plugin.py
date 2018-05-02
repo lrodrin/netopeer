@@ -35,7 +35,13 @@ class NETCONF_plugin(object):
 
     @staticmethod
     def parseConfiguration(old_configuration):
-        configuration_parsed = json.dumps(xmltodict.parse(old_configuration))
+        d = xmltodict.parse(old_configuration)
+        if 'data' in d:
+            del d['data']['@xmlns']
+            del d['data']['@xmlns:nc']
+
+        print(d)
+        configuration_parsed = json.dumps(d)
         return configuration_parsed
 
 
