@@ -11,24 +11,26 @@ logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
 
 
 class NetopeerAPIaccessor:
-    ip = '10.1.7.66'
+    ip_agent_CO = '10.1.7.66'
     port = '830'
     user = 'root'
     password = 'netlabN.'
 
     def retrieveConfiguration(self):
-        connection = manager.connect(host=self.ip, port=self.port, username=self.user, password=self.password,
+        connection = manager.connect(host=self.ip_agent_CO, port=self.port, username=self.user, password=self.password,
                                      hostkey_verify=False, device_params={'name': 'default'}, allow_agent=False,
                                      look_for_keys=False)
-        logger.debug('Connection ' + str(connection))
+        logger.debug('Response connection ' + str(connection))
 
         configuration = connection.get_config(source='running', filter=('subtree', '<transceiver/>')).data_xml
+        logger.debug('Response configuration ' + str(configuration))
+
         return configuration
+
 
 # TEST
 # api = NetopeerAPIaccessor()
-# config = api.retrieveConfiguration()
-# print(config)
+# print(api.retrieveConfiguration())
 
 # def retrieveNodes(self):
 #     http_json = 'http://' + self.ip + ':' + str(self.port) + '/restconf/operational/opendaylight-inventory:nodes'

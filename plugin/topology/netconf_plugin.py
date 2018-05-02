@@ -1,9 +1,16 @@
 import logging
 import os
 
+import json
+import xmltodict
+
 from plugin.topology.netconf_api import NetopeerAPIaccessor
 
 # from lib.COP.objects_service_topology.topology import Topology
+
+__author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
+__copyright__ = "Copyright 2018, CTTC"
+__license__ = "MIT License"
 
 logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
 
@@ -21,16 +28,20 @@ class NETCONF_plugin(object):
             if key in kwargs:
                 setattr(self, key[4:], kwargs[key])
 
-    def createConfiguration(self):
+    @staticmethod
+    def createConfiguration():
         api = NetopeerAPIaccessor()
         configuration = api.retrieveConfiguration()
         return configuration
 
+    def parseConfiguration(self, configuration):
+        pass
+
 
 # TEST
-plugin = NETCONF_plugin()
-config = plugin.createConfiguration()
-print(config)
+config = NETCONF_plugin().createConfiguration()
+config_parse = (xmltodict.parse(config))
+print(json.dumps(config_parse))
 
 # def parseTopology(self, topology):
 #     try:
