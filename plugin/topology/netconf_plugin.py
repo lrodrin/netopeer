@@ -1,6 +1,5 @@
 import json
 import logging
-import os
 
 import xmltodict
 
@@ -12,7 +11,8 @@ __author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
 __license__ = "MIT License"
 
-logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
+# logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
+logging.basicConfig(filename='netconf_plugin.log', filemode='w', level=logging.DEBUG)
 
 
 class NETCONF_plugin(object):
@@ -28,29 +28,35 @@ class NETCONF_plugin(object):
             if key in kwargs:
                 setattr(self, key[4:], kwargs[key])
 
-    @staticmethod
-    def createConfiguration():
-        configuration = NetopeerAPIaccessor().retrieveConfiguration()
-        return configuration
+        self.name = 'NETCONF'
 
-    @staticmethod
-    def parseConfiguration(old_configuration):
-        d = xmltodict.parse(old_configuration)
-        if 'data' in d:
-            del d['data']['@xmlns']
-            del d['data']['@xmlns:nc']
+        # NETCONF API
+        self.api = NetopeerAPIaccessor()
 
-        configuration_parsed = json.dumps(d.pop('data'))
+    def __str__(self):
+        return self.name
+
+    def createConfiguration(self):
+        logging.debug('netconf_plugin.createConfiguration')
+        configuration = self.api.retrieveConfiguration()
+        configuration_parsed = self.parseConfiguration(configuration)
         return configuration_parsed
+
+    @staticmethod
+    def parseConfiguration(configuration):
+        logging.debug('netconf_plugin.parseConfiguration')
+        new_dict = xmltodict.parse(configuration)
+        if 'data' in new_dict:
+            del new_dict['data']['@xmlns']
+            del new_dict['data']['@xmlns:nc']
+
+        configuration_parsed = new_dict.pop('data')
+        return json.dumps(configuration_parsed, indent=4, sort_keys=True)
 
 
 # TEST
 plugin = NETCONF_plugin()
-config = plugin.createConfiguration()
-print(plugin.parseConfiguration(config))
-
-# config_parse = (xmltodict.parse(config))
-# print(json.dumps(config_parse))
+print(plugin.createConfiguration())
 
 # def parseTopology(self, topology):
 #     try:

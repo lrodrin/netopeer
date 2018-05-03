@@ -1,5 +1,4 @@
 import logging
-import os
 
 from ncclient import manager
 
@@ -7,25 +6,39 @@ __author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
 __license__ = "MIT License"
 
-logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
+# logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
+logging.basicConfig(filename='netconf_plugin.log', filemode='w', level=logging.DEBUG)
 
 
 class NetopeerAPIaccessor:
+    ip_agent_CS = '10.1.7.65'
     ip_agent_CO = '10.1.7.66'
     port = '830'
     user = 'root'
     password = 'netlabN.'
 
     def retrieveConfiguration(self):
-        connection = manager.connect(host=self.ip_agent_CO, port=self.port, username=self.user, password=self.password,
-                                     hostkey_verify=False, device_params={'name': 'default'}, allow_agent=False,
-                                     look_for_keys=False)
-        logger.debug('Response connection ' + str(connection))
+        # TODO: connection and get methods
+        # connection_CS = manager.connect(host=self.ip_agent_CS, port=self.port, username=self.user,
+        #                                 password=self.password,
+        #                                 hostkey_verify=False, device_params={'name': 'default'}, allow_agent=False,
+        #                                 look_for_keys=False)
+        connection_CO = manager.connect(host=self.ip_agent_CO, port=self.port, username=self.user,
+                                        password=self.password,
+                                        hostkey_verify=False, device_params={'name': 'default'}, allow_agent=False,
+                                        look_for_keys=False)
 
-        configuration = connection.get_config(source='running', filter=('subtree', '<transceiver/>')).data_xml
-        logger.debug('Response configuration ' + str(configuration))
+        # logger.debug('Response connection_CS to NETCONF server ' + str(connection_CS))
+        logging.debug('Response connection_CO to NETCONF server ' + str(connection_CO))
 
-        return configuration
+        # configuration_CO = connection_CS.get_config(source='running', filter=('subtree', '<transceiver/>')).data_xml
+        configuration_CO = connection_CO.get_config(source='running', filter=('subtree', '<transceiver/>')).data_xml
+
+        # logger.debug('Response get configuration_CO ' + str(configuration_CS))
+        logging.debug('Response get configuration_CO ' + str(configuration_CO))
+        #
+        # return configuration_CS, configuration_CO
+        return configuration_CO
 
 
 # TEST
