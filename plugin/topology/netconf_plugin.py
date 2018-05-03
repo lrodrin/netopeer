@@ -38,9 +38,12 @@ class NETCONF_plugin(object):
 
     def createConfiguration(self):
         logging.debug('netconf_plugin.createConfiguration')
-        configuration = self.api.retrieveConfiguration()
-        configuration_parsed = self.parseConfiguration(configuration)
-        return configuration_parsed
+        configuration_CO = self.api.retrieveConfiguration()
+        # configuration_CS, configuration_CO = self.api.retrieveConfiguration()
+        # configuration_CS_parsed = self.parseConfiguration(configuration_CS)
+        configuration_CO_parsed = self.parseConfiguration(configuration_CO)
+        # return configuration_CS_parsed, configuration_CO_parsed
+        return configuration_CO_parsed
 
     @staticmethod
     def parseConfiguration(configuration):
