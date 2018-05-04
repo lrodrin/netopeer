@@ -44,15 +44,15 @@ class NETCONF_plugin(object):
                 setattr(self, key[4:], kwargs[key])
 
         self.api = NetopeerAPIaccessor(self.user, self.password,
-                                       self.addr, self.port)
-
+                self.addr, self.port)        
+        
         self.controller = kwargs['controller']
 
     def __str__(self):
         return self.name
 
     def createTopology(self):
-        configuration = self.api.retrieveTopology()
+        configuration = self.api.retrieveConfiguration()
         configuration_parsed = parseConfiguration(configuration)
-        logger.debug('Response from {}:\n'.format(configuration_parsed))
+        logger.debug('Response from {}:\n'.format(configuration_parsed))   
         return configuration_parsed

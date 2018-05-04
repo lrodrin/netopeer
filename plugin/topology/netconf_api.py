@@ -21,7 +21,7 @@ class NetopeerAPIaccessor:
         self.ip = ip
         self.port = port
 
-    def retrieveTopology(self):
+    def retrieveConfiguration(self):
         logger.debug('Retrieving config from {}:{}'.format(self.ip, self.port))
         try:
             connection = manager.connect(host=self.ip, port=self.port, username=self.user,
