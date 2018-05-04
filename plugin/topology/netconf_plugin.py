@@ -1,11 +1,13 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+
 import inspect
-import json
 import logging
-import os
+import os, json
 
 import xmltodict
 
-from plugin.topology.netconf_api import NetopeerAPIaccessor
+from TopologyManager.plugins.NETCONF_plugin.netconf_api import NetopeerAPIaccessor
 
 __author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
@@ -27,23 +29,22 @@ class NETCONF_plugin(object):
             if key in kwargs:
                 setattr(self, key[4:], kwargs[key])
 
-        # self.name = 'NETCONF'
         self.api = NetopeerAPIaccessor(self.user, self.password,
-                                       self.addr, self.port)
+                self.addr, self.port)
         self.controller = kwargs['controller']
 
     def __str__(self):
         return self.name
 
-    def createConfiguration(self):
+    def createTopology(self):
         logger.debug(format(inspect.stack()[1]))
         logger.debug('netconfPlugin.createConfiguration')
 
         configuration = self.api.retrieveConfiguration()
-        configuration_parsed = self.parseConfiguration(configuration)
+        configuration_parsed = self.parseTopology(configuration)
         return configuration_parsed
 
-    def parseConfiguration(self, configuration):
+    def parseTopology(self, configuration):
         logger.debug(format(inspect.stack()[1]))
         logging.debug('netconfPlugin.parseConfiguration')
 

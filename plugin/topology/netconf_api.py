@@ -14,13 +14,8 @@ logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
 
 class NetopeerAPIaccessor:
 
-    def __init__(
-            self,
-            user,
-            password,
-            ip,
-            port,
-    ):
+    def __init__(self, user, password, ip, port, ):
+
         self.user = user
         self.password = password
         self.ip = ip
@@ -28,7 +23,6 @@ class NetopeerAPIaccessor:
 
     def retrieveConfiguration(self):
         logger.debug('Retrieving config from {}:{}'.format(self.ip, self.port))
-
         try:
             connection = manager.connect(host=self.ip, port=self.port, username=self.user,
                                          password=self.password, hostkey_verify=False,
