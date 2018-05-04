@@ -21,7 +21,7 @@ class NetopeerAPIaccessor:
         self.ip = ip
         self.port = port
 
-    def retrieveConfiguration(self):
+    def retrieveTopology(self):
         logger.debug('Retrieving config from {}:{}'.format(self.ip, self.port))
         try:
             connection = manager.connect(host=self.ip, port=self.port, username=self.user,
@@ -31,7 +31,6 @@ class NetopeerAPIaccessor:
             logger.debug('Response from {}:\n\t{}'.format(connection, connection.content))
 
             configuration = connection.get_config(source='running', filter=('subtree', '<transceiver/>')).data_xml
-            logger.debug('Response from {}:\n\t{}'.format(connection, configuration))
 
         except Exception as e:
             logger.error({'error': str(sys.exc_info()[0]), 'value': str(sys.exc_info()[1]),
@@ -42,4 +41,4 @@ class NetopeerAPIaccessor:
 
 # if __name__ == '__main__':
 #     api = NetopeerAPIaccessor('root', 'netlabN.', '10.1.7.66', 830)
-#     print(api.retrieveConfiguration())
+#     print(api.retrieveTopology())
