@@ -40,6 +40,6 @@ class API:
             raise e
         return configuration
 
-# if __name__ == '__main__':
-#     api = NetopeerAPIaccessor('root', 'netlabN.', '10.1.7.66', 830)
-#     print(api.retrieveTopology())
+if __name__ == '__main__':
+    api = API('root', 'netlabN.', '10.1.7.66', 830)
+    print(api.retrieveConfiguration())
