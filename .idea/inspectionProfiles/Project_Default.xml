@@ -32,5 +32,16 @@
         </list>
       </option>
     </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="plugin.topology.netconf_plugin.NETCONF_plugin.user" />
+          <option value="plugin.topology.netconf_plugin.NETCONF_plugin.password" />
+          <option value="plugin.topology.netconf_plugin.NETCONF_plugin.addr" />
+          <option value="plugin.topology.netconf_plugin.NETCONF_plugin.port" />
+          <option value="plugin.topology.netconf_plugin.NETCONF_plugin.name" />
+        </list>
+      </option>
+    </inspection_tool>
   </profile>
 </component>

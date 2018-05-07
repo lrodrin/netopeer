@@ -216,15 +216,15 @@ if __name__ == '__main__':
     manager.registerController('conf', json_data)
 
     manager.registerPlugin('netconf')
-    # json_data = {
-    #     'ctl_name': 'odl2',
-    #     'ctl_addr': '10.1.7.84',
-    #     'ctl_port': '8181',
-    #     'ctl_method': 'http',
-    #     'ctl_user': 'admin',
-    #     'ctl_password': 'admin'
-    #     }
-    # manager.registerController('netconf', json_data)
+    json_data = {
+        'ctl_name': 'odl2',
+        'ctl_addr': '10.1.7.84',
+        'ctl_port': '8181',
+        'ctl_method': 'http',
+        'ctl_user': 'admin',
+        'ctl_password': 'admin'
+        }
+    manager.registerController('netconf', json_data)
 
     #print manager.getL0Topology()
     #print manager.getL2Topology()

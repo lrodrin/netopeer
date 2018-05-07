@@ -7,8 +7,8 @@ import os, json
 
 import xmltodict
 
-# from TopologyManager.plugins.NETCONF_plugin.netconf_api import NetopeerAPIaccessor
-from netconf_api import NetopeerAPIaccessor
+from TopologyManager.plugins.NETCONF_plugin.netconf_api import NetopeerAPIaccessor
+from lib.COP.objects_service_topology.topology import Topology
 
 __author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
@@ -44,15 +44,28 @@ class NETCONF_plugin(object):
                 setattr(self, key[4:], kwargs[key])
 
         self.api = NetopeerAPIaccessor(self.user, self.password,
-                                       self.addr, self.port)
-
-        # self.controller = kwargs['controller']
+                self.addr, self.port)        
+        
+        self.controller = kwargs['controller']
 
     def __str__(self):
         return self.name
 
+    # def createTopology(self):
+    #     configuration = self.api.retrieveConfiguration()
+    #     configuration_parsed = parseConfiguration(configuration)
+    #     logger.debug('Response from {}:\n'.format(configuration_parsed))   
+    #     return configuration_parsed
+
     def createTopology(self):
-        configuration = self.api.retrieveConfiguration()
-        configuration_parsed = parseConfiguration(configuration)
-        logger.debug('Response from {}:\n'.format(configuration_parsed))
-        return configuration_parsed
+    	topology = Topology()
+    	topology_parsed = self.parseTopology(topology)
+    	return topology_parsed
+
+    def parseTopology(self, topology):
+    	configuration = self.api.retrieveConfiguration()
+    	configuration_parsed = parseConfiguration(configuration)
+        logger.debug('Response from {}:\n'.format(configuration_parsed)) 
+        
+        netconf_topology = configuration_parsed['topology'][0]
+        return netconf_topology  
