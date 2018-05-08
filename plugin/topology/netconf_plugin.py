@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import inspect
-import json
 import logging
 import os
 
@@ -39,16 +38,17 @@ class NETCONF_plugin(object):
         logger.debug(format(inspect.stack()[1]))
         logging.debug('netconfPlugin.createTopology')
 
-        # topology = Topology()
-        topology_parsed = self.parseTopology()
+        topology = Topology()
+        topology_parsed = self.parseTopology(topology)
         return topology_parsed
 
-    def parseTopology(self):
+    def parseTopology(self, topology):
         logger.debug(format(inspect.stack()[1]))
         logging.debug('netconfPlugin.parseTopology')
 
-        configuration = self.api.retrieveConfiguration()
-        topology = Topology(configuration)
+        topology_json = self.api.retrieveConfiguration()
+        topology_tmp = Topology(topology_json)
+        topology.topologyId = topology_tmp.topologyId
         return topology
 
     def refreshTopology(self, topology):
