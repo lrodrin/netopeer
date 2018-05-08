@@ -1,0 +1,36 @@
+module: node-topology
+  +--ro node-id?   string
+  +--ro port
+     +--ro port-id?                 string
+     +--ro layer-protocol-name?     string
+     +--ro available-core* [core-id]
+     |  +--ro core-id                     string
+     |  +--ro available-frequency-slot* [slot-id]
+     |  |  +--ro slot-id                      string
+     |  |  +--ro nominal-central-frequency
+     |  |  |  +--ro grid-type?                string
+     |  |  |  +--ro adjustment-granularity?   string
+     |  |  |  +--ro channel-number?           string
+     |  |  +--ro slot-width-number?           string
+     |  +--ro occupied-frequency-slot* [slot-id]
+     |     +--ro slot-id                      string
+     |     +--ro nominal-central-frequency
+     |     |  +--ro grid-type?                string
+     |     |  +--ro adjustment-granularity?   string
+     |     |  +--ro channel-number?           string
+     |     +--ro slot-width-number?           string
+     +--ro available-transceiver
+        +--ro transceiver-id?                     string
+        +--ro transceiver-type?                   string
+        +--ro supported-modulation-format
+        |  +--ro modulation-id?   string
+        |  +--ro mod-type?        string
+        +--ro supported-center-frequency-range
+        |  +--ro max-cf?   string
+        |  +--ro min-cf?   string
+        +--ro supported-bandwidth
+        |  +--ro max-bw?   string
+        |  +--ro min-bw?   string
+        +--ro supported-FEC?                      string
+        +--ro supported-equalization?             string
+        +--ro supported-monitoring?               string

@@ -1,0 +1,47 @@
+module: sliceable-transceiver-sdm
+  +--rw transceiver
+  |  +--rw transceiverid?   string
+  |  +--rw slice* [sliceid]
+  |     +--rw sliceid            string
+  |     +--rw optical-channel* [opticalchannelid]
+  |     |  +--rw opticalchannelid    string
+  |     |  +--rw coreid?             string
+  |     |  +--rw modeid?             string
+  |     |  +--rw frequency-slot
+  |     |     +--rw ncf?          int32
+  |     |     +--rw slot-width?   uint32
+  |     +--rw optical-signal* [opticalchannelid]
+  |        +--rw opticalchannelid    -> /transceiver/slice/optical-channel/opticalchannelid
+  |        +--rw constellation?      identityref
+  |        +--rw bandwidth?          decimal64
+  |        +--rw fec?                identityref
+  |        +--rw equalization
+  |        |  +--rw equalizationid?   string
+  |        |  +--rw mimo?             boolean
+  |        |  +--rw num_taps?         uint32
+  |        +--ro monitor
+  |           +--ro ber?    string
+  |           +--ro osnr?   string
+  +--ro transceiver-state
+     +--ro transceiverid?   string
+     +--ro slice* [sliceid]
+        +--ro sliceid            string
+        +--ro optical-channel* [opticalchannelid]
+        |  +--ro opticalchannelid    string
+        |  +--ro coreid?             string
+        |  +--ro modeid?             string
+        |  +--ro frequency-slot
+        |     +--ro ncf?          int32
+        |     +--ro slot-width?   uint32
+        +--ro optical-signal* [opticalchannelid]
+           +--ro opticalchannelid    -> /transceiver/slice/optical-channel/opticalchannelid
+           +--ro constellation?      identityref
+           +--ro bandwidth?          decimal64
+           +--ro fec?                identityref
+           +--ro equalization
+           |  +--ro equalizationid?   string
+           |  +--ro mimo?             boolean
+           |  +--ro num_taps?         uint32
+           +--ro monitor
+              +--ro ber?    string
+              +--ro osnr?   string

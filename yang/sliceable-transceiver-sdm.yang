@@ -13,7 +13,7 @@ module sliceable-transceiver-sdm {
   description
     "Latest update to sliceable transponder SDM YANG data model.";
 
-  revision "2017-03-10" {
+  revision "2018-05-08" {
     description "Update to  sliceable transponder SDM YANG data model initial revision.";
     reference "";
   }
@@ -103,12 +103,8 @@ module sliceable-transceiver-sdm {
       uses equalization;
     } 
     container monitor {
-      leaf ber {
-        config false;
-        type string;
-      }
-      leaf channel-power { type string; }
-      leaf noise-level { type string; }
+      config false;
+      leaf ber { type string; }
       leaf osnr { type string; }
     }
   }
@@ -145,6 +141,9 @@ module sliceable-transceiver-sdm {
   }
 
   grouping transceiver {
+    leaf transceiverid {
+      type string;
+    }
     list slice{
       key "sliceid";
       uses slice;
@@ -158,5 +157,16 @@ module sliceable-transceiver-sdm {
   
   container transceiver {
     uses transceiver;
+  }
+
+  container transceiver-state {
+    config false;
+    leaf transceiverid {
+      type string;
+    }
+    list slice {
+      key "sliceid";
+      uses slice;
+    }
   }
 }
