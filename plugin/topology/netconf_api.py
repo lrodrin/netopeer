@@ -58,7 +58,6 @@ class NETCONF_API:
                           'TRACEBACK': str(traceback.format_exc()), 'CODE': 500})
             raise e
 
-
-if __name__ == '__main__':
-    api = NETCONF_API('root', 'netlabN.', '10.1.7.84', 830)
-    print(api.retrieveConfiguration())
+# if __name__ == '__main__':
+#     api = NETCONF_API('root', 'netlabN.', '10.1.7.84', 830)
+#     print(api.retrieveConfiguration())

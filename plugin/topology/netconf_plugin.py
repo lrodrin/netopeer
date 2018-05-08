@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import inspect
+import json
 import logging
 import os
 
@@ -29,7 +30,7 @@ class NETCONF_plugin(object):
                 setattr(self, key[4:], kwargs[key])
 
         self.api = NETCONF_API(self.user, self.password, self.addr, self.port)
-        self.controller = kwargs['controller']
+        # self.controller = kwargs['controller']
 
     def __str__(self):
         return self.name
