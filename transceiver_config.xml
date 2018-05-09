@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
     <transceiver xmlns="urn:sliceable-transceiver-sdm">
+        <transceiverid>1</transceiverid>
         <slice>
             <sliceid>1</sliceid>
             <optical-channel>
@@ -877,11 +878,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>2</opticalchannelid>
@@ -893,11 +889,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>3</opticalchannelid>
@@ -909,11 +900,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>4</opticalchannelid>
@@ -925,11 +911,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>5</opticalchannelid>
@@ -941,11 +922,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>6</opticalchannelid>
@@ -957,11 +933,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>7</opticalchannelid>
@@ -973,11 +944,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>8</opticalchannelid>
@@ -989,11 +955,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>9</opticalchannelid>
@@ -1005,11 +966,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>10</opticalchannelid>
@@ -1021,11 +977,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>11</opticalchannelid>
@@ -1037,11 +988,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>12</opticalchannelid>
@@ -1053,11 +999,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>13</opticalchannelid>
@@ -1069,11 +1010,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>14</opticalchannelid>
@@ -1085,11 +1021,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>15</opticalchannelid>
@@ -1101,11 +1032,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>16</opticalchannelid>
@@ -1117,11 +1043,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>17</opticalchannelid>
@@ -1133,11 +1054,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>18</opticalchannelid>
@@ -1149,11 +1065,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>19</opticalchannelid>
@@ -1165,11 +1076,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>20</opticalchannelid>
@@ -1181,11 +1087,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>21</opticalchannelid>
@@ -1197,11 +1098,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>22</opticalchannelid>
@@ -1213,11 +1109,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>23</opticalchannelid>
@@ -1229,11 +1120,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>24</opticalchannelid>
@@ -1245,11 +1131,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>25</opticalchannelid>
@@ -1261,11 +1142,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>26</opticalchannelid>
@@ -1277,11 +1153,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>27</opticalchannelid>
@@ -1293,11 +1164,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>28</opticalchannelid>
@@ -1309,11 +1175,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>29</opticalchannelid>
@@ -1325,11 +1186,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>30</opticalchannelid>
@@ -1341,11 +1197,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>31</opticalchannelid>
@@ -1357,11 +1208,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>32</opticalchannelid>
@@ -1373,11 +1219,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>33</opticalchannelid>
@@ -1389,11 +1230,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>34</opticalchannelid>
@@ -1405,11 +1241,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>35</opticalchannelid>
@@ -1421,11 +1252,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>36</opticalchannelid>
@@ -1437,11 +1263,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>37</opticalchannelid>
@@ -1453,11 +1274,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>38</opticalchannelid>
@@ -1469,11 +1285,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>39</opticalchannelid>
@@ -1485,11 +1296,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>40</opticalchannelid>
@@ -1501,11 +1307,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>41</opticalchannelid>
@@ -1517,11 +1318,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>42</opticalchannelid>
@@ -1533,11 +1329,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>43</opticalchannelid>
@@ -1549,11 +1340,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>44</opticalchannelid>
@@ -1565,11 +1351,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>45</opticalchannelid>
@@ -1581,11 +1362,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>46</opticalchannelid>
@@ -1597,11 +1373,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>47</opticalchannelid>
@@ -1613,11 +1384,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>48</opticalchannelid>
@@ -1629,11 +1395,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>49</opticalchannelid>
@@ -1645,11 +1406,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>50</opticalchannelid>
@@ -1661,11 +1417,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>51</opticalchannelid>
@@ -1677,11 +1428,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>52</opticalchannelid>
@@ -1693,11 +1439,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>53</opticalchannelid>
@@ -1709,11 +1450,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>54</opticalchannelid>
@@ -1725,11 +1461,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>55</opticalchannelid>
@@ -1741,11 +1472,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>56</opticalchannelid>
@@ -1757,11 +1483,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>57</opticalchannelid>
@@ -1773,11 +1494,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>58</opticalchannelid>
@@ -1789,11 +1505,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>59</opticalchannelid>
@@ -1805,11 +1516,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>60</opticalchannelid>
@@ -1821,11 +1527,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>61</opticalchannelid>
@@ -1837,11 +1538,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>62</opticalchannelid>
@@ -1853,11 +1549,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>63</opticalchannelid>
@@ -1869,11 +1560,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>64</opticalchannelid>
@@ -1885,11 +1571,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>65</opticalchannelid>
@@ -1901,11 +1582,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>66</opticalchannelid>
@@ -1917,11 +1593,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>67</opticalchannelid>
@@ -1933,11 +1604,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>68</opticalchannelid>
@@ -1949,11 +1615,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>69</opticalchannelid>
@@ -1965,11 +1626,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>70</opticalchannelid>
@@ -1981,11 +1637,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>71</opticalchannelid>
@@ -1997,11 +1648,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>72</opticalchannelid>
@@ -2013,11 +1659,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>73</opticalchannelid>
@@ -2029,11 +1670,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>74</opticalchannelid>
@@ -2045,11 +1681,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>75</opticalchannelid>
@@ -2061,11 +1692,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>76</opticalchannelid>
@@ -2077,11 +1703,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>77</opticalchannelid>
@@ -2093,11 +1714,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>78</opticalchannelid>
@@ -2109,11 +1725,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>79</opticalchannelid>
@@ -2125,11 +1736,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>80</opticalchannelid>
@@ -2141,11 +1747,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>81</opticalchannelid>
@@ -2157,11 +1758,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>82</opticalchannelid>
@@ -2173,11 +1769,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>83</opticalchannelid>
@@ -2189,11 +1780,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>84</opticalchannelid>
@@ -2205,11 +1791,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>85</opticalchannelid>
@@ -2221,11 +1802,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>86</opticalchannelid>
@@ -2237,11 +1813,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>87</opticalchannelid>
@@ -2253,11 +1824,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>88</opticalchannelid>
@@ -2269,11 +1835,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>89</opticalchannelid>
@@ -2285,11 +1846,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>90</opticalchannelid>
@@ -2301,11 +1857,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>91</opticalchannelid>
@@ -2317,11 +1868,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>92</opticalchannelid>
@@ -2333,11 +1879,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>93</opticalchannelid>
@@ -2349,11 +1890,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>94</opticalchannelid>
@@ -2365,11 +1901,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>95</opticalchannelid>
@@ -2381,11 +1912,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>96</opticalchannelid>
@@ -2397,11 +1923,6 @@
                     <mimo>true</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
-                <monitor>
-                    <channel-power>channel-power</channel-power>
-                    <noise-level>noise-level</noise-level>
-                    <osnr>osnr</osnr>
-                </monitor>
             </optical-signal>
         </slice>
     </transceiver>

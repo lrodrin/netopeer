@@ -1,5 +1,5 @@
 """
-This module generate XML configuration
+This module generate transceiver XML configuration
 
 Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -14,9 +14,11 @@ modes = ["LP01", "LP11a", "LP11b", "LP21a", "LP21b", "LP02"]
 channels = ["137", "129", "121", "113", "105", "97", "89", "81", "73", "65", "57", "49", "41", "33", "25", "17"]
 
 
-def generate(filename, id_slice, conste, fs, bw):
+def generate(filename, id_transceiver, id_slice, conste, fs, bw):
     config = etree.Element('config', xmlns="urn:ietf:params:xml:ns:netconf:base:1.0")
     transceiver = etree.SubElement(config, 'transceiver', xmlns="urn:sliceable-transceiver-sdm")
+    transceiverid = etree.SubElement(transceiver, 'transceiverid')
+    transceiverid.text = '%s' % id_transceiver
     slice = etree.SubElement(transceiver, 'slice')
     sliceid = etree.SubElement(slice, 'sliceid')
     sliceid.text = '%s' % id_slice
@@ -62,16 +64,12 @@ def generate(filename, id_slice, conste, fs, bw):
         num_taps = etree.SubElement(equalization, 'num_taps')
         num_taps.text = '500'
 
-        monitor = etree.SubElement(optical_signal, 'monitor')
+        # monitor = etree.SubElement(optical_signal, 'monitor')
         # monitor parameters
         # ber = etree.SubElement(monitor, 'ber')
         # ber.text = 'ber'
-        channel_power = etree.SubElement(monitor, 'channel-power')
-        channel_power.text = 'channel-power'
-        noise_level = etree.SubElement(monitor, 'noise-level')
-        noise_level.text = 'noise-level'
-        osnr = etree.SubElement(monitor, 'osnr')
-        osnr.text = 'osnr'
+        # osnr = etree.SubElement(monitor, 'osnr')
+        # osnr.text = 'osnr'
 
     xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
@@ -80,6 +78,4 @@ def generate(filename, id_slice, conste, fs, bw):
 
 
 if __name__ == '__main__':
-    generate("test1_edit_config.xml", 1, 'qam16', 2, '12000000000')
-
-    generate("test5_edit_all_config.xml", 1, 'qpsk', 4, '24000000000')
+    generate("transceiver_config.xml", 1, 1, 'qam16', 2, '12000000000')

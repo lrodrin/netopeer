@@ -4,6 +4,10 @@ module node-topology {
 
   prefix "node-topology";
 
+  import sliceable-transceiver-sdm {
+    prefix sliceable-transceiver-sdm;
+  }
+
   organization
     "CTTC";
 
@@ -13,7 +17,7 @@ module node-topology {
   description
     "Latest update to node topology SDM YANG data model.";
 
-  revision "2018-05-08" {
+  revision "2018-05-09" {
     description "Update to node topology SDM YANG data model initial revision.";
     reference "";
   }
@@ -23,10 +27,16 @@ module node-topology {
     type string;
   }
 
-  grouping available-transceiver {
+  grouping sliceable-transceiver-sdm-ref {
     leaf transceiver-id {
-      type string;
+        type leafref {
+            path '/sliceable-transceiver-sdm:transceiver/sliceable-transceiver-sdm:transceiverid';
+        }
     }
+  }
+
+  grouping available-transceiver {
+    uses sliceable-transceiver-sdm-ref;
     leaf transceiver-type {
       type string;
     }
@@ -115,12 +125,7 @@ module node-topology {
     }
   }
 
-  /**
-   * Container/lists
-   */    
-
-  container port {
-    config false;
+  grouping port {
     leaf port-id {
       type string;
     }
@@ -134,5 +139,15 @@ module node-topology {
     container available-transceiver {
       uses available-transceiver;
     }
+  }
+
+  /**
+   * Container/lists
+   */    
+
+  list port {
+    config false;
+    key "port-id";
+    uses port;
   }
 }

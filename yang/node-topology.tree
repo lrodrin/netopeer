@@ -1,7 +1,7 @@
 module: node-topology
   +--ro node-id?   string
-  +--ro port
-     +--ro port-id?                 string
+  +--ro port* [port-id]
+     +--ro port-id                  string
      +--ro layer-protocol-name?     string
      +--ro available-core* [core-id]
      |  +--ro core-id                     string
@@ -20,7 +20,7 @@ module: node-topology
      |     |  +--ro channel-number?           string
      |     +--ro slot-width-number?           string
      +--ro available-transceiver
-        +--ro transceiver-id?                     string
+        +--ro transceiver-id?                     -> /sliceable-transceiver-sdm:transceiver/transceiverid
         +--ro transceiver-type?                   string
         +--ro supported-modulation-format
         |  +--ro modulation-id?   string
