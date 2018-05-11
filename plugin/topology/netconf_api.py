@@ -20,12 +20,6 @@ def parseConfiguration(configuration):
     logging.debug('netconfPlugin.parseConfiguration')
 
     configuration_dict = xmltodict.parse(configuration)
-    # if 'data' in configuration_dict:
-    #     del configuration_dict['data']['@xmlns']
-    #     del configuration_dict['data']['@xmlns:nc']
-    #
-    # configuration_parsed = configuration_dict.pop('data')
-    # return json.dumps(configuration_parsed, indent=4, sort_keys=True)
     return json.dumps(configuration_dict, indent=4, sort_keys=True)
 
 
@@ -48,7 +42,7 @@ class NETCONF_API:
                                          device_params={'name': 'default'}, allow_agent=False,
                                          look_for_keys=False)
 
-            configuration = connection.get_config(source='running', filter=('subtree', '<transceiver/>')).data_xml
+            configuration = connection.get_config(source='running', filter=('subtree', '<node/>')).data_xml
             configuration_json = parseConfiguration(configuration)
 
             return configuration_json
@@ -58,6 +52,13 @@ class NETCONF_API:
                           'TRACEBACK': str(traceback.format_exc()), 'CODE': 500})
             raise e
 
-# if __name__ == '__main__':
-#     api = NETCONF_API('root', 'netlabN.', '10.1.7.84', 830)
-#     print(api.retrieveConfiguration())
+
+if __name__ == '__main__':
+    api = NETCONF_API('root', 'netlabN.', '10.1.7.84', 830)
+    config = api.retrieveConfiguration()
+    config_parsed = json.loads(config)
+    # print(config_parsed['data']['node']['port']['port-id'])
+    # print(config_parsed['data']['node']['port']['layer-protocol-name'])
+
+    for port in config_parsed['data']['node']['port']:
+        print(port['port-id'])

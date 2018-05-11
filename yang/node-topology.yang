@@ -20,12 +20,7 @@ module node-topology {
   revision "2018-05-09" {
     description "Update to node topology SDM YANG data model initial revision.";
     reference "";
-  }
-
-  leaf node-id {
-    config false;
-    type string;
-  }
+  }  
 
   grouping sliceable-transceiver-sdm-ref {
     leaf transceiver-id {
@@ -141,13 +136,23 @@ module node-topology {
     }
   }
 
+  grouping node {
+  	leaf node-id {    	
+    	type string;
+  	}
+  	list port {
+	    config false;
+	    key "port-id";
+	    uses port;
+  	}
+  }
+
   /**
    * Container/lists
-   */    
+   */
 
-  list port {
-    config false;
-    key "port-id";
-    uses port;
-  }
+  container node {
+  	//config false;
+    uses node;
+  }  
 }

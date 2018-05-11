@@ -8,18 +8,13 @@ from lxml import etree
 
 from data import pretty_print
 
-INDENT = ' ' * 4
-
-modes = ["LP01", "LP11a", "LP11b", "LP21a", "LP21b", "LP02"]
-channels = ["137", "129", "121", "113", "105", "97", "89", "81", "73", "65", "57", "49", "41", "33", "25", "17"]
-
 
 def generate(filename, id_node, number_of_ports):
     config = etree.Element('config', xmlns="urn:ietf:params:xml:ns:netconf:base:1.0")
     node = etree.SubElement(config, 'node', xmlns="urn:node-topology")
     nodeid = etree.SubElement(node, 'node-id')
     nodeid.text = '%s' % id_node
-    for i in range(number_of_ports):
+    for i in range(1, number_of_ports):
         port = etree.SubElement(node, 'port')
         # port parameters
         portid = etree.SubElement(port, 'port-id')
@@ -27,15 +22,15 @@ def generate(filename, id_node, number_of_ports):
         layer_protocol_name = etree.SubElement(port, 'layer-protocol-name')
         layer_protocol_name.text = 'layer_protocol_name'
 
-        for i in range(number_of_ports):
+        for j in range(1, number_of_ports - 1):
             available_core = etree.SubElement(port, 'available-core')
             # available_core parameters
             coreid = etree.SubElement(available_core, 'core-id')
-            coreid.text = '%s' % i
-            for i in range(number_of_ports):
+            coreid.text = '%s' % j
+            for i in range(1, number_of_ports - 1):
                 available_frequency_slot = etree.SubElement(available_core, 'available-frequency-slot')
                 frequency_slot_parameters(available_frequency_slot, i)
-            for i in range(number_of_ports):
+            for i in range(1, number_of_ports - 1):
                 occupied_frequency_slot = etree.SubElement(available_core, 'occupied-frequency-slot')
                 frequency_slot_parameters(occupied_frequency_slot, i)
 
@@ -100,4 +95,4 @@ def nominal_central_frequency_parameters(nominal_central_frequency):
 
 
 if __name__ == '__main__':
-    generate("node_topology_config.xml", 1, 2)
+    generate("node_topology_config.xml", 1, 3)

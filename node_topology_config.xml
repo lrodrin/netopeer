@@ -3,59 +3,11 @@
     <node xmlns="urn:node-topology">
         <node-id>1</node-id>
         <port>
-            <port-id>0</port-id>
+            <port-id>1</port-id>
             <layer-protocol-name>layer_protocol_name</layer-protocol-name>
-            <available-core>
-                <core-id>0</core-id>
-                <available-frequency-slot>
-                    <slot-id>0</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </available-frequency-slot>
-                <available-frequency-slot>
-                    <slot-id>1</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </available-frequency-slot>
-                <occupied-frequency-slot>
-                    <slot-id>0</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </occupied-frequency-slot>
-                <occupied-frequency-slot>
-                    <slot-id>1</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </occupied-frequency-slot>
-            </available-core>
             <available-core>
                 <core-id>1</core-id>
                 <available-frequency-slot>
-                    <slot-id>0</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </available-frequency-slot>
-                <available-frequency-slot>
                     <slot-id>1</slot-id>
                     <nominal-central-frequency>
                         <grid-type>grid-type</grid-type>
@@ -64,15 +16,6 @@
                     </nominal-central-frequency>
                     <slot-width-number>slot_width_number</slot-width-number>
                 </available-frequency-slot>
-                <occupied-frequency-slot>
-                    <slot-id>0</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </occupied-frequency-slot>
                 <occupied-frequency-slot>
                     <slot-id>1</slot-id>
                     <nominal-central-frequency>
@@ -104,59 +47,11 @@
             </available-transceiver>
         </port>
         <port>
-            <port-id>1</port-id>
+            <port-id>2</port-id>
             <layer-protocol-name>layer_protocol_name</layer-protocol-name>
-            <available-core>
-                <core-id>0</core-id>
-                <available-frequency-slot>
-                    <slot-id>0</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </available-frequency-slot>
-                <available-frequency-slot>
-                    <slot-id>1</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </available-frequency-slot>
-                <occupied-frequency-slot>
-                    <slot-id>0</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </occupied-frequency-slot>
-                <occupied-frequency-slot>
-                    <slot-id>1</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </occupied-frequency-slot>
-            </available-core>
             <available-core>
                 <core-id>1</core-id>
                 <available-frequency-slot>
-                    <slot-id>0</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </available-frequency-slot>
-                <available-frequency-slot>
                     <slot-id>1</slot-id>
                     <nominal-central-frequency>
                         <grid-type>grid-type</grid-type>
@@ -165,15 +60,6 @@
                     </nominal-central-frequency>
                     <slot-width-number>slot_width_number</slot-width-number>
                 </available-frequency-slot>
-                <occupied-frequency-slot>
-                    <slot-id>0</slot-id>
-                    <nominal-central-frequency>
-                        <grid-type>grid-type</grid-type>
-                        <adjustment-granularity>adjustment-granularity</adjustment-granularity>
-                        <channel-number>channel-number</channel-number>
-                    </nominal-central-frequency>
-                    <slot-width-number>slot_width_number</slot-width-number>
-                </occupied-frequency-slot>
                 <occupied-frequency-slot>
                     <slot-id>1</slot-id>
                     <nominal-central-frequency>
