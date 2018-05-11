@@ -4,10 +4,6 @@ module node-connectivity {
 
   prefix "node-connectivity";
 
-  import sliceable-transceiver-sdm {
-    prefix sliceable-transceiver-sdm;
-  }
-
   organization
     "CTTC";
 
@@ -17,17 +13,9 @@ module node-connectivity {
   description
     "Latest update to node connectivity SDM YANG data model.";
 
-  revision "2018-05-08" {
+  revision "2018-05-11" {
     description "Update to node connectivity SDM YANG data model initial revision.";
     reference "";
-  }
-
-  grouping sliceable-transceiver-sdm-ref {
-    leaf transceiver-id {
-        type leafref {
-            path '/sliceable-transceiver-sdm:transceiver/sliceable-transceiver-sdm:transceiverid';
-        }
-    }
   }
 
   grouping connection {
@@ -40,7 +28,9 @@ module node-connectivity {
     leaf port-out_out {
       type string;
     }  
-    uses sliceable-transceiver-sdm-ref;
+    leaf transceiverid {
+      type string;
+    }
   }
 
   /**

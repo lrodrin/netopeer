@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <connection xmlns="urn:node-connectivity">
+        <connectionid>1</connectionid>
+        <port-in_id>1</port-in_id>
+        <port-out_out>1</port-out_out>
+        <transceiverid>1</transceiverid>
+    </connection>
+</config>

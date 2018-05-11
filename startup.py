@@ -1,5 +1,5 @@
 """
-This module create the configuration of one spectral super channel (slice)
+This module create the configuration
 
 Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -32,9 +32,17 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    config_file = 'node_topology_config.xml'
-    filter = "<node/>"
+
+    # configuration files
+    config_transceiver_file = 'transceiver_config.xml'
+    config_topology_file = 'node_topology_config.xml'
+    config_connection_file = 'node_connectivity_config.xml'
+
+    # filters
+    filter_transceiver = "<transceiver/>"
+    filter_topology = "<node/>"
+    filter_connection = "<connection/>"
 
     connectionTX = init_connection(host, port, login, password)
-    create_configuration(connectionTX, config_file, 'running', 'merge', filter)
+    create_configuration(connectionTX, config_connection_file, 'running', 'merge', filter_connection)
     close_connection(connectionTX)
