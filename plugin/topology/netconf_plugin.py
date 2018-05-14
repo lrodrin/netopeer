@@ -2,11 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import inspect
+import json
 import logging
 import os
 
 from TopologyManager.plugins.NETCONF_plugin.netconf_api import NETCONF_API
 from lib.COP.objects_service_topology.topology import Topology
+from lib.COP.objects_service_topology.node import Node
+from lib.COP.objects_service_topology.edgeEnd import EdgeEnd
 
 __author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
@@ -29,7 +32,7 @@ class NETCONF_plugin(object):
                 setattr(self, key[4:], kwargs[key])
 
         self.api = NETCONF_API(self.user, self.password, self.addr, self.port)
-        # self.controller = kwargs['controller']
+        self.controller = kwargs['controller']
 
     def __str__(self):
         return self.name
@@ -38,6 +41,7 @@ class NETCONF_plugin(object):
         logger.debug(format(inspect.stack()[1]))
         logging.debug('netconfPlugin.createTopology')
 
+        # Topology Manager network representation
         topology = Topology()
         topology_parsed = self.parseTopology(topology)
         return topology_parsed
@@ -46,9 +50,22 @@ class NETCONF_plugin(object):
         logger.debug(format(inspect.stack()[1]))
         logging.debug('netconfPlugin.parseTopology')
 
-        topology_json = self.api.retrieveConfiguration()
-        topology_tmp = Topology(topology_json)
-        topology.topologyId = topology_tmp.topologyId
+        topology_retrieved = self.api.retrieveConfiguration()
+        topology_json = json.loads(topology_retrieved)
+        logger.debug('Topology: {}'.format(json.dumps(topology_json['data']['node'])))
+
+        configNode = topology_json['data']['node']  # node
+        node = Node()
+        node.nodeId = configNode['node-id']  # node-id
+        for netconf_port in configNode['port']:
+            port = EdgeEnd()
+            port.edgeEndId = netconf_port['port-id']
+            port.name = netconf_port['layer-protocol-name']
+            node.edgeEnd[port.edgeEndId] = port
+
+        node.nodetype = 'SDM'
+        node.domain = str(self.controller.domainId)
+        topology.nodes[node.nodeId] = node
         return topology
 
     def refreshTopology(self, topology):

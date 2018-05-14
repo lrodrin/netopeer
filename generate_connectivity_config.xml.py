@@ -28,4 +28,8 @@ def generate(filename, id_connection, id_port_in, id_port_out, id_transceiver):
 
 
 if __name__ == '__main__':
+    # number_of_connections = 2
+    # for i in number_of_connections:
+    # generate("node_connectivity_config.xml", i, i, i, i)
+
     generate("node_connectivity_config.xml", 1, 1, 1, 1)
