@@ -54,10 +54,10 @@ class NETCONF_plugin(object):
         topology_json = json.loads(topology_retrieved)
         logger.debug('Topology: {}'.format(json.dumps(topology_json['data']['node'])))
 
-        configNode = topology_json['data']['node']  # node
+        configNode = topology_json['data']['node']  # node   
         node = Node()
         node.nodeId = configNode['node-id']  # node-id
-        for netconf_port in configNode['port']:
+        for netconf_port in configNode['port']:            
             port = EdgeEnd()
             port.edgeEndId = netconf_port['port-id']
             port.name = netconf_port['layer-protocol-name']

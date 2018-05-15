@@ -18,7 +18,6 @@ logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
 def parseConfiguration(configuration):
     logger.debug(format(inspect.stack()[1]))
     logging.debug('netconfPlugin.parseConfiguration')
-
     configuration_dict = xmltodict.parse(configuration)
     return json.dumps(configuration_dict, indent=4, sort_keys=True)
 
@@ -52,13 +51,7 @@ class NETCONF_API:
                           'TRACEBACK': str(traceback.format_exc()), 'CODE': 500})
             raise e
 
-
-if __name__ == '__main__':
-    api = NETCONF_API('root', 'netlabN.', '10.1.7.84', 830)
-    config = api.retrieveConfiguration()
-    config_parsed = json.loads(config)
-    # print(config_parsed['data']['node']['port']['port-id'])
-    # print(config_parsed['data']['node']['port']['layer-protocol-name'])
-
-    for port in config_parsed['data']['node']['port']:
-        print(port['port-id'])
+# if __name__ == '__main__':
+#     api = NETCONF_API('root', 'netlabN.', '10.1.7.84', 830)
+#     config = api.retrieveConfiguration()
+#     print(json.loads(config))

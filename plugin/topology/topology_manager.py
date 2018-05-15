@@ -188,41 +188,41 @@ if __name__ == '__main__':
     manager.registerPlugin('pce')
     json_data = {
         'ctl_name': 'pce',
-        'ctl_addr': '10.1.1.111',
+        'ctl_addr': '10.1.7.84',
         'ctl_port': '8881',
         'ctl_method': 'http',
         }
     manager.registerController('pce', json_data)
 
-    manager.registerPlugin('odl')
+    manager.registerPlugin('odl2')
     json_data = {
-        'ctl_name': 'odl',
-        'ctl_addr': '10.1.7.33',
+        'ctl_name': 'odl2',
+        'ctl_addr': '10.1.7.84',
         'ctl_port': '8080',
         'ctl_method': 'http',
         'ctl_user': 'admin',
         'ctl_password': 'admin'
         }
-    manager.registerController('odl', json_data)
+    manager.registerController('odl2', json_data)
 
-    manager.registerPlugin('conf')
-    json_data = {
-        'ctl_name': 'conf',
-        'ctl_addr': '10.1.7.33',
-        'ctl_port': '0000',
-        'ctl_method': 'http',
-        'ctl_multilayer_config_file': 'multi_topology.xml'
-        }
-    manager.registerController('conf', json_data)
+    # manager.registerPlugin('conf')
+    # json_data = {
+    #     'ctl_name': 'conf',
+    #     'ctl_addr': '10.1.7.33',
+    #     'ctl_port': '0000',
+    #     'ctl_method': 'http',
+    #     'ctl_multilayer_config_file': 'multi_topology.xml'
+    #     }
+    # manager.registerController('conf', json_data)
 
     manager.registerPlugin('netconf')
     json_data = {
-        'ctl_name': 'odl2',
+        'ctl_name': 'netconf',
         'ctl_addr': '10.1.7.84',
-        'ctl_port': '8181',
-        'ctl_method': 'http',
-        'ctl_user': 'admin',
-        'ctl_password': 'admin'
+        'ctl_port': '830',
+        'ctl_method': 'ssh',
+        'ctl_user': 'root',
+        'ctl_password': 'netlabN.'
         }
     manager.registerController('netconf', json_data)
 

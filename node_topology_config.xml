@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
     <node xmlns="urn:node-topology">
-        <node-id>1</node-id>
+        <node-id>10.1.7.84</node-id>
         <port>
             <port-id>1</port-id>
             <layer-protocol-name>layer_protocol_name</layer-protocol-name>

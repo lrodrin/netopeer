@@ -95,4 +95,5 @@ def nominal_central_frequency_parameters(nominal_central_frequency):
 
 
 if __name__ == '__main__':
-    generate("node_topology_config.xml", 1, 3)
+    nodeid = '10.1.7.84'
+    generate("node_topology_config.xml", nodeid, 3)

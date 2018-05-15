@@ -28,7 +28,7 @@ def close_connection(connection):
 
 
 if __name__ == '__main__':
-    host = '10.1.7.84'
+    host = '10.1.7.65'
     port = 830
     login = 'root'
     password = 'netlabN.'
@@ -44,5 +44,5 @@ if __name__ == '__main__':
     filter_connection = "<connection/>"
 
     connectionTX = init_connection(host, port, login, password)
-    create_configuration(connectionTX, config_connection_file, 'running', 'merge', filter_connection)
+    create_configuration(connectionTX, config_topology_file, 'running', 'merge', filter_topology)
     close_connection(connectionTX)
