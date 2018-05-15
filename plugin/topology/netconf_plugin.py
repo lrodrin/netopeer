@@ -52,7 +52,7 @@ class NETCONF_plugin(object):
 
         topology_retrieved = self.api.retrieveConfiguration()
         topology_json = json.loads(topology_retrieved)
-        logger.debug('Topology: {}'.format(json.dumps(topology_json['data']['node'])))
+        logger.debug('Topology: {}'.format(json.dumps(topology_json['data']['node'])))        
 
         configNode = topology_json['data']['node']  # node   
         node = Node()
