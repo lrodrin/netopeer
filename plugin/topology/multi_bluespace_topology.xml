@@ -173,7 +173,7 @@
             <osnr_remote>22.940001</osnr_remote>
         </link>
         <link>
-            <source>10.1.7.67</source>
+            <source>10.1.7.84</source>
             <type>1</type>
             <target>10.1.7.66</target>
             <local_ip_addrs>
@@ -233,7 +233,7 @@
         <link>
             <source>10.1.7.66</source>
             <type>1</type>
-            <target>10.1.7.67</target>
+            <target>10.1.7.84</target>
             <local_ip_addrs>
                 <count>0</count>
                 <item_version>0</item_version>
@@ -289,7 +289,7 @@
             <osnr_remote>22.940001</osnr_remote>
         </link>
         <link>
-            <source>10.1.7.66</source>
+            <source>10.1.7.84</source>
             <type>1</type>
             <target>10.1.7.65</target>
             <local_ip_addrs>
@@ -349,7 +349,7 @@
         <link>
             <source>10.1.7.65</source>
             <type>1</type>
-            <target>10.1.7.66</target>
+            <target>10.1.7.84</target>
             <local_ip_addrs>
                 <count>0</count>
                 <item_version>0</item_version>
