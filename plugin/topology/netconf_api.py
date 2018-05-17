@@ -51,7 +51,14 @@ class NETCONF_API:
                           'TRACEBACK': str(traceback.format_exc()), 'CODE': 500})
             raise e
 
-# if __name__ == '__main__':
-#     api = NETCONF_API('root', 'netlabN.', '10.1.7.84', 830)
-#     config = api.retrieveConfiguration()
-#     print(json.loads(config))
+
+if __name__ == '__main__':
+    api = NETCONF_API('root', 'netlabN.', '10.1.7.67', 830)
+    config = api.retrieveConfiguration()
+    config_parsed = json.loads(config)
+
+    ports = config_parsed['data']['node']['port']
+    for port in ports:
+        available_core = port['available-core']
+        for core in available_core:
+            print(port['port-id'], core['core-id'])
