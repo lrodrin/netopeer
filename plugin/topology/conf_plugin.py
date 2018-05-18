@@ -21,8 +21,9 @@ from lib.COP.objects_service_topology.topology import Topology
 
 logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
 
-__author__ = 'amll'
-
+__author__ = "Ricard Vilalta <ricard.vilalta@cttc.cat> and Laura Rodriguez <laura.rodriguez@cttc.cat>"
+__copyright__ = "Copyright 2018, CTTC"
+__license__ = "MIT License"
 
 class CONF_plugin(object):
 
@@ -38,7 +39,6 @@ class CONF_plugin(object):
                 setattr(self, key[4:], kwargs[key])
 
         # CONFIG DATA
-
         self.api = CONF_API(self.addr, self.port)
         self.topology = None
         self.controller = kwargs['controller']
@@ -55,14 +55,15 @@ class CONF_plugin(object):
         return topology_parsed
 
     def parseXMLtopology(self, topology, xmldoc):
-        nodeList = xmldoc.getElementsByTagName('node')
+        nodeList = xmldoc.getElementsByTagName('node')  
         linkList = xmldoc.getElementsByTagName('link')
 
-        for i in range(len(nodeList)):
+        for i in range(len(nodeList)):        
             node = Node()
             node.nodeId = str(nodeList[i].getElementsByTagName('id')[0].childNodes[0].nodeValue)
+            node.nodeId = str(nodeList[i].getElementsByTagName('id')[0].childNodes[0].nodeValue)
             node.domain = str(self.controller.domainId)
-            topology.nodes[node.nodeId] = node
+            topology.nodes[node.nodeId] = node       
 
         for i in range(len(linkList)):
             source_node_value = (linkList[i].getElementsByTagName('source')[0]
@@ -105,7 +106,7 @@ class CONF_plugin(object):
                     logger.debug('%s - DWDM Edge', link_id)
                 else:
                     e = EthEdge()
-                    e.edgeType.set(2)  # Eth Edge
+                    e.edgeType.set(2)  # ETH Edge
                     logger.debug('%s - Eth Edge', link_id)
                 switching_cap = 'psc'
 
@@ -120,24 +121,34 @@ class CONF_plugin(object):
                 switching_cap = 'sdm'
                 e = SdmEdge()
                 e.edgeType.set(4)  # SDM Edge
-                e.delay = str(linkList[i].getElementsByTagName('delay')[0].childNodes[0].nodeValue)
+                e.delay = str(linkList[i].getElementsByTagName('delay')[0]
+                              .childNodes[0].nodeValue)
 
             e.source = str(src_node.nodeId)
             e.localIfid = str(src_port)
             e.target = str(dest_node.nodeId)
             e.remoteIfid = str(dest_port)
-
             e.metric = str(linkList[i].getElementsByTagName('te_metric')[0]
                            .childNodes[0].nodeValue)
-            e.edgeId = str(e.source) + '_to_' + str(e.target)
 
+            e.edgeId = str(e.source) + '_to_' + str(e.target)
             e.switchingCap = switching_cap
 
-            port = EdgeEnd()
-            port.edgeEndId = e.localIfid
-            port.peerNodeId = topology.nodes[e.target].nodeId
-            port.switchingCap = switching_cap
-            topology.nodes[e.source].edgeEnd[e.localIfid] = port
+            edgeEndNotFound = False
+            try:
+                if not topology.nodes[e.source].edgeEnd[e.localIfid]:
+                    pass
+
+            except:
+                edgeEndNotFound = True
+
+            if not edgeEndNotFound:  # if topology.nodes[e.source].edgeEnd[e.localIfid] exists then
+                port = EdgeEnd()
+                port.edgeEndId = e.localIfid
+                port.peerNodeId = topology.nodes[e.target].nodeId
+                port.switchingCap = switching_cap
+                topology.nodes[e.source].edgeEnd[e.localIfid] = port
+
 
             e.maxResvBw = str(linkList[i].getElementsByTagName('max_resv_bw')[0]
                               .childNodes[0].nodeValue)
@@ -170,6 +181,7 @@ class CONF_plugin(object):
                     e.bitmap.setChannel(channelsOcupied[i])
 
             topology.edges[e.edgeId] = e
+
         logger.debug('Composed conf topology: {}'.format(topology))
         return topology
 
