@@ -58,7 +58,7 @@
         </node>
         <link>
             <source>10.1.7.84</source>
-            <type>1</type>
+            <type>2</type>
             <target>10.1.7.67</target>
             <local_ip_addrs>
                 <count>0</count>
@@ -93,7 +93,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                    <switching_cap>1</switching_cap>
+                    <switching_cap>160</switching_cap>
                     <encoding>8</encoding>
                     <max_lsp_bw>
                         <count>1</count>
@@ -113,10 +113,11 @@
             <osnr_db>22.994263</osnr_db>
             <osnr_local>42</osnr_local>
             <osnr_remote>22.940001</osnr_remote>
+            <delay>0.0</delay>
         </link>
         <link>
             <source>10.1.7.67</source>
-            <type>1</type>
+            <type>2</type>
             <target>10.1.7.84</target>
             <local_ip_addrs>
                 <count>0</count>
@@ -151,7 +152,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                    <switching_cap>1</switching_cap>
+                    <switching_cap>160</switching_cap>
                     <encoding>8</encoding>
                     <max_lsp_bw>
                         <count>1</count>
@@ -171,10 +172,11 @@
             <osnr_db>22.994263</osnr_db>
             <osnr_local>42</osnr_local>
             <osnr_remote>22.940001</osnr_remote>
+            <delay>0.0</delay>
         </link>
         <link>
             <source>10.1.7.84</source>
-            <type>1</type>
+            <type>2</type>
             <target>10.1.7.66</target>
             <local_ip_addrs>
                 <count>0</count>
@@ -209,7 +211,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                    <switching_cap>1</switching_cap>
+                    <switching_cap>160</switching_cap>
                     <encoding>8</encoding>
                     <max_lsp_bw>
                         <count>1</count>
@@ -229,10 +231,11 @@
             <osnr_db>22.994263</osnr_db>
             <osnr_local>42</osnr_local>
             <osnr_remote>22.940001</osnr_remote>
+            <delay>0.0</delay>
         </link>
         <link>
             <source>10.1.7.66</source>
-            <type>1</type>
+            <type>2</type>
             <target>10.1.7.84</target>
             <local_ip_addrs>
                 <count>0</count>
@@ -267,7 +270,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                    <switching_cap>1</switching_cap>
+                    <switching_cap>160</switching_cap>
                     <encoding>8</encoding>
                     <max_lsp_bw>
                         <count>1</count>
@@ -287,10 +290,11 @@
             <osnr_db>22.994263</osnr_db>
             <osnr_local>42</osnr_local>
             <osnr_remote>22.940001</osnr_remote>
+            <delay>0.0</delay>
         </link>
         <link>
             <source>10.1.7.84</source>
-            <type>1</type>
+            <type>2</type>
             <target>10.1.7.65</target>
             <local_ip_addrs>
                 <count>0</count>
@@ -325,7 +329,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                    <switching_cap>1</switching_cap>
+                    <switching_cap>160</switching_cap>
                     <encoding>8</encoding>
                     <max_lsp_bw>
                         <count>1</count>
@@ -345,10 +349,11 @@
             <osnr_db>22.994263</osnr_db>
             <osnr_local>42</osnr_local>
             <osnr_remote>22.940001</osnr_remote>
+            <delay>0.0</delay>
         </link>
         <link>
             <source>10.1.7.65</source>
-            <type>1</type>
+            <type>2</type>
             <target>10.1.7.84</target>
             <local_ip_addrs>
                 <count>0</count>
@@ -383,7 +388,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                    <switching_cap>1</switching_cap>
+                    <switching_cap>160</switching_cap>
                     <encoding>8</encoding>
                     <max_lsp_bw>
                         <count>1</count>
@@ -403,6 +408,7 @@
             <osnr_db>22.994263</osnr_db>
             <osnr_local>42</osnr_local>
             <osnr_remote>22.940001</osnr_remote>
+            <delay>0.0</delay>
         </link>
     </g>
 </boost_serialization>

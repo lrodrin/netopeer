@@ -11,6 +11,10 @@ from lib.COP.objects_service_topology.topology import Topology
 from lib.COP.objects_service_topology.node import Node
 from lib.COP.objects_service_topology.edgeEnd import EdgeEnd
 
+from lib.COP.objects_service_topology.sdmCore import SdmCore
+from lib.COP.objects_service_topology.sdmEdge import SdmEdge
+
+
 __author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
 __license__ = "MIT License"
@@ -57,15 +61,27 @@ class NETCONF_plugin(object):
         configNode = topology_json['data']['node']  # node   
         node = Node()
         node.nodeId = configNode['node-id']  # node-id
-        for netconf_port in configNode['port']:            
+        node.nodetype = 'SDM'
+        node.domain = str(self.controller.domainId)
+
+        # TODO one port condition
+        ports = configNode['port']  # list of ports
+        for netconf_port in ports:            
             port = EdgeEnd()
             port.edgeEndId = netconf_port['port-id']
             port.name = netconf_port['layer-protocol-name']
             node.edgeEnd[port.edgeEndId] = port
 
-        node.nodetype = 'SDM'
-        node.domain = str(self.controller.domainId)
+            available_cores = netconf_port['available-core']  # list of cores
+            for netconf_core in available_cores:
+                core = SdmCore()
+                core.coreId = netconf_core['core-id']
+                port.availableCore[core.coreId] = core
+
+            ## TODO transceiver each port contains one transceiver
+            
         topology.nodes[node.nodeId] = node
+
         return topology
 
     def refreshTopology(self, topology):

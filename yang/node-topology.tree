@@ -21,7 +21,7 @@ module: node-topology
         |     |  +--ro channel-number?           string
         |     +--ro slot-width-number?           string
         +--ro available-transceiver
-           +--ro transceiver-id?                     -> /sliceable-transceiver-sdm:transceiver/transceiverid
+           +--ro transceiver-id?                     string
            +--ro transceiver-type?                   string
            +--ro supported-modulation-format
            |  +--ro modulation-id?   string
