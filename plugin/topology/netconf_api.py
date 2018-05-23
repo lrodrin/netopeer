@@ -61,4 +61,6 @@ if __name__ == '__main__':
     for port in ports:
         available_core = port['available-core']
         for core in available_core:
-            print(port['port-id'], core['core-id'])
+            available_frequency = core['available-frequency-slot']
+            for freq in available_frequency:
+                print(freq)
