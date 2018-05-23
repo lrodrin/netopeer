@@ -64,6 +64,8 @@ class NETCONF_plugin(object):
         node.nodetype = 'SDM'
         node.domain = str(self.controller.domainId)
 
+        # TODO pensar amb el cas d'un element (segurament fa PUM)
+
         ports = topoNode['port']  # list of ports
         for netconf_port in ports:
             port = EdgeEnd()
@@ -78,28 +80,8 @@ class NETCONF_plugin(object):
                 core = SdmCore()
                 core.coreId = netconf_core['core-id']
 
-                available_frequency = netconf_core[
-                    'available-frequency-slot']  # TODO crear un mateixa funció per les dues llistes
-                for netconf_frequency in available_frequency:
-                    frequencyA = Frequency()
-                    frequencyA.slotId = netconf_frequency['slot-id']
-                    frequencyA.gridType = netconf_frequency['nominal-central-frequency']['grid-type']
-                    frequencyA.adjustGranularity = netconf_frequency['nominal-central-frequency'][
-                        'adjustment-granularity']
-                    frequencyA.numChannel = netconf_frequency['nominal-central-frequency']['channel-number']
-                    frequencyA.numSlotWidth = netconf_frequency['slot-width-number']
-                    core.availableFrequency[frequencyA.slotId] = frequencyA
-
-                occupied_frequency = netconf_core['occupied-frequency-slot']
-                for netconf_frequency in occupied_frequency:
-                    frequencyO = Frequency()
-                    frequencyO.slotId = netconf_frequency['slot-id']
-                    frequencyO.gridType = netconf_frequency['nominal-central-frequency']['grid-type']
-                    frequencyO.adjustGranularity = netconf_frequency['nominal-central-frequency'][
-                        'adjustment-granularity']
-                    frequencyO.numChannel = netconf_frequency['nominal-central-frequency']['channel-number']
-                    frequencyO.numSlotWidth = netconf_frequency['slot-width-number']
-                    core.occupiedFrequency[frequencyO.slotId] = frequencyO
+                self.addFrequency(core, netconf_core, 'available-frequency-slot')
+                self.addFrequency(core, netconf_core, 'occupied-frequency-slot')
 
                 port.availableCore[core.coreId] = core
 
@@ -115,7 +97,7 @@ class NETCONF_plugin(object):
                 transceiver.fec = available_transceiver['supported-FEC']
                 transceiver.equalization = available_transceiver['supported-equalization']
                 transceiver.monitoring = available_transceiver['supported-monitoring']
-                port.availableTransceiver[transceiver.transceiverId] = transceiver
+                port.availableTransceiver = transceiver
 
         topology.nodes[node.nodeId] = node
 
@@ -127,3 +109,17 @@ class NETCONF_plugin(object):
 
         topology_parsed = self.parseTopology(topology)
         return topology_parsed
+
+    def addFrequency(self, core, netconf_core, type):
+        frequency = netconf_core[type]
+        for netconf_frequency in frequency:
+            newFrequency = Frequency()
+            newFrequency.slotId = netconf_frequency['slot-id']
+            newFrequency.gridType = netconf_frequency['nominal-central-frequency']['grid-type']
+            newFrequency.adjustGranularity = netconf_frequency['nominal-central-frequency']['adjustment-granularity']
+            newFrequency.numChannel = netconf_frequency['nominal-central-frequency']['channel-number']
+            newFrequency.numSlotWidth = netconf_frequency['slot-width-number']
+            if type == 'available-frequency-slot':
+                core.availableFrequency[newFrequency.slotId] = newFrequency
+            elif type == 'occupied-frequency-slot':
+                core.occupiedFrequency[newFrequency.slotId] = newFrequency
