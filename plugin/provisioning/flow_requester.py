@@ -1,19 +1,23 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
 
 import logging
 import os
+import sys
 import threading
 import time
-import sys
 
 if sys.version_info >= (3, 0):
     import queue as Queue
 else:
     import Queue
 
-__author__ = 'amll'
-
+__author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
+__copyright__ = "Copyright 2018, CTTC"
+__license__ = "MIT License"
 
 logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
+
 
 class FlowRequester(threading.Thread):
     def __init__(self, thread_id, req_queue, notification_queue, api):
@@ -25,38 +29,42 @@ class FlowRequester(threading.Thread):
         self.running = False
 
     def run(self):
-        logger.debug('Starting thread {}'.format(self.thread_id))
+        logger.debug('Starting thread %s', self.thread_id)
         while not self.running:
             time.sleep(0.001)
             if not self.flow_queue.empty():
                 logger.debug('Request arrived')
                 try:
                     request = self.flow_queue.get_nowait()
+                    logger.debug(request['method'])
                     if request['method'] == 'create':
                         req = request['params']
-                        try:
-                            response = self.api.insertFlow(**req)
-                        except Exception as _except:
-                            raise _except
+                        logger.debug('Flow provisioning : %s', req)
+                        for key in ('nodeId', 'name', 'priority', 'actions', 'matches'):
+                            if key in req:
+                                setattr(self, key, req[key])
+                                del req[key]
+
+                        response = self.api.insert_flow(self.nodeId, req['id'], self.name, self.priority,
+                                                        self.actions, self.matches, **req)
                         self.notification_queue.put(response)
                         self.flow_queue.task_done()
 
                     elif request['method'] == 'remove':
-                        req = request['params']
-                        response = self.api.deleteFlow(**req)
+                        params = request['params']
+                        response = self.api.deleteFlows(params['nodeId'], params['name'])
                         self.notification_queue.put(response)
                         self.flow_queue.task_done()
 
                     else:
                         logger.warning('Invalid method')
-                        raise ValueError('Invalid request')
 
                 except Queue.Empty:
                     logger.debug('Accessing to a empty queue')
                     continue
-        logger.debug('Stop thread {}'.format(self.thread_id))
 
+        logger.debug('Stop thread %s', self.thread_id)
 
     def stop(self):
         self.running = True
-        logger.info('Thread {} ByeBye'.format(self.thread_id))
+        logger.info('Thread %s ByeBye', self.thread_id)
