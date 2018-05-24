@@ -4,7 +4,6 @@
 import logging
 import os
 import sys
-import time
 import traceback
 from threading import Lock
 
@@ -15,7 +14,6 @@ else:
 
 from ProvisioningManager.NETCONF_plugin.netconf_api import NETCONF_api
 from ProvisioningManager.NETCONF_plugin.flow_requester import FlowRequester
-from lib.ABNO_objects.response import Response
 from lib.COP.objects_common.error import Error
 from common.abno_cop_client import API
 from common.config import ConfigObject
@@ -23,6 +21,10 @@ from common.config import ConfigObject
 __author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
 __license__ = "MIT License"
+
+sys.path.append('/'.join([element for i, element in
+                          enumerate(os.path.abspath(__file__).split('/'))
+                          if i < len(os.path.abspath(__file__).split('/')) - 3]))
 
 logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
 
@@ -144,7 +146,7 @@ class NETCONF_plugin:
     def remove_connection(self, connection, id=None):
         try:
             logger.info("Sending new connection to remove in NETCONF: " + str(connection))
-            # logger.debug('Current established flows: ' + str(self.installed_flows))
+            logger.debug('Current established flows: ' + str(self.installed_flows))
             # self.lock.acquire()
             # if id:
             #     connectionId = id
@@ -189,30 +191,30 @@ class NETCONF_plugin:
         #                  'result': 'successful',
         #                  'content': responses})
 
-    # def save_flow(self, connection, params, nodeId):
-    # flowName = params['name']
-    # logger.debug('Current established flows: ' + str(self.installed_flows))
-    # if connection.connectionId not in self.installed_flows:
-    #     logger.debug('Init db')
-    #     self.installed_flows[connection.connectionId] = {'flows': {}}
-    #
-    # if nodeId not in self.installed_flows[connection.connectionId]['flows'].keys():
-    #     logger.debug('NodeId: ' + str(nodeId))
-    #     logger.debug('Current nodes: ' + str(self.installed_flows[connection.connectionId]['flows'].keys()))
-    #     self.installed_flows[connection.connectionId]['flows'][nodeId] = {}
-    #
-    # self.installed_flows[connection.connectionId]['flows'][nodeId][flowName] = params.copy()
-    # logger.debug('Installed flow: ' + str(self.installed_flows[connection.connectionId]['flows'][nodeId][flowName]))
+    def save_flow(self, connection, params, nodeId):
+        flowName = params['name']
+        logger.debug('Current established flows: ' + str(self.installed_flows))
+        # if connection.connectionId not in self.installed_flows:
+        #     logger.debug('Init db')
+        #     self.installed_flows[connection.connectionId] = {'flows': {}}
+        #
+        # if nodeId not in self.installed_flows[connection.connectionId]['flows'].keys():
+        #     logger.debug('NodeId: ' + str(nodeId))
+        #     logger.debug('Current nodes: ' + str(self.installed_flows[connection.connectionId]['flows'].keys()))
+        #     self.installed_flows[connection.connectionId]['flows'][nodeId] = {}
+        #
+        # self.installed_flows[connection.connectionId]['flows'][nodeId][flowName] = params.copy()
+        logger.debug('Installed flow: ' + str(self.installed_flows[connection.connectionId]['flows'][nodeId][flowName]))
 
     # This method waits take the responses from the notification queue, checks if the all
     # have been processed correctly, and returns True if so. In case, at least one of the
     # responses had failed, it returns False.
     def handling_responses(self, unservered_reqs, connection_request, method):
-        # success_responses = []
-        # failed_responses = list()
+        success_responses = []
+        failed_responses = list()
         logger.debug('method : %s', method)
-        # logger.debug('Number pending requests : %s', int(len(unservered_reqs) - len(failed_responses)))
-        # logger.debug('Unreserved_reqs %s', unservered_reqs.keys())
+        logger.debug('Number pending requests : %s', int(len(unservered_reqs) - len(failed_responses)))
+        logger.debug('Unreserved_reqs %s', unservered_reqs.keys())
         # while int(len(unservered_reqs) - len(failed_responses)) > 0:
         #     if not self.nofication_q.empty():
         #         response = self.nofication_q.get()
@@ -257,13 +259,14 @@ class NETCONF_plugin:
 
         logger.warning('No valid method %s', method)
 
-    # def list_vEdgeEnds(self, ctx_id):
-    #     list_veps = self.abno_api.get_list_vEdgeEnds(**{'contextId': ctx_id})
-    #     logger.debug('Virtual endpoints list: %s ', str(list_veps))
-    #     return list_veps
+    def list_vEdgeEnds(self, ctx_id):
+        list_veps = self.abno_api.get_list_vEdgeEnds(**{'contextId': ctx_id})
+        logger.debug('Virtual endpoints list: %s ', str(list_veps))
+        return list_veps
 
-    # def validate_endpoints(self, ingressPort, egressPort):
-    #     logger.debug('Original ingressPort %s, egressPort %s' % (ingressPort, egressPort))
+    def validate_endpoints(self, ingressPort, egressPort):
+        logger.debug('Original ingressPort %s, egressPort %s' % (ingressPort, egressPort))
+
     #     if ingressPort[:len(_VIRTUAL_PREFIX)] == _VIRTUAL_PREFIX:
     #         if ingressPort in self.virtual_endpoints:
     #             a = self.virtual_endpoints[ingressPort]['pEdgeEnd']['edgeEndId']
@@ -284,7 +287,8 @@ class NETCONF_plugin:
     #
     #     return a, b
 
-    # def clear(self):
+    def clear(self):
+        pass
     #     try:
     #         self.q.join()
     #         for thread in self.threads:
