@@ -1,30 +1,37 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
 import logging
 import os
 import sys
+import time
 import traceback
 from threading import Lock
 
+from common.config import ConfigObject
+
+# import copy
+
 if sys.version_info >= (3, 0):
+    # import configparser as ConfigParser
     import queue as Queue
 else:
+    # import ConfigParser
     import Queue
 
 from ProvisioningManager.NETCONF_plugin.netconf_api import NETCONF_api
 from ProvisioningManager.NETCONF_plugin.flow_requester import FlowRequester
-from lib.COP.objects_common.error import Error
-from common.abno_cop_client import API
-from common.config import ConfigObject
-
-__author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
-__copyright__ = "Copyright 2018, CTTC"
-__license__ = "MIT License"
 
 sys.path.append('/'.join([element for i, element in
                           enumerate(os.path.abspath(__file__).split('/'))
                           if i < len(os.path.abspath(__file__).split('/')) - 3]))
+
+from lib.ABNO_objects.response import Response
+from lib.COP.objects_common.error import Error
+from common.abno_cop_client import API
+
+__author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
+__copyright__ = "Copyright 2018, CTTC"
+__license__ = "MIT License"
 
 logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
 
@@ -72,15 +79,15 @@ class NETCONF_plugin:
             logger.info("Sending new connection to NETCONF: " + str(connection))
             # matches = connection.match.json_serializer()
             # unservered_reqs = {}
-            #
+
             # for i in range(0, int(
             #         len(connection.path.topoComponents) / 2)):  # There are 2 ports (ingress, egress) per node
             #     ingressPort = connection.path.topoComponents[str(2 * i)].edgeEndId
             #     egressPort = connection.path.topoComponents[str(2 * i + 1)].edgeEndId
-            #
-            #     ingressPort, egressPort = self.validate_endpoints(ingressPort, egressPort)
-            #
-            #     action = ''
+
+            # ingressPort, egressPort = self.validate_endpoints(ingressPort, egressPort)
+
+            # action = ''
             #     if ingressPort != '':
             #         matches['inPhyPort'] = ingressPort
             #     else:
@@ -94,24 +101,25 @@ class NETCONF_plugin:
             #         continue
             #     else:
             #         node_id_cop = connection.path.topoComponents[str(2 * i)].nodeId
-            #         nodeId = 'openflow:' + str(dpid_hexs2dec(node_id_cop))  # Formato ODL (openflow:HW_ADDR)
+            #         # nodeId = 'openflow:' + str(dpid_hexs2dec(node_id_cop))  # Formato ODL (openflow:HW_ADDR)
+            #         nodeId = node_id_cop
             #         # flowName = str(connection.id) + '_' + nodeId + '_action:_' + connection.action
             #         flowName = str(nodeId) + '_' + str(self.counter)
             #         flowId = str(nodeId) + '_' + str(self.counter)
             #         self.counter += 1
             #         # Convert OpenFlow standard table matches, to custom Opendaylight matches.
-            #         ODL_matches = self.of_to_odl_matches_converter(matches)
+            #         # ODL_matches = self.of_to_odl_matches_converter(matches)
             #
-            #         if str(connection.transportLayer.layer) != 'ethernet_broadcast':
-            #             action = Action()
-            #             action.output_phyport = egressPort
-            #         else:
-            #             action = Action()
-            #             action.output_flood = True
+            #         # if str(connection.transportLayer.layer) != 'ethernet_broadcast':
+            #         #     action = Action()
+            #         #     action.output_phyport = egressPort
+            #         # else:
+            #         #     action = Action()
+            #         #     action.output_flood = True
             #
-            #         logger.debug('Actions before odl filter %s', str(action))
-            #         actions = self.of_to_odl_action_converter(action.json_serializer())
-            #         logger.debug('Actions after odl filter %s', str(actions))
+            #         # logger.debug('Actions before odl filter %s', str(action))
+            #         # actions = self.of_to_odl_action_converter(action.json_serializer())
+            #         # logger.debug('Actions after odl filter %s', str(actions))
             #         logger.debug('Node to push flows : ' + str(nodeId)
             #                      + ', ingressPort = ' + str(ingressPort)
             #                      + ', egressPort = ' + str(egressPort))
@@ -119,8 +127,8 @@ class NETCONF_plugin:
             #         NODE_INFO = {'id': flowId, 'nodeId': nodeId,
             #                      'priority': 6,
             #                      'name': flowName,
-            #                      'actions': actions,
-            #                      'matches': ODL_matches}
+            #                      'actions': "",
+            #                      'matches': ""}
             #         params = NODE_INFO
             #         logger.debug('Input params : %s', str(params))
             #         request = {'method': 'create', 'params': params}
@@ -132,6 +140,7 @@ class NETCONF_plugin:
             # response = self.handling_responses(unservered_reqs, connection, 'create')
             # self.lock.release()
             # return response
+            return {}
         except Exception:
             error = Error({'error': str(sys.exc_info()[0]),
                            'value': str(sys.exc_info()[1]),
@@ -152,7 +161,7 @@ class NETCONF_plugin:
             #     connectionId = id
             # else:
             #     connectionId = connection.connectionId
-            #
+
             # logger.debug('Remove connection: %s ', str(connectionId))
             # unservered_reqs = dict()
             # if connectionId in self.installed_flows.keys():
@@ -169,6 +178,7 @@ class NETCONF_plugin:
             # response = self.handling_responses(unservered_reqs, connectionId, 'remove')
             # self.lock.release()
             # return response
+            return {}
         except Exception:
             error = Error({'error': str(sys.exc_info()[0]),
                            'value': str(sys.exc_info()[1]),
@@ -190,6 +200,7 @@ class NETCONF_plugin:
         # return Response({'message': 'Successful remove all connections operation',
         #                  'result': 'successful',
         #                  'content': responses})
+        return {}
 
     def save_flow(self, connection, params, nodeId):
         flowName = params['name']
@@ -204,7 +215,7 @@ class NETCONF_plugin:
         #     self.installed_flows[connection.connectionId]['flows'][nodeId] = {}
         #
         # self.installed_flows[connection.connectionId]['flows'][nodeId][flowName] = params.copy()
-        logger.debug('Installed flow: ' + str(self.installed_flows[connection.connectionId]['flows'][nodeId][flowName]))
+        # logger.debug('Installed flow: ' + str(self.installed_flows[connection.connectionId]['flows'][nodeId][flowName]))
 
     # This method waits take the responses from the notification queue, checks if the all
     # have been processed correctly, and returns True if so. In case, at least one of the
@@ -221,7 +232,7 @@ class NETCONF_plugin:
         #         logger.debug('Unreserved_reqs %s', unservered_reqs.keys())
         #         if str(response['name']) in unservered_reqs.keys():
         #             logger.debug('Response code %s , message %s from req %s' % (
-        #             response['status'], response['content'], response['name']))
+        #                 response['status'], response['content'], response['name']))
         #             self.nofication_q.task_done()
         #             if response['status'] in [200, 201, 204]:
         #                 success_responses.append(response['name'])
@@ -259,14 +270,13 @@ class NETCONF_plugin:
 
         logger.warning('No valid method %s', method)
 
-    def list_vEdgeEnds(self, ctx_id):
-        list_veps = self.abno_api.get_list_vEdgeEnds(**{'contextId': ctx_id})
-        logger.debug('Virtual endpoints list: %s ', str(list_veps))
-        return list_veps
+    # def list_vEdgeEnds(self, ctx_id):
+    #     list_veps = self.abno_api.get_list_vEdgeEnds(**{'contextId': ctx_id})
+    #     logger.debug('Virtual endpoints list: %s ', str(list_veps))
+    #     return list_veps
 
-    def validate_endpoints(self, ingressPort, egressPort):
-        logger.debug('Original ingressPort %s, egressPort %s' % (ingressPort, egressPort))
-
+    # def validate_endpoints(self, ingressPort, egressPort):
+    #     logger.debug('Original ingressPort %s, egressPort %s' % (ingressPort, egressPort))
     #     if ingressPort[:len(_VIRTUAL_PREFIX)] == _VIRTUAL_PREFIX:
     #         if ingressPort in self.virtual_endpoints:
     #             a = self.virtual_endpoints[ingressPort]['pEdgeEnd']['edgeEndId']
@@ -288,23 +298,22 @@ class NETCONF_plugin:
     #     return a, b
 
     def clear(self):
-        pass
-    #     try:
-    #         self.q.join()
-    #         for thread in self.threads:
-    #             thread.stop()
-    #             while thread.is_alive():
-    #                 time.sleep(0.1)
-    #
-    #         i = 0
-    #         while not self.nofication_q.empty():
-    #             i += 1
-    #             task = self.nofication_q.get()
-    #             logger.debug('Response %s : %s' % (i, str(task)))
-    #             self.nofication_q.task_done()
-    #
-    #     except Exception:
-    #         raise sys.exc_info()
+        try:
+            self.q.join()
+            for thread in self.threads:
+                thread.stop()
+                while thread.is_alive():
+                    time.sleep(0.1)
+
+            i = 0
+            while not self.nofication_q.empty():
+                i += 1
+                task = self.nofication_q.get()
+                logger.debug('Response %s : %s' % (i, str(task)))
+                self.nofication_q.task_done()
+
+        except Exception:
+            raise sys.exc_info()
 
     # def of_to_odl_action_converter(self, actions):
     #     # TODO: Complete action list
@@ -482,8 +491,8 @@ class NETCONF_plugin:
 #     string_dpid = dpid.replace(':', '')
 #     int_dpid = int(string_dpid, base=16)
 #     return int_dpid
-#
-#
+
+
 # def dpid_dec2hexs(nodeId):
 #     """Translates dpid(OVS ID) from decimal ID stored in ODL-DB to hexadecimal
 #      pairs separated with ":". Returns a string with format XX:XX:...XX:XX

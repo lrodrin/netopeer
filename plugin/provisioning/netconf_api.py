@@ -1,12 +1,11 @@
-#!/usr/bin/env python2
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
-
 import json
 import logging
 import os
 
-import requests
-from requests.auth import HTTPBasicAuth
+# import requests
+# from requests.auth import HTTPBasicAuth
 
 __author__ = "Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
@@ -28,8 +27,8 @@ class NETCONF_api:
         self.password = password
         self.ip = ip
         self.port = port
-        self.url = 'http://' + ip + ':' + str(self.port) \
-                   + '/restconf/config/opendaylight-inventory:nodes/node/'
+        # self.url = 'http://' + ip + ':' + str(self.port) \
+        #            + '/restconf/config/opendaylight-inventory:nodes/node/'
 
     #  FLOW OPERATIONS
     def insert_flow(self, nodeId, flowId, name, priority, actions, matches, table=0, **kwargs):
@@ -89,61 +88,67 @@ class NETCONF_api:
             ):
                 flow['flow'][0]['match'][key] = matches[key]
         logger.info('FLOW: ' + json.dumps(flow, indent=2))  # remove after test
-        http_json = ('http://' + self.ip + ':' + str(self.port) +
-                     '/restconf/config/opendaylight-inventory:nodes/node/'
-                     + str(nodeId) + '/table/' + str(table) + '/flow/'
-                     + str(flow['flow'][0]['id']))
-        headers = {'content-type': 'application/json'}
+        # http_json = ('http://' + self.ip + ':' + str(self.port) +
+        #              '/restconf/config/opendaylight-inventory:nodes/node/'
+        #              + str(nodeId) + '/table/' + str(table) + '/flow/'
+        #              + str(flow['flow'][0]['id']))
+        # headers = {'content-type': 'application/json'}
         logger.debug('Inserting flow: ' + str(flow))
-        response = requests.put(http_json, data=json.dumps(flow), headers=headers,
-                                auth=HTTPBasicAuth(self.user, self.password))
-        logger.debug(response)
-        return {'name': name, 'status': response.status_code, 'content': response.content}
+        # response = requests.put(http_json, data=json.dumps(flow), headers=headers,
+        #                         auth=HTTPBasicAuth(self.user, self.password))
+        # logger.debug(response)
+        # return {'name': name, 'status': response.status_code, 'content': response.content}
+        return {}
 
     def deleteFlows(self, nodeId, flowId=None, table=0, del_table_flows=False, del_node_flows=False, **kwargs):
         if del_node_flows:
             logger.debug('Remove all flows from node %s', nodeId)
-            http_json = ('http://' + self.ip + ':' + str(self.port) +
-                         '/restconf/config/opendaylight-inventory:nodes/node/'
-                         + str(nodeId))
+            # http_json = ('http://' + self.ip + ':' + str(self.port) +
+            #              '/restconf/config/opendaylight-inventory:nodes/node/'
+            #              + str(nodeId))
         elif del_table_flows:
             logger.debug('Remove all flows from table %s of node %s', table, nodeId)
-            http_json = ('http://' + self.ip + ':' + str(self.port) +
-                         '/restconf/config/opendaylight-inventory:nodes/node/'
-                         + str(nodeId) + '/table/' + str(table))
+            # http_json = ('http://' + self.ip + ':' + str(self.port) +
+            #              '/restconf/config/opendaylight-inventory:nodes/node/'
+            #              + str(nodeId) + '/table/' + str(table))
         else:
             logger.debug('Remove flow %s from node %s', flowId, nodeId)
-            http_json = ('http://' + self.ip + ':' + str(self.port) +
-                         '/restconf/config/opendaylight-inventory:nodes/node/'
-                         + str(nodeId) + '/table/' + str(table) + '/flow/' + str(flowId))
+            # http_json = ('http://' + self.ip + ':' + str(self.port) +
+            #              '/restconf/config/opendaylight-inventory:nodes/node/'
+            #              + str(nodeId) + '/table/' + str(table) + '/flow/' + str(flowId))
 
         # if kwargs.has_key('name'):
         #     name = kwargs['name']
         #     http_json += name
         # else:
         #     raise TypeError('Flow name or Id required')
-        response = requests.delete(http_json, auth=HTTPBasicAuth(self.user, self.password))
-        logger.debug('deleteFlows: %s', response)
-        return {'name': flowId, 'status': response.status_code, 'content': response.content}
+        # response = requests.delete(http_json, auth=HTTPBasicAuth(self.user, self.password))
+        # logger.debug('deleteFlows: %s', response)
+        # return {'name': flowId, 'status': response.status_code, 'content': response.content}
+        return {}
 
-    def insertMeter(self, nodeId, meter_id, data_rate):
-        url1 = 'http://' + str(self.ip) + ':' + str(
-            self.port) + '/restconf/config/opendaylight-inventory:nodes/node/' + str(nodeId) + '/meter/' + str(
-            meter_id) + ''
-        headers = {'content-type': 'application/json', 'Content-type': 'application/json'}
-        data1 = '{"meter": {"meter-id": "' + str(
-            meter_id) + '","container-name": "mymeter","meter-name":"mymeter_' + str(meter_id) + '", \
-	    "flags": "meter-kbps","meter-band-headers": {"meter-band-header": {"band-id": "1","band-rate": "' + str(
-            data_rate) + '", \
-	    "meter-band-types": { "flags": "ofpmbt-drop" },"band-burst-size": "0","drop-rate": "' + str(
-            data_rate) + '","drop-burst-size": "0"}}}}'
+    # def insertMeter(self, nodeId, meter_id, data_rate):
+    #     url1 = 'http://' + str(self.ip) + ':' + str(
+    #         self.port) + '/restconf/config/opendaylight-inventory:nodes/node/' + str(nodeId) + '/meter/' + str(
+    #         meter_id) + ''
+    #     headers = {'content-type': 'application/json', 'Content-type': 'application/json'}
+    #     data1 = '{"meter": {"meter-id": "' + str(
+    #         meter_id) + '","container-name": "mymeter","meter-name":"mymeter_' + str(meter_id) + '", \
+    #    "flags": "meter-kbps","meter-band-headers": {"meter-band-header": {"band-id": "1","band-rate": "' + str(
+    #         data_rate) + '", \
+    #    "meter-band-types": { "flags": "ofpmbt-drop" },"band-burst-size": "0","drop-rate": "' + str(
+    #         data_rate) + '","drop-burst-size": "0"}}}}'
+    #
+    #     response = requests.put(url1, data=data1, headers=headers, auth=HTTPBasicAuth(self.user,
+    #                                                                                   self.password))
 
     def deleteFlow(self, nodeId, name):
         logger.debug('remove flow')
-        url = self.url + '' + str(nodeId) + '/table/0/flow/' + str(name) + ''
-        response = requests.delete(url, auth=HTTPBasicAuth(self.user,
-                                                           self.password))
-        return {'name': name, 'status': response.status_code, 'content': response.content}
+        # url = self.url + '' + str(nodeId) + '/table/0/flow/' + str(name) + ''
+        # response = requests.delete(url, auth=HTTPBasicAuth(self.user,
+        #                                                    self.password))
+        # return {'name': name, 'status': response.status_code, 'content': response.content}
+        return {}
 
     def retrieveAllFlows(self):
         return {}
