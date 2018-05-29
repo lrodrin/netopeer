@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-
 import os, sys
 import logging
 
@@ -24,6 +23,7 @@ logger = logging.getLogger('.'.join(os.path.abspath(__name__).split('/')[1:]))
 __author__ = "Ricard Vilalta <ricard.vilalta@cttc.cat> and Laura Rodriguez <laura.rodriguez@cttc.cat>"
 __copyright__ = "Copyright 2018, CTTC"
 __license__ = "MIT License"
+
 
 class CONF_plugin(object):
 
@@ -55,15 +55,14 @@ class CONF_plugin(object):
         return topology_parsed
 
     def parseXMLtopology(self, topology, xmldoc):
-        nodeList = xmldoc.getElementsByTagName('node')  
+        nodeList = xmldoc.getElementsByTagName('node')
         linkList = xmldoc.getElementsByTagName('link')
 
-        for i in range(len(nodeList)):        
+        for i in range(len(nodeList)):
             node = Node()
             node.nodeId = str(nodeList[i].getElementsByTagName('id')[0].childNodes[0].nodeValue)
-            node.nodeId = str(nodeList[i].getElementsByTagName('id')[0].childNodes[0].nodeValue)
             node.domain = str(self.controller.domainId)
-            topology.nodes[node.nodeId] = node       
+            topology.nodes[node.nodeId] = node
 
         for i in range(len(linkList)):
             source_node_value = (linkList[i].getElementsByTagName('source')[0]
@@ -72,7 +71,9 @@ class CONF_plugin(object):
             target_node_value = (linkList[i].getElementsByTagName('target')[0]
                                  .childNodes[0].nodeValue
                                  )
+
             link_id = str(source_node_value) + '_to_' + str(target_node_value)
+
             for node in topology.nodes:
                 if topology.nodes[node].nodeId == source_node_value:
                     src_node = topology.nodes[node]
@@ -97,6 +98,7 @@ class CONF_plugin(object):
                     .getElementsByTagName('count')[0]
                     .childNodes[0].nodeValue
             )
+
             if int(switching_cap_type) == 1:
                 if channel_count > 0:
                     e = DwdmEdge()
@@ -124,61 +126,63 @@ class CONF_plugin(object):
                 e.delay = str(linkList[i].getElementsByTagName('delay')[0]
                               .childNodes[0].nodeValue)
 
-            e.source = str(src_node.nodeId)
-            e.localIfid = str(src_port)
-            e.target = str(dest_node.nodeId)
-            e.remoteIfid = str(dest_port)
-            e.metric = str(linkList[i].getElementsByTagName('te_metric')[0]
-                           .childNodes[0].nodeValue)
+            e = self.set_parameters_edge(channel_count, dest_node, dest_port, e, i, linkList, src_node, src_port,
+                                         switching_cap, topology)
 
-            e.edgeId = str(e.source) + '_to_' + str(e.target)
-            e.switchingCap = switching_cap
+            # e.source = str(src_node.nodeId)
+            # e.localIfid = str(src_port)
+            # e.target = str(dest_node.nodeId)
+            # e.remoteIfid = str(dest_port)
+            # e.metric = str(linkList[i].getElementsByTagName('te_metric')[0]
+            #                .childNodes[0].nodeValue)
 
-            edgeEndNotFound = False
-            try:
-                if not topology.nodes[e.source].edgeEnd[e.localIfid]:
-                    pass
+            # e.edgeId = str(e.source) + '_to_' + str(e.target)
+            # e.switchingCap = switching_cap
 
-            except:
-                edgeEndNotFound = True
+            # edgeEndNotFound = False
+            # try:
+            #     if not topology.nodes[e.source].edgeEnd[e.localIfid]:
+            #         pass
 
-            if not edgeEndNotFound:  # if topology.nodes[e.source].edgeEnd[e.localIfid] exists then
-                port = EdgeEnd()
-                port.edgeEndId = e.localIfid
-                port.peerNodeId = topology.nodes[e.target].nodeId
-                port.switchingCap = switching_cap
-                topology.nodes[e.source].edgeEnd[e.localIfid] = port
+            # except:
+            #     edgeEndNotFound = True
 
+            # if not edgeEndNotFound:    # if topology.nodes[e.source].edgeEnd[e.localIfid] exists then
+            #     port = EdgeEnd()
+            #     port.edgeEndId = e.localIfid
+            #     port.peerNodeId = topology.nodes[e.target].nodeId
+            #     port.switchingCap = switching_cap
+            #     topology.nodes[e.source].edgeEnd[e.localIfid] = port
 
-            e.maxResvBw = str(linkList[i].getElementsByTagName('max_resv_bw')[0]
-                              .childNodes[0].nodeValue)
+            # e.maxResvBw = str(linkList[i].getElementsByTagName('max_resv_bw')[0]
+            #     .childNodes[0].nodeValue)
 
-            e.unreservBw = str(linkList[i].getElementsByTagName('unresv_bw')[0]
-                               .getElementsByTagName('item')[0].childNodes[0].nodeValue)
+            # e.unreservBw = str(linkList[i].getElementsByTagName('unresv_bw')[0]
+            #     .getElementsByTagName('item')[0].childNodes[0].nodeValue)
 
-            channelsOcupied = []
-            if e.edgeType.get() == 1:
-                logger.debug('Edge: %s', str(e))
-                e.channels = KeyedArrayType(DwdmChannel, 'g694Id')
-                for item in linkList[i].getElementsByTagName('channels')[0].getElementsByTagName('item'):
-                    channel = DwdmChannel()
-                    channel.g694Id = int(item.getElementsByTagName('g694_id')[0].childNodes[0].nodeValue)
-                    channel.state = int(item.getElementsByTagName('state')[0].childNodes[0].nodeValue)
-                    if channel.state == 2:
-                        logger.debug(self.__get_channel(channel.g694Id))
-                        channelsOcupied.append(self.__get_channel(channel.g694Id))
+            # channelsOcupied = []
+            # if e.edgeType.get() == 1:
+            #     logger.debug('Edge: %s',str(e))
+            #     e.channels = KeyedArrayType(DwdmChannel, 'g694Id')
+            #     for item in linkList[i].getElementsByTagName('channels')[0].getElementsByTagName('item'):
+            #         channel = DwdmChannel()
+            #         channel.g694Id = int(item.getElementsByTagName('g694_id')[0].childNodes[0].nodeValue)
+            #         channel.state = int(item.getElementsByTagName('state')[0].childNodes[0].nodeValue)
+            #         if channel.state == 2:
+            #             logger.debug(self.__get_channel(channel.g694Id))
+            #             channelsOcupied.append(self.__get_channel(channel.g694Id))
 
-                    e.channels[item.getElementsByTagName('g694_id'
-                                                         )[0].childNodes[0].nodeValue] = channel
+            #         e.channels[item.getElementsByTagName('g694_id'
+            #                 )[0].childNodes[0].nodeValue] = channel
 
-                e.bitmap = Bitmap(
-                    {
-                        'numChannels': channel_count,
-                        'arrayBits': [0] * channel_count
-                    }
-                )
-                for i in range(len(channelsOcupied)):
-                    e.bitmap.setChannel(channelsOcupied[i])
+            #     e.bitmap = Bitmap(
+            #         {
+            #             'numChannels': channel_count,
+            #             'arrayBits':[0] * channel_count
+            #         }
+            #     )
+            #     for i in range(len(channelsOcupied)):
+            #         e.bitmap.setChannel(channelsOcupied[i])
 
             topology.edges[e.edgeId] = e
 
@@ -224,3 +228,56 @@ class CONF_plugin(object):
 
     def __str__(self):
         return self.name
+
+    def set_parameters_edge(self, channel_count, dest_node, dest_port, e, i, linkList, src_node, src_port,
+                            switching_cap, topology):
+        e.source = str(src_node.nodeId)
+        e.localIfid = str(src_port)
+        e.target = str(dest_node.nodeId)
+        e.remoteIfid = str(dest_port)
+        e.metric = str(linkList[i].getElementsByTagName('te_metric')[0]
+                       .childNodes[0].nodeValue)
+        e.edgeId = str(e.source) + '_to_' + str(e.target)
+        e.switchingCap = switching_cap
+        edgeEndNotFound = False
+        try:
+            if not topology.nodes[e.source].edgeEnd[e.localIfid]:
+                pass
+
+        except:
+            edgeEndNotFound = True
+        if not edgeEndNotFound:  # if topology.nodes[e.source].edgeEnd[e.localIfid] exists then
+            port = EdgeEnd()
+            port.edgeEndId = e.localIfid
+            port.peerNodeId = topology.nodes[e.target].nodeId
+            port.switchingCap = switching_cap
+            topology.nodes[e.source].edgeEnd[e.localIfid] = port
+        e.maxResvBw = str(linkList[i].getElementsByTagName('max_resv_bw')[0]
+                          .childNodes[0].nodeValue)
+        e.unreservBw = str(linkList[i].getElementsByTagName('unresv_bw')[0]
+                           .getElementsByTagName('item')[0].childNodes[0].nodeValue)
+        channelsOcupied = []
+        if e.edgeType.get() == 1:
+            logger.debug('Edge: %s', str(e))
+            e.channels = KeyedArrayType(DwdmChannel, 'g694Id')
+            for item in linkList[i].getElementsByTagName('channels')[0].getElementsByTagName('item'):
+                channel = DwdmChannel()
+                channel.g694Id = int(item.getElementsByTagName('g694_id')[0].childNodes[0].nodeValue)
+                channel.state = int(item.getElementsByTagName('state')[0].childNodes[0].nodeValue)
+                if channel.state == 2:
+                    logger.debug(self.__get_channel(channel.g694Id))
+                    channelsOcupied.append(self.__get_channel(channel.g694Id))
+
+                e.channels[item.getElementsByTagName('g694_id'
+                                                     )[0].childNodes[0].nodeValue] = channel
+
+            e.bitmap = Bitmap(
+                {
+                    'numChannels': channel_count,
+                    'arrayBits': [0] * channel_count
+                }
+            )
+            for i in range(len(channelsOcupied)):
+                e.bitmap.setChannel(channelsOcupied[i])
+
+        return e
