@@ -65,6 +65,7 @@ class CONF_plugin(object):
             topology.nodes[node.nodeId] = node
 
         for i in range(len(linkList)):
+            sdm = False
             source_node_value = (linkList[i].getElementsByTagName('source')[0]
                                  .childNodes[0].nodeValue
                                  )
@@ -125,6 +126,8 @@ class CONF_plugin(object):
                 e.edgeType.set(4)  # SDM Edge
                 e.delay = str(linkList[i].getElementsByTagName('delay')[0]
                               .childNodes[0].nodeValue)
+
+                sdm = True
 
             e = self.set_parameters_edge(channel_count, dest_node, dest_port, e, i, linkList, src_node, src_port,
                                          switching_cap, topology)
