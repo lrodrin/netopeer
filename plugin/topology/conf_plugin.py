@@ -1,10 +1,10 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
+import inspect
+import logging
 import os
 import sys
-import logging
-import inspect
 
 from TopologyManager.plugins.CONF_plugin.conf_api import CONF_API
 
@@ -31,8 +31,6 @@ class CONF_plugin(object):
 
     def __init__(self, **kwargs):
 
-        # self.controller = None
-
         for key in (
                 'ctl_name',
                 'ctl_addr',
@@ -43,7 +41,6 @@ class CONF_plugin(object):
 
         # CONFIG DATA
         self.api = CONF_API(self.addr, self.port)
-        # self.topology = None
         self.controller = kwargs['controller']
 
     def __str__(self):
@@ -130,8 +127,9 @@ class CONF_plugin(object):
                     logger.debug('%s - Eth Edge', link_id)
 
                 switching_cap = 'psc'
-                topology.edges[e.edgeId] = self.set_edge_parameters(channel_count, dest_node, dest_port, e, i, linkList,
-                                                                    src_node, src_port, switching_cap, topology, False)
+                self.set_edge_parameters(channel_count, dest_node, dest_port, e, i, linkList, src_node, src_port,
+                                         switching_cap, topology, False)
+                topology.edges[e.edgeId] = e
 
             elif int(switching_cap_type) == 150:
                 switching_cap = 'lsc'
@@ -140,8 +138,9 @@ class CONF_plugin(object):
                 e.delay = str(linkList[i].getElementsByTagName('delay')[0]
                               .childNodes[0].nodeValue)
                 logger.debug('%s - DWDM Edge', link_id)
-                topology.edges[e.edgeId] = self.set_edge_parameters(channel_count, dest_node, dest_port, e, i, linkList,
-                                                                    src_node, src_port, switching_cap, topology, False)
+                self.set_edge_parameters(channel_count, dest_node, dest_port, e, i, linkList, src_node, src_port,
+                                         switching_cap, topology, False)
+                topology.edges[e.edgeId] = e
 
             elif int(switching_cap_type) == 160:
                 for j in range(0, number_of_cores):
@@ -151,9 +150,9 @@ class CONF_plugin(object):
                     e.delay = str(linkList[i].getElementsByTagName('delay')[0]
                                   .childNodes[0].nodeValue)
                     logger.debug('%s - SDM Edge', link_id)
-                    topology.edges[e.edgeId] = self.set_edge_parameters(channel_count, dest_node, dest_port, e, j,
-                                                                        linkList, src_node, src_port, switching_cap,
-                                                                        topology, True)
+                    self.set_edge_parameters(channel_count, dest_node, dest_port, e, j, linkList, src_node, src_port,
+                                             switching_cap, topology, True)
+                    topology.edges[e.edgeId] = e
 
         logger.debug('Composed CONF topology: {}'.format(topology))
         return topology
@@ -168,27 +167,28 @@ class CONF_plugin(object):
             self.parseTopology(topology)
             return topology
 
-    def set_edge_parameters(self, channel_count, dest_node, dest_port, e, i, linkList, src_node, src_port,
+    def set_edge_parameters(self, channel_count, dest_node, dest_port, edge, index, linkList, src_node, src_port,
                             switching_cap, topology, is_sdm_edge):
-        e.source = str(src_node.nodeId)
-        e.localIfid = str(src_port)
-        e.target = str(dest_node.nodeId)
-        e.remoteIfid = str(dest_port)
-        e.metric = str(linkList[i].getElementsByTagName('te_metric')[0]
-                       .childNodes[0].nodeValue)
+
+        edge.source = str(src_node.nodeId)
+        edge.localIfid = str(src_port)
+        edge.target = str(dest_node.nodeId)
+        edge.remoteIfid = str(dest_port)
+        edge.metric = str(linkList[index].getElementsByTagName('te_metric')[0]
+                          .childNodes[0].nodeValue)
 
         if is_sdm_edge:
-            e.edgeId = str(e.source) + '_to_' + str(e.target) + '_' + str(i)
-            e.coreId = str(i)
+            edge.edgeId = str(edge.source) + '_to_' + str(edge.target) + '_coreId_' + str(index)
+            edge.coreId = str(index)
 
         else:
-            e.edgeId = str(e.source) + '_to_' + str(e.target)
+            edge.edgeId = str(edge.source) + '_to_' + str(edge.target)
 
-        e.switchingCap = switching_cap
+        edge.switchingCap = switching_cap
 
         edgeEndNotFound = False
         try:
-            if not topology.nodes[e.source].edgeEnd[e.localIfid]:
+            if not topology.nodes[edge.source].edgeEnd[edge.localIfid]:
                 pass
 
         except:
@@ -196,21 +196,21 @@ class CONF_plugin(object):
 
         if not edgeEndNotFound:  # if topology.nodes[e.source].edgeEnd[e.localIfid] exists then
             port = EdgeEnd()
-            port.edgeEndId = e.localIfid
-            port.peerNodeId = topology.nodes[e.target].nodeId
+            port.edgeEndId = edge.localIfid
+            port.peerNodeId = topology.nodes[edge.target].nodeId
             port.switchingCap = switching_cap
-            topology.nodes[e.source].edgeEnd[e.localIfid] = port
+            topology.nodes[edge.source].edgeEnd[edge.localIfid] = port
 
-        e.maxResvBw = str(linkList[i].getElementsByTagName('max_resv_bw')[0]
-                          .childNodes[0].nodeValue)
-        e.unreservBw = str(linkList[i].getElementsByTagName('unresv_bw')[0]
-                           .getElementsByTagName('item')[0].childNodes[0].nodeValue)
+        edge.maxResvBw = str(linkList[index].getElementsByTagName('max_resv_bw')[0]
+                             .childNodes[0].nodeValue)
+        edge.unreservBw = str(linkList[index].getElementsByTagName('unresv_bw')[0]
+                              .getElementsByTagName('item')[0].childNodes[0].nodeValue)
 
         channelsOcupied = []
-        if e.edgeType.get() == 1:
-            logger.debug('Edge: %s', str(e))
-            e.channels = KeyedArrayType(DwdmChannel, 'g694Id')
-            for item in linkList[i].getElementsByTagName('channels')[0].getElementsByTagName('item'):
+        if edge.edgeType.get() == 1:
+            logger.debug('Edge: %s', str(edge))
+            edge.channels = KeyedArrayType(DwdmChannel, 'g694Id')
+            for item in linkList[index].getElementsByTagName('channels')[0].getElementsByTagName('item'):
                 channel = DwdmChannel()
                 channel.g694Id = int(item.getElementsByTagName('g694_id')[0].childNodes[0].nodeValue)
                 channel.state = int(item.getElementsByTagName('state')[0].childNodes[0].nodeValue)
@@ -218,19 +218,17 @@ class CONF_plugin(object):
                     logger.debug(self.__get_channel(channel.g694Id))
                     channelsOcupied.append(self.__get_channel(channel.g694Id))
 
-                e.channels[item.getElementsByTagName('g694_id'
-                                                     )[0].childNodes[0].nodeValue] = channel
+                edge.channels[item.getElementsByTagName('g694_id'
+                                                        )[0].childNodes[0].nodeValue] = channel
 
-            e.bitmap = Bitmap(
+            edge.bitmap = Bitmap(
                 {
                     'numChannels': channel_count,
                     'arrayBits': [0] * channel_count
                 }
             )
-            for i in range(len(channelsOcupied)):
-                e.bitmap.setChannel(channelsOcupied[i])
-
-        return e
+            for index in range(len(channelsOcupied)):
+                edge.bitmap.setChannel(channelsOcupied[index])
 
     @staticmethod
     def __get_channel(label):
