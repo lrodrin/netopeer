@@ -1,10 +1,10 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-import inspect
-import logging
 import os
 import sys
+import logging
+import inspect
 
 from TopologyManager.plugins.CONF_plugin.conf_api import CONF_API
 
@@ -115,16 +115,9 @@ class CONF_plugin(object):
 
             if int(switching_cap_type) == 1:
                 if channel_count > 0:
-                    e = DwdmEdge()
-                    e.edgeType.set(1)  # DWDM Edge
-                    e.delay = str(linkList[i].getElementsByTagName('delay')[0]
-                                  .childNodes[0].nodeValue)
-                    logger.debug('%s - DWDM Edge', link_id)
-
+                    e = self.create_edge(i, linkList, link_id, 'DWDM')  # DWDM Edge
                 else:
-                    e = EthEdge()
-                    e.edgeType.set(2)  # Eth Edge
-                    logger.debug('%s - Eth Edge', link_id)
+                    e = self.create_edge(i, linkList, link_id, 'ETH')  # ETH Edge
 
                 switching_cap = 'psc'
                 self.set_edge_parameters(channel_count, dest_node, dest_port, e, i, linkList, src_node, src_port,
@@ -133,11 +126,7 @@ class CONF_plugin(object):
 
             elif int(switching_cap_type) == 150:
                 switching_cap = 'lsc'
-                e = DwdmEdge()
-                e.edgeType.set(1)  # DWDM Edge
-                e.delay = str(linkList[i].getElementsByTagName('delay')[0]
-                              .childNodes[0].nodeValue)
-                logger.debug('%s - DWDM Edge', link_id)
+                e = self.create_edge(i, linkList, link_id, 'DWDM')  # DWDM Edge
                 self.set_edge_parameters(channel_count, dest_node, dest_port, e, i, linkList, src_node, src_port,
                                          switching_cap, topology, False)
                 topology.edges[e.edgeId] = e
@@ -145,11 +134,7 @@ class CONF_plugin(object):
             elif int(switching_cap_type) == 160:
                 for j in range(0, number_of_cores):
                     switching_cap = 'sdm'
-                    e = SdmEdge()
-                    e.edgeType.set(4)  # SDM Edge
-                    e.delay = str(linkList[i].getElementsByTagName('delay')[0]
-                                  .childNodes[0].nodeValue)
-                    logger.debug('%s - SDM Edge', link_id)
+                    e = self.create_edge(i, linkList, link_id, 'SDM')  # SDM Edge
                     self.set_edge_parameters(channel_count, dest_node, dest_port, e, j, linkList, src_node, src_port,
                                              switching_cap, topology, True)
                     topology.edges[e.edgeId] = e
@@ -166,6 +151,27 @@ class CONF_plugin(object):
         else:
             self.parseTopology(topology)
             return topology
+
+    def create_edge(self, i, linkList, link_id, edge_type):
+        edge = None
+        if edge_type == 'DWDM':
+            edge = DwdmEdge()
+            edge.edgeType.set(1)
+            edge.delay = str(linkList[i].getElementsByTagName('delay')[0]
+                             .childNodes[0].nodeValue)
+
+        elif edge_type == 'ETH':
+            edge = EthEdge()
+            edge.edgeType.set(2)
+
+        elif edge_type == 'SDM':
+            edge = SdmEdge()
+            edge.edgeType.set(4)
+            edge.delay = str(linkList[i].getElementsByTagName('delay')[0]
+                             .childNodes[0].nodeValue)
+
+        logger.debug('%s - %s Edge' % (link_id, edge_type))
+        return edge
 
     def set_edge_parameters(self, channel_count, dest_node, dest_port, edge, index, linkList, src_node, src_port,
                             switching_cap, topology, is_sdm_edge):
