@@ -5,9 +5,11 @@
 
 import socket
 
-__author__ = 'amll'
+__author__ = "Ricard Vilalta <ricard.vilalta@cttc.cat> and Laura Rodriguez <laura.rodriguez@cttc.cat>"
+__copyright__ = "Copyright 2018, CTTC"
+__license__ = "MIT License"
 
-#### WRITING TED FILE ###############
+# WRITING TED FILE
 header_1 = \
     '''\t<local_ip_addrs>
 \t\t<count>0</count>
@@ -122,25 +124,15 @@ def create(topology):
 \t\t<count>0</count>
 \t\t<item_version>0</item_version>
 \t</osnr>
+\t<cpu_cores>0</cpu_cores>
+\t<ram_gb>0</ram_gb>
+\t<disk_gb>0</disk_gb>
 '''
         xml += '</node>\n'
-    edge_cnt = 0
     for edge in topology.edges:
-        if topology.edges[edge].switchingCap == 'sdm':
-            ### Getting core and modes from source port
-            #### print (topology.nodes[topology.edges[edge].source].edgeEnd[topology.edges[edge].localIfid])
-            node_src = topology.nodes[topology.edges[edge].source].edgeEnd[topology.edges[edge].localIfid]
-            for core in node_src.availableCore:
-                xml += get_edge_xml(topology.edges[edge], core, 'AA')
-                edge_cnt += 1
-        else:
-            xml += get_edge_xml(topology.edges[edge])
-            edge_cnt += 1
-    xml += '</g>\n</boost_serialization>'
+        xml += get_edge_xml(topology.edges[edge])
 
-    # TODO Modify edge count
-    if edge_cnt != len(topology.edges):
-        xml = xml.replace('<E>' + str(len(topology.edges)) + '</E>\n', '<E>' + str(edge_cnt) + '</E>\n')
+    xml += '</g>\n</boost_serialization>'
 
     return xml
 
@@ -235,8 +227,9 @@ def get_switching_cap_encoding(link_type):
         return '''\t\t\t<switching_cap>150</switching_cap>
 \t\t\t<encoding>8</encoding>
 '''
+    # TODO: Move sdm to 160
     elif link_type == 'sdm':
-        return '''\t\t\t<switching_cap>160</switching_cap>
+        return '''\t\t\t<switching_cap>150</switching_cap>
 \t\t\t<encoding>8</encoding>
 '''
     else:
