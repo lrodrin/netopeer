@@ -7,7 +7,7 @@ import xml.dom.minidom as md
 
 from lxml import etree
 
-from data import pretty_print
+from kddi.data import pretty_print
 
 INDENT = ' ' * 4
 
