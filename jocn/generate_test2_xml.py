@@ -11,7 +11,7 @@ from kddi.data import pretty_print
 INDENT = ' ' * 4
 
 modes = ["LP01", "LP11a", "LP11b", "LP21a", "LP21b", "LP02"]
-channels = ["55", "53", "51", "49", "47", "45", "42", "41"]
+channels = ["55", "53", "51", "49", "47", "45", "43", "41"]
 cores = ["Core19", "Core18", "Core17", "Core16", "Core15",
          "Core14", "Core13", "Core12", "Core11", "Core10",
          "Core9", "Core8", "Core7", "Core6", "Core5",
