@@ -3,7 +3,6 @@ This module generate XML configuration
 
 Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
-import xml.dom.minidom as md
 
 from lxml import etree
 
@@ -18,78 +17,65 @@ cores = ["Core19", "Core18", "Core17", "Core16", "Core15",
          "Core4", "Core3", "Core2", "Core1"]
 
 
-def pretty_print_from_string(fh):
-    return '\n'.join(line for line in md.parseString(fh).toprettyxml(indent=INDENT).split('\n') if line.strip())
-
-
-def generate(filename, id_slice):
+def generate(filename, id_slice, conste, fs, bw):
     config = etree.Element('config', xmlns="urn:ietf:params:xml:ns:netconf:base:1.0")
-    transceiver = etree.Element('transceiver', xmlns="urn:sliceable-transceiver-sdm")
-    slice = etree.Element('slice')
-    sliceid = etree.Element('sliceid')
+    transceiver = etree.SubElement(config, 'transceiver', xmlns="urn:sliceable-transceiver-sdm")
+    slice = etree.SubElement(transceiver, 'slice')
+    sliceid = etree.SubElement(slice, 'sliceid')
     sliceid.text = '%s' % id_slice
-    slice.append(sliceid)
     counter = 1
     for c in range(0, len(cores)):
         for m in range(0, len(modes)):
-            optical_channel = etree.Element('optical-channel')
+            optical_channel = etree.SubElement(slice, 'optical-channel')
             # optical_channels parameters
-            opticalchannelid = etree.Element('opticalchannelid')
+            opticalchannelid = etree.SubElement(optical_channel, 'opticalchannelid')
             opticalchannelid.text = '%s' % counter
-            optical_channel.append(opticalchannelid)
-            coreid = etree.Element('coreid')
+            coreid = etree.SubElement(optical_channel, 'coreid')
             coreid.text = '%s' % cores[c]
-            optical_channel.append(coreid)
-            modeid = etree.Element('modeid')
+            modeid = etree.SubElement(optical_channel, 'modeid')
             modeid.text = '%s' % modes[m]
-            optical_channel.append(modeid)
 
-            frequency_slot = etree.Element('frequency-slot')
+            frequency_slot = etree.SubElement(optical_channel, 'frequency-slot')
             # frequency_slot parameters
-            ncf = etree.Element('ncf')
+            ncf = etree.SubElement(frequency_slot, 'ncf')
             ncf.text = '39'
-            frequency_slot.append(ncf)
-            slot_width = etree.Element('slot-width')
-            slot_width.text = '1'
+            slot_width = etree.SubElement(frequency_slot, 'slot-width')
+            slot_width.text = '%s' % fs
             frequency_slot.append(slot_width)
-            optical_channel.append(frequency_slot)
-
             counter += 1
-            slice.append(optical_channel)
 
     for i in range(1, len(cores) * len(modes) + 1):
-        optical_signal = etree.Element('optical-signal')
+        optical_signal = etree.SubElement(slice, 'optical-signal')
         # optical_signal parameters
-        opticalchannelid = etree.Element('opticalchannelid')
+        opticalchannelid = etree.SubElement(optical_signal, 'opticalchannelid')
         opticalchannelid.text = '%s' % i
-        optical_signal.append(opticalchannelid)
-        constellation = etree.Element('constellation')
-        constellation.text = 'qam64'
-        optical_signal.append(constellation)
-        bandwidth = etree.Element('bandwidth')
-        bandwidth.text = '12000000000'
-        optical_signal.append(bandwidth)
-        fec = etree.Element('fec')
+        constellation = etree.SubElement(optical_signal, 'constellation')
+        constellation.text = '%s' % conste
+        bandwidth = etree.SubElement(optical_signal, 'bandwidth')
+        bandwidth.text = '%s' % bw
+        fec = etree.SubElement(optical_signal, 'fec')
         fec.text = 'sd-fec'
-        optical_signal.append(fec)
 
-        equalization = etree.Element('equalization')
+        equalization = etree.SubElement(optical_signal, 'equalization')
         # equalization parameters
-        equalizationid = etree.Element('equalizationid')
+        equalizationid = etree.SubElement(equalization, 'equalizationid')
         equalizationid.text = '1'
-        equalization.append(equalizationid)
-        mimo = etree.Element('mimo')
+        mimo = etree.SubElement(equalization, 'mimo')
         mimo.text = 'true'
-        equalization.append(mimo)
-        num_taps = etree.Element('num_taps')
+        num_taps = etree.SubElement(equalization, 'num_taps')
         num_taps.text = '500'
-        equalization.append(num_taps)
-        optical_signal.append(equalization)
 
-        slice.append(optical_signal)
-    transceiver.append(slice)
-    config.append(transceiver)
-    # pretty string
+        # monitor = etree.SubElement(optical_signal, 'monitor')
+        # monitor parameters
+        # ber = etree.SubElement(monitor, 'ber')
+        # ber.text = 'ber'
+        # channel_power = etree.SubElement(monitor, 'channel-power')
+        # channel_power.text = 'channel-power'
+        # noise_level = etree.SubElement(monitor, 'noise-level')
+        # noise_level.text = 'noise-level'
+        # osnr = etree.SubElement(monitor, 'osnr')
+        # osnr.text = 'osnr'
+
     xml = etree.tostring(transceiver)
     pretty_xml = pretty_print(xml)
     with open(filename, "w") as f:
@@ -97,4 +83,4 @@ def generate(filename, id_slice):
 
 
 if __name__ == '__main__':
-    generate("test1.xml", 1)
+    generate("test1.xml", 1, 'qam64', 1, '12000000000')

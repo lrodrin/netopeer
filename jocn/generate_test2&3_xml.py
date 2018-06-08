@@ -11,14 +11,15 @@ from kddi.data import pretty_print
 INDENT = ' ' * 4
 
 modes = ["LP01", "LP11a", "LP11b", "LP21a", "LP21b", "LP02"]
-channels = ["55", "53", "51", "49", "47", "45", "43", "41"]
+channels_test2 = ["55", "53", "51", "49", "47", "45", "43", "41"]
+channels_test3 = ["37", "35", "33", "31", "29", "27", "25"]
 cores = ["Core19", "Core18", "Core17", "Core16", "Core15",
          "Core14", "Core13", "Core12", "Core11", "Core10",
          "Core9", "Core8", "Core7", "Core6", "Core5",
          "Core4", "Core3", "Core2", "Core1"]
 
 
-def generate(filename, id_slice, conste, fs, bw):
+def generate(filename, id_slice, conste, fs, bw, channels):
     config = etree.Element('config', xmlns="urn:ietf:params:xml:ns:netconf:base:1.0")
     transceiver = etree.SubElement(config, 'transceiver', xmlns="urn:sliceable-transceiver-sdm")
     slice = etree.SubElement(transceiver, 'slice')
@@ -85,4 +86,5 @@ def generate(filename, id_slice, conste, fs, bw):
 
 
 if __name__ == '__main__':
-    generate("test2.xml", 2, 'qam64', 1, '12000000000')
+    generate("test2.xml", 2, 'qam64', 1, '12000000000', channels_test2)
+    generate("test3.xml", 3, 'qam64', 1, '12000000000', channels_test3)
