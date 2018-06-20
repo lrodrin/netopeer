@@ -1,7 +1,7 @@
 """
 This module create the configuration of one spectral super channel (slice)
 
-Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
 import kddi.data as d
@@ -33,13 +33,13 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    config_file = 'test1_edit_config.xml'
-    filter = "<transceiver/>"
+    test1_config_file = 'test1.xml'
+    filter = "<transceiver-connectivity/>"
 
     connectionTX = init_connection(host, port, login, password)
-    create_configuration(connectionTX, config_file, 'running', 'merge', filter)
+    create_configuration(connectionTX, test1_config_file, 'running', 'merge', filter)
     close_connection(connectionTX)
 
-    connectionRX = init_connection(host2, port, login, password)
-    create_configuration(connectionRX, config_file, 'running', 'merge', filter)
-    close_connection(connectionRX)
+    # connectionRX = init_connection(host2, port, login, password)
+    # create_configuration(connectionRX, test1_config_file, 'running', 'merge', filter)
+    # close_connection(connectionRX)

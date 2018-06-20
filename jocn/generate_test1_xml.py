@@ -1,5 +1,5 @@
 """
-This module generate XML configuration
+This module generate XML configuration for test 1
 
 Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -19,7 +19,8 @@ cores = ["Core19", "Core18", "Core17", "Core16", "Core15",
 
 def generate(filename, id_slice, conste, fs, bw):
     config = etree.Element('config', xmlns="urn:ietf:params:xml:ns:netconf:base:1.0")
-    transceiver = etree.SubElement(config, 'transceiver', xmlns="urn:sliceable-transceiver-sdm")
+    transceiver = etree.SubElement(config, 'transceiver-connectivity',
+                                   xmlns="urn:sliceable-transceiver-sdm-connectivity")
     slice = etree.SubElement(transceiver, 'slice')
     sliceid = etree.SubElement(slice, 'sliceid')
     sliceid.text = '%s' % id_slice
@@ -59,22 +60,11 @@ def generate(filename, id_slice, conste, fs, bw):
         equalization = etree.SubElement(optical_signal, 'equalization')
         # equalization parameters
         equalizationid = etree.SubElement(equalization, 'equalizationid')
-        equalizationid.text = '1'
+        equalizationid.text = '%s' % i
         mimo = etree.SubElement(equalization, 'mimo')
         mimo.text = 'true'
         num_taps = etree.SubElement(equalization, 'num_taps')
         num_taps.text = '500'
-
-        # monitor = etree.SubElement(optical_signal, 'monitor')
-        # monitor parameters
-        # ber = etree.SubElement(monitor, 'ber')
-        # ber.text = 'ber'
-        # channel_power = etree.SubElement(monitor, 'channel-power')
-        # channel_power.text = 'channel-power'
-        # noise_level = etree.SubElement(monitor, 'noise-level')
-        # noise_level.text = 'noise-level'
-        # osnr = etree.SubElement(monitor, 'osnr')
-        # osnr.text = 'osnr'
 
     xml = etree.tostring(transceiver)
     pretty_xml = pretty_print(xml)
@@ -83,4 +73,8 @@ def generate(filename, id_slice, conste, fs, bw):
 
 
 if __name__ == '__main__':
-    generate("test1.xml", 1, 'qam64', 1, '12000000000')
+    sliceid = 1
+    qam = 'qam64'
+    m = 1
+    bw = '12000000000'
+    generate("test1.xml", sliceid, qam, m, bw)

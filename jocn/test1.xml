@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<transceiver xmlns="urn:sliceable-transceiver-sdm">
+<transceiver-connectivity xmlns="urn:sliceable-transceiver-sdm-connectivity">
     <slice>
         <sliceid>1</sliceid>
         <optical-channel>
@@ -1045,7 +1045,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>2</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1056,7 +1056,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>3</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1067,7 +1067,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>4</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1078,7 +1078,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>5</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1089,7 +1089,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>6</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1100,7 +1100,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>7</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1111,7 +1111,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>8</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1122,7 +1122,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>9</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1133,7 +1133,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>10</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1144,7 +1144,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>11</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1155,7 +1155,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>12</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1166,7 +1166,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>13</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1177,7 +1177,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>14</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1188,7 +1188,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>15</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1199,7 +1199,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>16</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1210,7 +1210,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>17</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1221,7 +1221,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>18</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1232,7 +1232,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>19</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1243,7 +1243,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>20</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1254,7 +1254,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>21</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1265,7 +1265,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>22</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1276,7 +1276,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>23</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1287,7 +1287,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>24</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1298,7 +1298,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>25</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1309,7 +1309,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>26</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1320,7 +1320,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>27</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1331,7 +1331,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>28</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1342,7 +1342,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>29</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1353,7 +1353,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>30</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1364,7 +1364,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>31</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1375,7 +1375,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>32</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1386,7 +1386,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>33</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1397,7 +1397,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>34</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1408,7 +1408,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>35</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1419,7 +1419,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>36</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1430,7 +1430,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>37</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1441,7 +1441,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>38</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1452,7 +1452,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>39</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1463,7 +1463,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>40</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1474,7 +1474,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>41</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1485,7 +1485,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>42</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1496,7 +1496,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>43</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1507,7 +1507,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>44</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1518,7 +1518,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>45</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1529,7 +1529,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>46</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1540,7 +1540,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>47</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1551,7 +1551,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>48</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1562,7 +1562,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>49</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1573,7 +1573,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>50</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1584,7 +1584,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>51</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1595,7 +1595,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>52</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1606,7 +1606,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>53</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1617,7 +1617,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>54</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1628,7 +1628,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>55</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1639,7 +1639,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>56</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1650,7 +1650,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>57</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1661,7 +1661,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>58</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1672,7 +1672,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>59</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1683,7 +1683,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>60</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1694,7 +1694,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>61</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1705,7 +1705,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>62</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1716,7 +1716,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>63</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1727,7 +1727,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>64</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1738,7 +1738,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>65</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1749,7 +1749,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>66</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1760,7 +1760,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>67</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1771,7 +1771,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>68</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1782,7 +1782,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>69</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1793,7 +1793,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>70</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1804,7 +1804,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>71</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1815,7 +1815,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>72</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1826,7 +1826,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>73</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1837,7 +1837,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>74</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1848,7 +1848,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>75</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1859,7 +1859,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>76</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1870,7 +1870,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>77</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1881,7 +1881,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>78</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1892,7 +1892,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>79</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1903,7 +1903,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>80</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1914,7 +1914,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>81</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1925,7 +1925,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>82</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1936,7 +1936,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>83</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1947,7 +1947,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>84</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1958,7 +1958,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>85</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1969,7 +1969,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>86</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1980,7 +1980,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>87</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -1991,7 +1991,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>88</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2002,7 +2002,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>89</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2013,7 +2013,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>90</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2024,7 +2024,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>91</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2035,7 +2035,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>92</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2046,7 +2046,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>93</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2057,7 +2057,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>94</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2068,7 +2068,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>95</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2079,7 +2079,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>96</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2090,7 +2090,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>97</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2101,7 +2101,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>98</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2112,7 +2112,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>99</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2123,7 +2123,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>100</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2134,7 +2134,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>101</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2145,7 +2145,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>102</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2156,7 +2156,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>103</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2167,7 +2167,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>104</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2178,7 +2178,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>105</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2189,7 +2189,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>106</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2200,7 +2200,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>107</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2211,7 +2211,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>108</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2222,7 +2222,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>109</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2233,7 +2233,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>110</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2244,7 +2244,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>111</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2255,7 +2255,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>112</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2266,7 +2266,7 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>113</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
@@ -2277,10 +2277,10 @@
             <bandwidth>12000000000</bandwidth>
             <fec>sd-fec</fec>
             <equalization>
-                <equalizationid>1</equalizationid>
+                <equalizationid>114</equalizationid>
                 <mimo>true</mimo>
                 <num_taps>500</num_taps>
             </equalization>
         </optical-signal>
     </slice>
-</transceiver>
+</transceiver-connectivity>

@@ -1,0 +1,164 @@
+module sliceable-transceiver-sdm-connectivity {
+
+  namespace "urn:sliceable-transceiver-sdm-connectivity";
+
+  prefix "sliceable-transceiver-sdm-connectivity";
+
+  organization
+    "CTTC";
+
+  contact
+    "laura.rodriguez@cttc.cat";
+
+  description
+    "Latest update to sliceable transponder SDM YANG data model.";
+
+  revision "2018-06-20" {
+    description "Update to sliceable transponder SDM YANG data model initial revision.";
+    reference "";
+  }
+  
+  identity constellation {
+    description "constellation base";
+  }
+  
+  identity "qam64" {
+    base constellation;
+  }
+  
+  identity "qam16" {
+    base constellation;
+  }
+  
+  identity "qam4" {
+    base constellation;
+  }
+
+  identity "qpsk" {
+    base constellation;
+  }
+  
+  identity fec {
+    description "fec base";
+  }
+  
+  identity hd-fec {
+    base fec;
+  }
+  
+  identity sd-fec {
+    base fec;
+  }
+
+  grouping frequency-slot {
+    leaf ncf {
+      type int32;
+      description "Nominal central frequency = 193.1 THz + n x 0.00625 THz. 
+                  where 193.1 THz is ITU-T anchor frequency for transmission 
+                  over the C band, and n is a positive or negative integer including 0.";
+    }
+    leaf slot-width {
+      type uint32;
+      description "Slot width = m x 12.5 GHz, where m is an integer greater than or equal to 1.";
+    }
+  }
+  
+  grouping equalization {
+    leaf equalizationid {
+      type string;
+    }
+    leaf mimo {
+      type boolean;
+    }
+    leaf num_taps {
+      type uint32;
+    }
+    
+  }
+  
+  grouping optical-signal{
+    leaf opticalchannelid {
+      type leafref {
+        path "/transceiver-connectivity/slice/optical-channel/opticalchannelid";
+      }
+    }
+    leaf constellation {
+      type identityref {
+        base constellation;
+      }
+    }
+    leaf bandwidth {
+      type decimal64 {
+         fraction-digits 2;
+      }
+    }
+    leaf fec {
+      type identityref {
+        base fec;
+      }
+    }
+    container equalization {
+      uses equalization;
+    } 
+    container monitor {
+      config false;
+      leaf ber { type string; }
+      leaf osnr { type string; }
+    }
+  }
+
+  grouping optical-channel {
+    leaf opticalchannelid {
+        type string;
+    }
+    leaf coreid {
+      type string;
+    }
+    leaf modeid {
+      type string;
+      description "e.g. lp01";
+    }
+    container frequency-slot {
+      uses frequency-slot;
+    }
+  }
+
+
+  grouping slice {
+    leaf sliceid {
+      type string;
+    }
+    list optical-channel {
+      key "opticalchannelid";
+      uses optical-channel;
+    }
+    list optical-signal {
+      key "opticalchannelid";
+      uses optical-signal;
+    }
+  }
+
+  grouping transceiver-connectivity {
+    list slice{
+      key "sliceid";
+      uses slice;
+    }
+  
+  }
+
+  /**
+   * Container/lists
+   */
+  
+  container transceiver-connectivity {
+    uses transceiver-connectivity;
+  }
+
+  container transceiver-connectivity-state {
+    config false;
+    list slice {
+      key "sliceid";
+      uses slice;
+    }
+  }
+}
