@@ -28,8 +28,8 @@ def close_connection(connection):
 
 
 if __name__ == '__main__':
-    host = '10.1.7.65'
-    host2 = '10.1.7.66'
+    hostTX = '10.1.7.65'
+    hostRX = '10.1.7.66'
     port = 830
     login = 'root'
     password = 'netlabN.'
@@ -37,10 +37,10 @@ if __name__ == '__main__':
     filter = "<transceiver-connectivity/>"
 
     for config_file in test_config_files:
-        connectionTX = init_connection(host, port, login, password)
+        connectionTX = init_connection(hostTX, port, login, password)
         create_configuration(connectionTX, config_file, 'running', 'merge', filter)
         close_connection(connectionTX)
 
-        connectionRX = init_connection(host2, port, login, password)
+        connectionRX = init_connection(hostRX, port, login, password)
         create_configuration(connectionRX, config_file, 'running', 'merge', filter)
         close_connection(connectionRX)
