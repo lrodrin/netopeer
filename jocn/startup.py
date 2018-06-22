@@ -1,5 +1,5 @@
 """
-This module create the configuration of one spectral super channel (slice)
+This module create the configuration for test1, test2 and tes3
 
 Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -33,13 +33,14 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    test1_config_file = 'test1.xml'
+    test_config_files = ['test1.xml', 'test2.xml', 'test3.xml']
     filter = "<transceiver-connectivity/>"
 
-    connectionTX = init_connection(host, port, login, password)
-    create_configuration(connectionTX, test1_config_file, 'running', 'merge', filter)
-    close_connection(connectionTX)
+    for config_file in test_config_files:
+        connectionTX = init_connection(host, port, login, password)
+        create_configuration(connectionTX, config_file, 'running', 'merge', filter)
+        close_connection(connectionTX)
 
-    # connectionRX = init_connection(host2, port, login, password)
-    # create_configuration(connectionRX, test1_config_file, 'running', 'merge', filter)
-    # close_connection(connectionRX)
+        connectionRX = init_connection(host2, port, login, password)
+        create_configuration(connectionRX, config_file, 'running', 'merge', filter)
+        close_connection(connectionRX)

@@ -1,7 +1,7 @@
 """
-This module generate XML configuration
+This module generate XML configuration for test2 and test3
 
-Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
 from lxml import etree
@@ -11,17 +11,19 @@ from kddi.data import pretty_print
 INDENT = ' ' * 4
 
 modes = ["LP01", "LP11a", "LP11b", "LP21a", "LP21b", "LP02"]
-channels_test2 = ["55", "53", "51", "49", "47", "45", "43", "41"]
-channels_test3 = ["37", "35", "33", "31", "29", "27", "25"]
 cores = ["Core19", "Core18", "Core17", "Core16", "Core15",
          "Core14", "Core13", "Core12", "Core11", "Core10",
          "Core9", "Core8", "Core7", "Core6", "Core5",
          "Core4", "Core3", "Core2", "Core1"]
 
+channels_test2 = ["55", "53", "51", "49", "47", "45", "43", "41"]
+channels_test3 = ["37", "35", "33", "31", "29", "27", "25"]
+
 
 def generate(filename, id_slice, conste, fs, bw, channels):
     config = etree.Element('config', xmlns="urn:ietf:params:xml:ns:netconf:base:1.0")
-    transceiver = etree.SubElement(config, 'transceiver', xmlns="urn:sliceable-transceiver-sdm")
+    transceiver = etree.SubElement(config, 'transceiver-connectivity',
+                                   xmlns="urn:sliceable-transceiver-sdm-connectivity")
     slice = etree.SubElement(transceiver, 'slice')
     sliceid = etree.SubElement(slice, 'sliceid')
     sliceid.text = '%s' % id_slice
@@ -62,22 +64,11 @@ def generate(filename, id_slice, conste, fs, bw, channels):
         equalization = etree.SubElement(optical_signal, 'equalization')
         # equalization parameters
         equalizationid = etree.SubElement(equalization, 'equalizationid')
-        equalizationid.text = '1'
+        equalizationid.text = '%s' % i
         mimo = etree.SubElement(equalization, 'mimo')
         mimo.text = 'true'
         num_taps = etree.SubElement(equalization, 'num_taps')
         num_taps.text = '500'
-
-        # monitor = etree.SubElement(optical_signal, 'monitor')
-        # monitor parameters
-        # ber = etree.SubElement(monitor, 'ber')
-        # ber.text = 'ber'
-        # channel_power = etree.SubElement(monitor, 'channel-power')
-        # channel_power.text = 'channel-power'
-        # noise_level = etree.SubElement(monitor, 'noise-level')
-        # noise_level.text = 'noise-level'
-        # osnr = etree.SubElement(monitor, 'osnr')
-        # osnr.text = 'osnr'
 
     xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
@@ -86,5 +77,10 @@ def generate(filename, id_slice, conste, fs, bw, channels):
 
 
 if __name__ == '__main__':
-    generate("test2.xml", 2, 'qam64', 1, '12000000000', channels_test2)
-    generate("test3.xml", 3, 'qam64', 1, '12000000000', channels_test3)
+    sliceid_test2 = 2
+    sliceid_test3 = 3
+    qam = 'qam64'
+    m = 1
+    bw = '12000000000'
+    generate("test2.xml", 2, qam, 1, bw, channels_test2)
+    generate("test3.xml", 3, qam, 1, bw, channels_test3)
