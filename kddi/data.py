@@ -121,7 +121,7 @@ def edit_config(connection, data, session, operation):
     :param connection: connection
     :param data: data
     :param session: datastore session
-    :param operation: merge, replace or nonne
+    :param operation: merge, replace or none
     :type data: str
     :type session: str
     :type operation: str

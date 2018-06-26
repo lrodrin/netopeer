@@ -1,5 +1,5 @@
 """
-This module create the configuration for test1, test2 and tes3
+This module delete the running configuration of slice 1
 
 Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -12,12 +12,16 @@ def init_connection(host, port, login, password):
     return connection
 
 
-def create_configuration(connection, config_file, session, operation, filter):
+def delete_configuration(connection, session):
     try:
-        f = open(config_file)
-        d.edit_config(connection, f.read(), session, operation)
-        f.close()
-        print(d.get_config(connection, filter, session))
+        template = """<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+            <transceiver-connectivity xmlns="urn:sliceable-transceiver-sdm-connectivity">
+                <slice>
+                    <sliceid>1</sliceid>
+                </slice>
+            </transceiver-connectivity>
+        </config>"""
+        connection.edit_config(target=session, config=template, default_operation='replace')
 
     except Exception as e:
         print(e)
@@ -33,15 +37,11 @@ if __name__ == '__main__':
     port = 830
     login = 'root'
     password = 'netlabN.'
-    test1_config_file = 'test1.xml'
-    test2_config_file = 'test2.xml'
-    test3_config_file = 'test3.xml'
-    filter = "<transceiver-connectivity/>"
 
     connectionTX = init_connection(hostTX, port, login, password)
-    create_configuration(connectionTX, test1_config_file, 'running', 'merge', filter)
+    delete_configuration(connectionTX, 'running')
     close_connection(connectionTX)
 
     connectionRX = init_connection(hostRX, port, login, password)
-    create_configuration(connectionRX, test1_config_file, 'running', 'merge', filter)
+    delete_configuration(connectionRX, 'running')
     close_connection(connectionRX)
