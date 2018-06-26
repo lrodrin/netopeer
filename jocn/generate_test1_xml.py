@@ -25,16 +25,16 @@ def generate(filename, id_slice, conste, fs, bw):
     sliceid = etree.SubElement(slice, 'sliceid')
     sliceid.text = '%s' % id_slice
     counter = 1
-    for c in range(0, len(cores)):
-        for m in range(0, len(modes)):
+    for k in range(0, len(cores)):
+        for i in range(0, len(modes)):
             optical_channel = etree.SubElement(slice, 'optical-channel')
             # optical_channels parameters
             opticalchannelid = etree.SubElement(optical_channel, 'opticalchannelid')
             opticalchannelid.text = '%s' % counter
             coreid = etree.SubElement(optical_channel, 'coreid')
-            coreid.text = '%s' % cores[c]
+            coreid.text = '%s' % cores[k]
             modeid = etree.SubElement(optical_channel, 'modeid')
-            modeid.text = '%s' % modes[m]
+            modeid.text = '%s' % modes[i]
 
             frequency_slot = etree.SubElement(optical_channel, 'frequency-slot')
             # frequency_slot parameters
@@ -45,7 +45,7 @@ def generate(filename, id_slice, conste, fs, bw):
             frequency_slot.append(slot_width)
             counter += 1
 
-    for i in range(1, len(cores) * len(modes) + 1):
+    for i in range(1, len(modes) * len(cores) + 1):
         optical_signal = etree.SubElement(slice, 'optical-signal')
         # optical_signal parameters
         opticalchannelid = etree.SubElement(optical_signal, 'opticalchannelid')
@@ -66,15 +66,21 @@ def generate(filename, id_slice, conste, fs, bw):
         num_taps = etree.SubElement(equalization, 'num_taps')
         num_taps.text = '500'
 
-    xml = etree.tostring(transceiver)
+        monitor = etree.SubElement(optical_signal, 'monitor')
+        # monitor parameters
+        ber = etree.SubElement(monitor, 'ber')
+        ber.text = 'ber'
+        osnr = etree.SubElement(monitor, 'osnr')
+        osnr.text = 'osnr'
+
+    xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
     with open(filename, "w") as f:
         f.write(pretty_xml)
 
 
 if __name__ == '__main__':
-    sliceid = 1
     qam = 'qam64'
-    m = 1
+    m = 2
     bw = '12000000000'
-    generate("test1.xml", sliceid, qam, m, bw)
+    generate("test1.xml", 1, qam, m, bw)

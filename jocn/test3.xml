@@ -7196,7 +7196,7 @@
                     <num_taps>500</num_taps>
                 </equalization>
                 <monitor>
-                    <ber>2.08e-2</ber>
+                    <ber>ber</ber>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -7211,7 +7211,7 @@
                     <num_taps>500</num_taps>
                 </equalization>
                 <monitor>
-                    <ber>1.22e-2</ber>
+                    <ber>ber</ber>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -7226,7 +7226,7 @@
                     <num_taps>500</num_taps>
                 </equalization>
                 <monitor>
-                    <ber>1.38e-2</ber>
+                    <ber>ber</ber>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -7241,7 +7241,7 @@
                     <num_taps>500</num_taps>
                 </equalization>
                 <monitor>
-                    <ber>1.73e-2</ber>
+                    <ber>ber</ber>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -7256,7 +7256,7 @@
                     <num_taps>500</num_taps>
                 </equalization>
                 <monitor>
-                    <ber>1.15e-2</ber>
+                    <ber>ber</ber>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>
@@ -7271,7 +7271,7 @@
                     <num_taps>500</num_taps>
                 </equalization>
                 <monitor>
-                    <ber>1.27e-2</ber>
+                    <ber>ber</ber>
                     <osnr>osnr</osnr>
                 </monitor>
             </optical-signal>

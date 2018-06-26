@@ -70,6 +70,13 @@ def generate(filename, id_slice, conste, fs, bw, channels):
         num_taps = etree.SubElement(equalization, 'num_taps')
         num_taps.text = '500'
 
+        monitor = etree.SubElement(optical_signal, 'monitor')
+        # monitor parameters
+        ber = etree.SubElement(monitor, 'ber')
+        ber.text = 'ber'
+        osnr = etree.SubElement(monitor, 'osnr')
+        osnr.text = 'osnr'
+
     xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
     with open(filename, "w") as f:
@@ -77,10 +84,10 @@ def generate(filename, id_slice, conste, fs, bw, channels):
 
 
 if __name__ == '__main__':
-    sliceid_test2 = 2
-    sliceid_test3 = 3
+    # sliceid_test2 = 2
+    # sliceid_test3 = 3
     qam = 'qam64'
-    m = 1
+    m = 2
     bw = '12000000000'
-    generate("test2.xml", 2, qam, 1, bw, channels_test2)
-    generate("test3.xml", 3, qam, 1, bw, channels_test3)
+    generate("test2.xml", 1, qam, m, bw, channels_test2)
+    generate("test3.xml", 1, qam, m, bw, channels_test3)
