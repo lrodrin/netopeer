@@ -1,7 +1,7 @@
 """
 This module generate node topology XML configuration
 
-Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
 from lxml import etree
@@ -33,12 +33,11 @@ def generate(filename, id_node, number_of_ports, number_of_cores):
     node = etree.SubElement(config, 'node', xmlns="urn:node-topology")
     nodeid = etree.SubElement(node, 'node-id')
     nodeid.text = '%s' % id_node
-    for i in range(0, number_of_ports):  # list of ports
+    for i in range(1, number_of_ports + 1):  # list of ports
         port = etree.SubElement(node, 'port')
         # port parameters
         portid = etree.SubElement(port, 'port-id')
-        # portid.text = '%s' % i
-        portid.text = '%s' % i
+        portid.text = '0%s' % i
         layer_protocol_name = etree.SubElement(port, 'layer-protocol-name')
         layer_protocol_name.text = 'sdm'
 
@@ -96,7 +95,7 @@ def generate(filename, id_node, number_of_ports, number_of_cores):
 
 
 if __name__ == '__main__':
-    nodeid = '10.1.7.67'
+    nodeid = '10.1.7.66'
     numports = 4
     numcores = 2
     generate("node_topology_config.xml", nodeid, numports, numcores)

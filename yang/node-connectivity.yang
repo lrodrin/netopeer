@@ -13,9 +13,15 @@ module node-connectivity {
   description
     "Latest update to node connectivity SDM YANG data model.";
 
-  revision "2018-05-11" {
+  revision "2018-07-23" {
     description "Update to node connectivity SDM YANG data model initial revision.";
     reference "";
+  }
+  
+  grouping transceiver {
+	leaf transceiverid {
+      type string;
+    }  
   }
 
   grouping connection {
@@ -28,8 +34,9 @@ module node-connectivity {
     leaf port-out_out {
       type string;
     }  
-    leaf transceiverid {
-      type string;
+    list transceiver {
+      key "transceiverid";
+	  uses transceiver;
     }
   }
 
@@ -37,7 +44,8 @@ module node-connectivity {
    * Container/lists
    */
   
-  container connection {
+  list connection {
+	key "connectionid";
     uses connection;
   }
 

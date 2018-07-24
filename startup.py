@@ -1,7 +1,7 @@
 """
 This module create the configuration
 
-Copyright (c) 2018-2019 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
 import kddi.data as d
@@ -28,7 +28,7 @@ def close_connection(connection):
 
 
 if __name__ == '__main__':
-    host = '10.1.7.67'
+    host = '10.1.7.84'
     port = 830
     login = 'root'
     password = 'netlabN.'

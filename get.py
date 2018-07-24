@@ -1,39 +1,50 @@
 """
-This module implements the measurement of the BANDWIDTH for slice 1
+This module create the configuration
 
-Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
-import data as d
+import kddi.data as d
 
 
-def get_bandwith_parameter(connection):
+def init_connection(host, port, login, password):
+    connection = d.connect(host, port, login, password)
+    return connection
+
+
+def get_configuration(connection, session, filter):
     try:
-
-        template = """<transceiver xmlns="urn:sliceable-transceiver-sdm">
-            <slice>
-            <optical-signal><opticalchannelid>1</opticalchannelid><bandwidth></bandwidth></optical-signal>
-            <optical-signal><opticalchannelid>2</opticalchannelid><bandwidth></bandwidth></optical-signal>
-            <optical-signal><opticalchannelid>3</opticalchannelid><bandwidth></bandwidth></optical-signal>
-            <optical-signal><opticalchannelid>4</opticalchannelid><bandwidth></bandwidth></optical-signal>
-            <optical-signal><opticalchannelid>5</opticalchannelid><bandwidth></bandwidth></optical-signal>
-            <optical-signal><opticalchannelid>6</opticalchannelid><bandwidth></bandwidth></optical-signal>
-            <optical-signal><opticalchannelid>7</opticalchannelid><bandwidth></bandwidth></optical-signal>             
-            </slice>
-            </transceiver>"""
-
-        print(d.get_config(connection, template, 'running'))
+        print(d.get_config(connection, filter, session))
 
     except Exception as e:
         print(e)
 
 
+def close_connection(connection):
+    connection.close_session()
+
+
 if __name__ == '__main__':
     host = '10.1.7.84'
+    host2 = '10.1.7.66'
     port = 830
     login = 'root'
     password = 'netlabN.'
 
-    connection = d.connect(host, port, login, password)
-    get_bandwith_parameter(connection)
-    connection.close_session()
+    # configuration files
+    config_transceiver_file = 'transceiver_config.xml'
+    config_topology_file = 'node_topology_config.xml'
+    config_connection_file = 'node_connectivity_config.xml'
+
+    # filters
+    filter_transceiver = "<transceiver/>"
+    filter_topology = "<node/>"
+    filter_connection = "<connection/>"
+
+    connectionRX = init_connection(host, port, login, password)
+    get_configuration(connectionRX, 'running', filter_connection)
+    close_connection(connectionRX)
+
+    connectionRX = init_connection(host2, port, login, password)
+    get_configuration(connectionRX, 'running', filter_connection)
+    close_connection(connectionRX)

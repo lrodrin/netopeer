@@ -1,6 +1,7 @@
 module: node-connectivity
-  +--rw connection
-     +--rw connectionid?    string
-     +--rw port-in_id?      string
-     +--rw port-out_out?    string
-     +--rw transceiverid?   string
+    +--rw connection* [connectionid]
+       +--rw connectionid    string
+       +--rw port-in_id?     string
+       +--rw port-out_out?   string
+       +--rw transceiver* [transceiverid]
+          +--rw transceiverid    string
