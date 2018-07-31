@@ -1,7 +1,7 @@
 """
 This module generate node topology XML configuration
 
-Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
+Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
 
 from lxml import etree
@@ -28,28 +28,30 @@ def nominal_central_frequency_parameters(nominal_central_frequency):
     channel_number.text = 'channel-number'
 
 
-def generate(filename, id_node, number_of_ports, number_of_cores):
+def generate(filename, id_node, numports_sdm, numcores, numports_eth):
     config = etree.Element('config', xmlns="urn:ietf:params:xml:ns:netconf:base:1.0")
     node = etree.SubElement(config, 'node', xmlns="urn:node-topology")
     nodeid = etree.SubElement(node, 'node-id')
     nodeid.text = '%s' % id_node
-    for i in range(1, number_of_ports + 1):  # list of ports
+
+    for i in range(1, numports_sdm + 1):  # list of ports
         port = etree.SubElement(node, 'port')
         # port parameters
         portid = etree.SubElement(port, 'port-id')
-        portid.text = '0%s' % i
+        # portid.text = '%s' % i
+        portid.text = '%s' % i
         layer_protocol_name = etree.SubElement(port, 'layer-protocol-name')
         layer_protocol_name.text = 'sdm'
 
-        for j in range(0, number_of_cores):  # list of available-core
+        for j in range(0, numcores):  # list of available-core
             available_core = etree.SubElement(port, 'available-core')
             # available_core parameters
             coreid = etree.SubElement(available_core, 'core-id')
             coreid.text = '%s' % j
-            for k in range(0, number_of_cores):  # list of available-frequency-slot
+            for k in range(0, numcores):  # list of available-frequency-slot
                 available_frequency_slot = etree.SubElement(available_core, 'available-frequency-slot')
                 frequency_slot_parameters(available_frequency_slot, k)
-            for k in range(0, number_of_cores):  # list of occupied-frequency-slot
+            for k in range(0, numcores):  # list of occupied-frequency-slot
                 occupied_frequency_slot = etree.SubElement(available_core, 'occupied-frequency-slot')
                 frequency_slot_parameters(occupied_frequency_slot, k)
 
@@ -88,6 +90,15 @@ def generate(filename, id_node, number_of_ports, number_of_cores):
         supported_monitoring = etree.SubElement(available_transceiver, 'supported-monitoring')
         supported_monitoring.text = 'true'
 
+    for i in range(numports_sdm + 1, numports_sdm + numports_eth + 1):  # list of ports
+        port = etree.SubElement(node, 'port')
+        # port parameters
+        portid = etree.SubElement(port, 'port-id')
+        # portid.text = '%s' % i
+        portid.text = '%s' % i
+        layer_protocol_name = etree.SubElement(port, 'layer-protocol-name')
+        layer_protocol_name.text = 'eth'
+
     xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
     with open(filename, "w") as f:
@@ -95,7 +106,8 @@ def generate(filename, id_node, number_of_ports, number_of_cores):
 
 
 if __name__ == '__main__':
-    nodeid = '10.1.7.66'
-    numports = 4
+    nodeid = '10.1.7.84'
+    numports_sdm = 3
     numcores = 2
-    generate("node_topology_config.xml", nodeid, numports, numcores)
+    numports_eth = 6
+    generate("node_topology_config.xml", nodeid, numports_sdm, numcores, numports_eth)
