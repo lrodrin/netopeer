@@ -106,7 +106,7 @@ def generate(filename, id_node, numports_sdm, numcores, numports_eth):
 
 
 if __name__ == '__main__':
-    nodeid = '10.1.7.84'
+    nodeid = '10.1.7.67'
     numports_sdm = 3
     numcores = 2
     numports_eth = 6

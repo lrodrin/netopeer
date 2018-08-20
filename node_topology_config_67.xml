@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
     <node xmlns="urn:node-topology">
-        <node-id>10.1.7.65</node-id>
+        <node-id>10.1.7.67</node-id>
         <port>
             <port-id>1</port-id>
             <layer-protocol-name>sdm</layer-protocol-name>
