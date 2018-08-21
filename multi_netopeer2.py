@@ -107,7 +107,7 @@ if __name__ == '__main__':
     print("TEST 2: EDIT")
     edit(connection_66, '10.1.7.66', '4', 'sdm')
     get(connection_66, '10.1.7.66', '4')
-    # test3 - deletelayer-protocol-name from node 10.1.7.67 and port id 9
+    # test3 - deletel node 10.1.7.67 configuration
     print("TEST 3: DELETE")
     delete(connection_66, '10.1.7.67')
 
