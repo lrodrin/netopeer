@@ -1,90 +1,95 @@
 #!/bin/bash
 
-apt-get install zlib1g-dev libssl-dev libavl-dev libev-dev coreutils acl valgrind autoconf libtool
-apt-get install gcc make cmake doxygen swig python-dev lua5.2 git build-essential devscripts debhelper
-apt-get install bison flex libpcre3-dev libprotobuf-c-dev protobuf-c-compiler
+apt-get update -qq
+apt-get install -y zlib1g-dev libssl-dev
+apt-get install -y libavl-dev libev-dev coreutils acl valgrind libpcre3-dev
+apt-get install -y cmake git flex bison devscripts debhelper rpm curl autoconf libtool
 
-echo "Building cmocka library from source"
-if [ ! -d "cmocka/build" ]; then
-	wget https://cmocka.org/files/1.0/cmocka-1.0.1.tar.xz
-	tar -xJvf cmocka-1.0.1.tar.xz
-	cd cmocka-1.0.1; mkdir build; cd build
-	cmake .. &&	make -j8 &&	sudo make install
-	cd ../..
-
+if [ ! -d "cmocka-1.1.1/build" ]; then
+    echo "Building cmocka from source."
+    wget https://cmocka.org/files/1.1/cmocka-1.1.1.tar.xz
+    tar -xJvf cmocka-1.1.1.tar.xz
+    cd cmocka-1.1.1 && mkdir build && cd build
+    cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr .. && make -j2 && sudo make install
+    cd ../..
 else
-	echo "Using cmocka from cache"
-    cd cmocka-1.0.1/build
+    echo "Using cmocka from cache."
+    cd cmocka-1.1.1/build
     sudo make install
     cd ../..
 fi
 
-echo "Building libyang library from source"
-git clone https://github.com/CESNET/libyang.git
+git clone -b master https://github.com/CESNET/libyang.git
 cd libyang; mkdir build; cd build
-cmake .. && make -j8 && sudo make install
+cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_BUILD_TYPE=Release ..
+make -j2 && sudo make install
 cd ../..
 
-echo "Building libssh library from source"
-if [ ! -d "libssh-/build" ]; then
-	wget https://git.libssh.org/projects/libssh.git/snapshot/libssh-0.7.5.tar.gz
-	tar -xzf libssh-0.7.5.tar.gz
-	cd libssh-0.7.5; mkdir build; cd build
-	cmake .. && make -j8 && sudo make install	
-	cd ../..
-
+if [ ! -d "libssh-0.7.5/build" ]; then
+    echo "Building libssh from source."
+    wget https://git.libssh.org/projects/libssh.git/snapshot/libssh-0.7.5.tar.gz
+    tar -xzf libssh-0.7.5.tar.gz
+    mkdir libssh-0.7.5/build && cd libssh-0.7.5/build
+    cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr .. && make -j2 && sudo make install
+    cd ../..
 else
-	echo "Using libssh from cache"
+    echo "Using libssh from cache."
     cd libssh-0.7.5/build
     sudo make install
     cd ../..
 fi
 
-echo "Building libnetconf2 library from source"
-git clone https://github.com/CESNET/libnetconf2.git
+git clone -b master https://github.com/CESNET/libnetconf2.git
 cd libnetconf2; mkdir build; cd build
-cmake .. && make -j8 && sudo make install
+cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_BUILD_TYPE=Release ..
+make -j2 && sudo make install
 cd ../..
 
-echo "Building protobuf library from source"
 if [ ! -f "protobuf/Makefile" ]; then
-	wget https://github.com/google/protobuf/archive/v3.2.0.tar.gz
-	tar -xzf v3.2.0.tar.gz
-	cd protobuf-3.2.0
-	./autogen.sh
-	./configure
-	make -j8 && sudo make install
-	cd ..
-
-else
-	echo "Using protobuf from cache"
+    echo "Building protobuf from source."
+    wget https://github.com/google/protobuf/archive/v3.2.0.tar.gz
+    tar -xzf v3.2.0.tar.gz
     cd protobuf-3.2.0
+    ./autogen.sh && ./configure --prefix=/usr && make -j2 && sudo make install
+    cd ..
+else
+    echo "Using protobuf from cache."
+    cd protobuf
     sudo make install
     cd ..
 fi
 
-echo "Building sysrepo library from source"
-git clone https://github.com/sysrepo/sysrepo.git
+if [ ! -f "protobuf-c/Makefile" ]; then
+    echo "Building protobuf-c from source."
+    wget https://github.com/protobuf-c/protobuf-c/archive/v1.2.1.tar.gz
+    tar -xzf v1.2.1.tar.gz
+    cd protobuf-c-1.2.1
+    ./autogen.sh && ./configure --prefix=/usr && make -j2 && sudo make install
+    cd ..
+else
+    echo "Using protobuf-c from cache."
+    cd protobuf-c
+    sudo make install
+    cd ..
+fi
+
+git clone -b master https://github.com/sysrepo/sysrepo.git
 cd sysrepo; mkdir build; cd build
-cmake .. && make -j8 && sudo make install
-ldconfig
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -DBUILD_EXAMPLES=False -DENABLE_TESTS=False -DGEN_LANGUAGE_BINDINGS=0 -DREPOSITORY_LOC:PATH=/ets/sysrepo ..
+make -j2 && sudo make install
 cd ../..
 
-echo "Building Netopeer2 from source"
-git clone https://github.com/CESNET/Netopeer2.git
+git clone -b master https://github.com/CESNET/Netopeer2.git
 cd Netopeer2
-
-echo "Building keystored"
 cd keystored && mkdir build && cd build
-cmake .. && make && sudo make install 
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE:String="Release" ..
+make -j2 && sudo make install
 cd ../..
-
-echo "Building server"
 cd server && mkdir build && cd build
-cmake .. && make && sudo make install 
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE:String="Release" ..
+make -j2 && sudo make install
 cd ../..
-
-echo "Building client"
 cd cli && mkdir build && cd build
-cmake ..
-make -j8 && sudo make install && cd
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE:String="Release" ..
+make -j2 && sudo make install
+cd ../..
