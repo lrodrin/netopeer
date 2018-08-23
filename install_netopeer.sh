@@ -3,7 +3,8 @@
 apt-get update -qq
 apt-get install -y zlib1g-dev libssl-dev
 apt-get install -y libavl-dev libev-dev coreutils acl valgrind libpcre3-dev libprotoc-dev
-apt-get install -y cmake git flex bison devscripts debhelper rpm curl autoconf libtool swig python-dev
+apt-get install -y cmake git flex bison devscripts debhelper rpm curl autoconf libtool 
+apt-get install -y swig python-dev lua5.1-dev lua5.2-dev
 
 if [ ! -d "cmocka-1.1.1/build" ]; then
     echo "Building cmocka from source."
