@@ -17,8 +17,7 @@ cd ../..
 
 git clone https://github.com/CESNET/libyang.git
 cd libyang; mkdir build; cd build
-cmake ..
-make -j2 && sudo make install
+cmake .. && make -j2 && sudo make install
 cd ../..
 
 echo "Building libssh from source."
@@ -44,10 +43,10 @@ echo "Building protobuf-c from source."
 wget https://github.com/protobuf-c/protobuf-c/archive/v1.2.1.tar.gz
 tar -xzf v1.2.1.tar.gz
 cd protobuf-c-1.2.1
-./autogen.sh && ./configure --prefix=/usr && make -j2 && sudo make install
+./autogen.sh && ./configure && make -j2 && sudo make install
 cd ..
 
-git clone -b master https://github.com/sysrepo/sysrepo.git
+git clone https://github.com/sysrepo/sysrepo.git
 cd sysrepo; mkdir build; cd build
 cmake .. && make -j2 && sudo make install
 cd ../..
