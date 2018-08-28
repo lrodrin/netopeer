@@ -1,0 +1,52 @@
+module node-connectivity {
+
+  namespace "urn:node-connectivity";
+
+  prefix "node-connectivity";
+
+  organization
+    "CTTC";
+
+  contact
+    "ricard.vilalta@cttc.es";
+
+  description
+    "Latest update to node connectivity SDM YANG data model.";
+
+  revision "2018-07-23" {
+    description "Update to node connectivity SDM YANG data model initial revision.";
+    reference "";
+  }
+  
+  grouping transceiver {
+	leaf transceiverid {
+      type string;
+    }  
+  }
+
+  grouping connection {
+    leaf connectionid {
+      type string;
+    }
+    leaf port-in_id {
+      type string;
+    }
+    leaf port-out_out {
+      type string;
+    }  
+    list transceiver {
+      key "transceiverid";
+	  uses transceiver;
+    }
+  }
+
+  /**
+   * Container/lists
+   */
+  
+  list connection {
+	key "connectionid";
+    uses connection;
+  }
+
+}
