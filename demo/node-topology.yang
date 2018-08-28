@@ -1,0 +1,148 @@
+module node-topology {
+
+  namespace "urn:node-topology";
+
+  prefix "node-topology";
+
+  organization
+    "CTTC";
+
+  contact
+    "ricard.vilalta@cttc.es, laura.rodriguez@cttc.es";
+
+  description
+    "Latest update to node topology SDM YANG data model.";
+
+  revision "2018-08-24" {
+    description "Update to node topology SDM YANG data model initial revision.";
+    reference "";
+  }
+
+  grouping available-transceiver {
+    leaf transceiver-id {
+      type string;
+    }
+    leaf transceiver-type {
+      type string;
+    }
+    container supported-modulation-format {
+      leaf modulation-id {
+        type string;
+      }
+      leaf mod-type {
+        type string;
+      }
+    }
+    container supported-center-frequency-range {
+      leaf max-cf {
+        type string;
+      }
+      leaf min-cf {
+        type string;
+      }
+    }
+    container supported-bandwidth {
+      leaf max-bw {
+        type string;
+      }
+      leaf min-bw {
+        type string;
+      }
+    }
+    leaf supported-FEC {
+      type string;
+    }
+    leaf supported-equalization {
+      type string;
+    }
+    leaf supported-monitoring {
+      type string;
+    }
+  }
+
+  grouping nominal-central-frequency {
+    leaf grid-type {
+      type string;
+    }
+    leaf adjustment-granularity {
+      type string;
+    }
+    leaf channel-number {
+      type string;
+    }
+  }
+
+  grouping available-frequency-slot {
+    leaf slot-id {
+      type string;
+    }
+    container nominal-central-frequency {
+      uses nominal-central-frequency;
+    }  
+    leaf slot-width-number {
+      type string;
+    }
+  }
+
+  grouping occupied-frequency-slot {
+    leaf slot-id {
+      type string;
+    }
+    container nominal-central-frequency {
+      uses nominal-central-frequency;
+    }
+    leaf slot-width-number {
+      type string;
+    }    
+  }
+
+  grouping available-core {
+    leaf core-id {
+      type string;
+    }
+    list available-frequency-slot {
+      key "slot-id";
+      uses available-frequency-slot;
+    }
+    list occupied-frequency-slot {
+      key "slot-id";
+      uses occupied-frequency-slot;
+    }
+  }
+
+  grouping port {
+    leaf port-id {
+      type string;
+    }
+    leaf layer-protocol-name {
+      type string;
+    }
+    list available-core {
+      key "core-id";
+      uses available-core;
+    }
+    container available-transceiver {
+      uses available-transceiver;
+    }
+  }
+
+  grouping node {
+    leaf node-id {
+      type string;
+    }
+    list port {
+       key "port-id";
+       uses port;
+    }
+  }
+
+  /**
+   * Container/lists
+   */
+
+  list node {
+    //config false;
+	key "node-id";
+    uses node;
+  }  
+}

@@ -1,0 +1,37 @@
+module: node-topology
+  +--rw node* [node-id]
+     +--rw node-id    string
+     +--rw port* [port-id]
+        +--rw port-id                  string
+        +--rw layer-protocol-name?     string
+        +--rw available-core* [core-id]
+        |  +--rw core-id                     string
+        |  +--rw available-frequency-slot* [slot-id]
+        |  |  +--rw slot-id                      string
+        |  |  +--rw nominal-central-frequency
+        |  |  |  +--rw grid-type?                string
+        |  |  |  +--rw adjustment-granularity?   string
+        |  |  |  +--rw channel-number?           string
+        |  |  +--rw slot-width-number?           string
+        |  +--rw occupied-frequency-slot* [slot-id]
+        |     +--rw slot-id                      string
+        |     +--rw nominal-central-frequency
+        |     |  +--rw grid-type?                string
+        |     |  +--rw adjustment-granularity?   string
+        |     |  +--rw channel-number?           string
+        |     +--rw slot-width-number?           string
+        +--rw available-transceiver
+           +--rw transceiver-id?                     string
+           +--rw transceiver-type?                   string
+           +--rw supported-modulation-format
+           |  +--rw modulation-id?   string
+           |  +--rw mod-type?        string
+           +--rw supported-center-frequency-range
+           |  +--rw max-cf?   string
+           |  +--rw min-cf?   string
+           +--rw supported-bandwidth
+           |  +--rw max-bw?   string
+           |  +--rw min-bw?   string
+           +--rw supported-FEC?                      string
+           +--rw supported-equalization?             string
+           +--rw supported-monitoring?               string

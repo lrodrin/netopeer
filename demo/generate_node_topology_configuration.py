@@ -5,6 +5,7 @@ Copyright (c) 2017-2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 
 from lxml import etree
 import xml.dom.minidom as md
+import sys
 
 INDENT = ' ' * 4
 
@@ -42,7 +43,6 @@ def generate(filename, id_node, numports_sdm, numcores, numports_eth):
         port = etree.SubElement(node, 'port')
         # port parameters
         portid = etree.SubElement(port, 'port-id')
-        # portid.text = '%s' % i
         portid.text = '%s' % i
         layer_protocol_name = etree.SubElement(port, 'layer-protocol-name')
         layer_protocol_name.text = 'sdm'
@@ -98,7 +98,6 @@ def generate(filename, id_node, numports_sdm, numcores, numports_eth):
         port = etree.SubElement(node, 'port')
         # port parameters
         portid = etree.SubElement(port, 'port-id')
-        # portid.text = '%s' % i
         portid.text = '%s' % i
         layer_protocol_name = etree.SubElement(port, 'layer-protocol-name')
         layer_protocol_name.text = 'eth'
@@ -110,10 +109,30 @@ def generate(filename, id_node, numports_sdm, numcores, numports_eth):
 
 
 if __name__ == '__main__':
-    nodeid = '10.1.7.67'
-	# numports_sdm = 3
-    numports_sdm = 4
-    numcores = 2
-    # numports_eth = 6
-    numports_eth = 0
-    generate("node_topology_config_67.xml", nodeid, numports_sdm, numcores, numports_eth)
+    option = str(raw_input("netconf configuration y or N: "))
+    nodeid = str(raw_input("node id: "))
+    if option == "y":
+        numports_sdm = 4
+        numcores = 2
+        numports_eth = 0
+    
+    elif option == "N":   
+        numports_sdm = 3
+        numcores = 2
+        numports_eth = 6
+      
+    generate("node_topology_config_%s.xml" % nodeid[-2:], nodeid, numports_sdm, numcores, numports_eth)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
