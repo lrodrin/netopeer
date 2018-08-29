@@ -13,7 +13,7 @@ module node-connectivity {
   description
     "Latest update to node connectivity SDM YANG data model.";
 
-  revision "2018-07-23" {
+  revision "2018-08-29" {
     description "Update to node connectivity SDM YANG data model initial revision.";
     reference "";
   }
