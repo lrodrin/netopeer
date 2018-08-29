@@ -40,13 +40,24 @@ module node-connectivity {
     }
   }
 
+  grouping node {
+    leaf node-id {
+      type string;
+    }
+    list connection {
+       key "connectionid";
+       uses connection;
+    }
+  }
+
   /**
    * Container/lists
    */
-  
-  list connection {
-	key "connectionid";
-    uses connection;
-  }
+
+  list node {
+    //config false;
+	key "node-id";
+    uses node;
+  }  
 
 }
