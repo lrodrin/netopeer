@@ -13,7 +13,7 @@ module sliceable-transceiver-sdm-connectivity {
   description
     "Latest update to sliceable transponder SDM YANG data model.";
 
-  revision "2018-09-18" {
+  revision "2018-06-20" {
     description "Update to  sliceable transponder SDM YANG data model initial revision.";
     reference "";
   }
