@@ -17,5 +17,5 @@ screen -Sdm ryu
 screen -Sdm pced
 screen -Sdm pcedML
 screen -Sdm pceL2
-screen -Sdm pmAbno
-screen -Sdm oAbno 
+screen -Sdm provisioning
+screen -Sdm abno
