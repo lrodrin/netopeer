@@ -15,7 +15,7 @@ ovs-ctl --system-id=random start
 #screen
 screen -Sdm ryu
 screen -Sdm pced
-screen -Sdm pcedML
+screen -Sdm pceML
 screen -Sdm pceL2
 screen -Sdm provisioning
 screen -Sdm abno
