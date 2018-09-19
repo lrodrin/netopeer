@@ -1,5 +1,5 @@
 """
-This module generate XML configuration for step 1, 2 and 5
+This module generate XML configuration for step 1 and 2
 
 Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -69,4 +69,3 @@ def generate(filename, bw, n, qam, mm, taps, num_modes):
 if __name__ == '__main__':
     generate("edit_1.xml", 12000000000, 39, 'qam64', "LMS 6x6", 200, 3)
     generate("edit_2.xml", 12000000000, 39, 'qam16', "LMS 12x12", 500, 6)
-    generate("edit_5.xml", 12000000000, 41, 'qam64', "LMS 6x6", 200, 3)

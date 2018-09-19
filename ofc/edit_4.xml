@@ -1,3 +1,4 @@
+<?xml version="1.0" ?>
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
     <transceiver-connectivity xmlns="urn:sliceable-transceiver-sdm-connectivity">
         <slice>
@@ -30,7 +31,7 @@
                 </frequency-slot>
             </optical-channel>
             <optical-channel>
-                <opticalchannelid>4</opticalchannelid>
+                <opticalchannelid>7</opticalchannelid>
                 <coreid>Core19</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
@@ -39,7 +40,7 @@
                 </frequency-slot>
             </optical-channel>
             <optical-channel>
-                <opticalchannelid>5</opticalchannelid>
+                <opticalchannelid>8</opticalchannelid>
                 <coreid>Core19</coreid>
                 <modeid>LP11a</modeid>
                 <frequency-slot>
@@ -48,7 +49,7 @@
                 </frequency-slot>
             </optical-channel>
             <optical-channel>
-                <opticalchannelid>6</opticalchannelid>
+                <opticalchannelid>9</opticalchannelid>
                 <coreid>Core19</coreid>
                 <modeid>LP11b</modeid>
                 <frequency-slot>
@@ -90,34 +91,34 @@
                 </equalization>
             </optical-signal>
             <optical-signal>
-                <opticalchannelid>4</opticalchannelid>
+                <opticalchannelid>7</opticalchannelid>
                 <constellation>qam64</constellation>
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>4</equalizationid>
+                    <equalizationid>7</equalizationid>
                     <mimo>LMS 6x6</mimo>
                     <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
-                <opticalchannelid>5</opticalchannelid>
+                <opticalchannelid>8</opticalchannelid>
                 <constellation>qam64</constellation>
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>5</equalizationid>
+                    <equalizationid>8</equalizationid>
                     <mimo>LMS 6x6</mimo>
                     <num_taps>200</num_taps>
                 </equalization>
             </optical-signal>
             <optical-signal>
-                <opticalchannelid>6</opticalchannelid>
+                <opticalchannelid>9</opticalchannelid>
                 <constellation>qam64</constellation>
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>6</equalizationid>
+                    <equalizationid>9</equalizationid>
                     <mimo>LMS 6x6</mimo>
                     <num_taps>200</num_taps>
                 </equalization>

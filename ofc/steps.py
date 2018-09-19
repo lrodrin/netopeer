@@ -51,22 +51,22 @@ def delete_4(connection, session):
         print(e)
 
 
-def delete_5(connection, session):
-    try:
-        template = """<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-            <transceiver-connectivity xmlns="urn:sliceable-transceiver-sdm-connectivity">
-                <slice>
-                    <sliceid>1</sliceid>
-                        <optical-channel><opticalchannelid>1</opticalchannelid></optical-channel>
-                        <optical-channel><opticalchannelid>2</opticalchannelid></optical-channel>
-                        <optical-channel><opticalchannelid>3</opticalchannelid></optical-channel>
-                </slice>
-            </transceiver-connectivity>
-        </config>"""
-        connection.edit_config(target=session, config=template, default_operation='replace')
-
-    except Exception as e:
-        print(e)
+# def delete_5(connection, session):
+#     try:
+#         template = """<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+#             <transceiver-connectivity xmlns="urn:sliceable-transceiver-sdm-connectivity">
+#                 <slice>
+#                     <sliceid>1</sliceid>
+#                         <optical-channel><opticalchannelid>1</opticalchannelid></optical-channel>
+#                         <optical-channel><opticalchannelid>2</opticalchannelid></optical-channel>
+#                         <optical-channel><opticalchannelid>3</opticalchannelid></optical-channel>
+#                 </slice>
+#             </transceiver-connectivity>
+#         </config>"""
+#         connection.edit_config(target=session, config=template, default_operation='replace')
+#
+#     except Exception as e:
+#         print(e)
 
 
 if __name__ == '__main__':
@@ -80,9 +80,9 @@ if __name__ == '__main__':
     # STEP 3
     edit(connectionRX, config_files[2], 'running', 'merge')
     # STEP 4
-    delete_4(connectionRX, 'running')
+    # delete_4(connectionRX, 'running')
     edit(connectionRX, config_files[3], 'running', 'replace')
     # STEP 5
-    delete_5(connectionRX, 'running')
+    # delete_5(connectionRX, 'running')
     edit(connectionRX, config_files[4], 'running', 'replace')
     close(connectionRX)

@@ -3,7 +3,7 @@
         <slice>
             <sliceid>1</sliceid>
             <optical-channel>
-                <opticalchannelid>1</opticalchannelid>
+                <opticalchannelid>8</opticalchannelid>
                 <coreid>Core19</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
