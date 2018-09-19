@@ -1,0 +1,25 @@
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <transceiver-connectivity xmlns="urn:sliceable-transceiver-sdm-connectivity">
+        <slice>
+            <sliceid>1</sliceid>
+            <optical-channel>
+                <opticalchannelid>4</opticalchannelid>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>5</opticalchannelid>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>6</opticalchannelid>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>10</opticalchannelid>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>11</opticalchannelid>
+            </optical-channel>
+            <optical-channel>
+                <opticalchannelid>12</opticalchannelid>
+            </optical-channel>
+        </slice>
+    </transceiver-connectivity>
+</config>
