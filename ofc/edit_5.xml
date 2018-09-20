@@ -36,7 +36,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>7</equalizationid>
+                    <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
                     <num_taps>200</num_taps>
                 </equalization>
@@ -47,7 +47,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>8</equalizationid>
+                    <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
                     <num_taps>200</num_taps>
                 </equalization>
@@ -58,7 +58,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>9</equalizationid>
+                    <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
                     <num_taps>200</num_taps>
                 </equalization>

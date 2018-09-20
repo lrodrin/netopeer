@@ -1,9 +1,10 @@
+<?xml version="1.0" ?>
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
     <transceiver-connectivity xmlns="urn:sliceable-transceiver-sdm-connectivity">
         <slice>
             <sliceid>1</sliceid>
             <optical-channel>
-                <opticalchannelid>8</opticalchannelid>
+                <opticalchannelid>1</opticalchannelid>
                 <coreid>Core19</coreid>
                 <modeid>LP01</modeid>
                 <frequency-slot>
@@ -116,7 +117,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>1</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -138,7 +139,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>3</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -149,7 +150,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>4</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -160,7 +161,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>5</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -171,7 +172,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>6</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -182,7 +183,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>7</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -193,7 +194,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>8</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -204,7 +205,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>9</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -215,7 +216,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>10</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -226,7 +227,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>11</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>
@@ -237,7 +238,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>12</equalizationid>
+                    <equalizationid>2</equalizationid>
                     <mimo>LMS 12x12</mimo>
                     <num_taps>500</num_taps>
                 </equalization>

@@ -56,7 +56,10 @@ def generate(filename, bw, qam, mm, taps, num_modes):
 
         equalization = etree.SubElement(optical_signal, 'equalization')
         equalizationid = etree.SubElement(equalization, 'equalizationid')
-        equalizationid.text = '%s' % i
+        if mm == "LMS 6x6" and taps == 200:
+            equalizationid.text = '1'
+        elif mm == "LMS 12x12" and taps == 500:
+            equalizationid.text = '2'
         mimo = etree.SubElement(equalization, 'mimo')
         mimo.text = '%s' % mm
         num_taps = etree.SubElement(equalization, 'num_taps')

@@ -1,3 +1,4 @@
+<?xml version="1.0" ?>
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
     <transceiver-connectivity xmlns="urn:sliceable-transceiver-sdm-connectivity">
         <slice>
@@ -46,7 +47,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
                     <num_taps>200</num_taps>
                 </equalization>
@@ -57,7 +58,7 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>3</equalizationid>
+                    <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
                     <num_taps>200</num_taps>
                 </equalization>
