@@ -1,5 +1,5 @@
 """
-This module implements ...
+This module implements the SSH connection to NETCONF servers TX and RX
 
 Copyright (c) 2018 Laura Rodriguez Navas <laura.rodriguez.navas@cttc.cat>
 """
@@ -10,6 +10,7 @@ def connect(host, port, login, password):
     try:
         connection = manager.connect(host=host, port=port, username=login, password=password, hostkey_verify=False,
                                      device_params={'name': 'default'}, allow_agent=False, look_for_keys=False)
+        print('Server connected to host:', host, 'on port:', port)
         return connection
 
     except Exception as e:
