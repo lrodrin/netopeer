@@ -106,8 +106,9 @@ def generate(filename, id_node, numports_sdm, numcores, numports_eth):
 
 
 if __name__ == '__main__':
-    nodeid = '10.1.7.67'
-    numports_sdm = 3
+    nodeid = '10.1.7.65'
+    numports_sdm = 4
     numcores = 2
-    numports_eth = 6
+    # numports_eth = 6
+    numports_eth = 0
     generate("node_topology_config.xml", nodeid, numports_sdm, numcores, numports_eth)

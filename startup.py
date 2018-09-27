@@ -28,7 +28,7 @@ def close_connection(connection):
 
 
 if __name__ == '__main__':
-    host = '10.1.7.82'
+    host = '10.1.7.65'
     port = 830
     login = 'root'
     password = 'netlabN.'

@@ -25,9 +25,9 @@ def close_connection(connection):
 
 
 if __name__ == '__main__':
-    host = '10.1.7.84'
-    host2 = '10.1.7.66'
-    port = 830
+    host = '10.1.7.83'
+    # host2 = '10.1.7.66'
+    port = 831
     login = 'root'
     password = 'netlabN.'
 
@@ -38,13 +38,13 @@ if __name__ == '__main__':
 
     # filters
     filter_transceiver = "<transceiver/>"
-    filter_topology = "<node/>"
+    filter_topology = "<node-topology/>"
     filter_connection = "<connection/>"
 
     connectionRX = init_connection(host, port, login, password)
-    get_configuration(connectionRX, 'running', filter_connection)
+    get_configuration(connectionRX, 'running', "<transceiver-connectivity/>")
     close_connection(connectionRX)
 
-    connectionRX = init_connection(host2, port, login, password)
-    get_configuration(connectionRX, 'running', filter_connection)
-    close_connection(connectionRX)
+    # connectionRX = init_connection(host2, port, login, password)
+    # get_configuration(connectionRX, 'running', filter_connection)
+    # close_connection(connectionRX)

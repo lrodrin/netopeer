@@ -1,0 +1,11 @@
+{
+  "simple_rpc:response-id": 42,
+  "elements": [
+    {
+      "response-value": "return-one"
+    },
+    {
+      "response-value": "return-two"
+    }
+  ]
+}

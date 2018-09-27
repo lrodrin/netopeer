@@ -12,7 +12,7 @@ INDENT = ' ' * 4
 
 def connect_to_multi_netopeer2(port):
     try:
-        connection = manager.connect(host='10.1.7.83', port=port, username='root', password='netlabN.',
+        connection = manager.connect(host='10.1.1.118', port=port, username='root', password='osboxes.org',
                                      hostkey_verify=False,
                                      device_params={'name': 'default'}, allow_agent=False, look_for_keys=False)
         return connection
@@ -88,30 +88,30 @@ def delete(connection, nodeid):
 
 if __name__ == '__main__':
     # startup
-    config_file_65 = 'node_topology_config_65.xml'
+    # config_file_65 = 'node_topology_config_65.xml'
     connection_65 = connect_to_multi_netopeer2(831)
-    create_node_configuration(connection_65, config_file_65)
+    # create_node_configuration(connection_65, config_file_65)
 
-    config_file_66 = 'node_topology_config_66.xml'
-    connection_66 = connect_to_multi_netopeer2(832)
-    create_node_configuration(connection_66, config_file_66)
-
-    config_file_67 = 'node_topology_config_67.xml'
-    connection_67 = connect_to_multi_netopeer2(833)
-    create_node_configuration(connection_67, config_file_67)
+    # config_file_66 = 'node_topology_config_66.xml'
+    # connection_66 = connect_to_multi_netopeer2(832)
+    # create_node_configuration(connection_66, config_file_66)
+    #
+    # config_file_67 = 'node_topology_config_67.xml'
+    # connection_67 = connect_to_multi_netopeer2(833)
+    # create_node_configuration(connection_67, config_file_67)
 
     # test1 - get parameters from node 10.1.7.65 and port id 3
     print("TEST 1: GET")
     get(connection_65, '10.1.7.65', '3')
     # test2 - edit layer-protocol-name from node 10.1.7.66 and port id 4
     print("TEST 2: EDIT")
-    edit(connection_66, '10.1.7.66', '4', 'sdm')
-    get(connection_66, '10.1.7.66', '4')
+    # edit(connection_66, '10.1.7.66', '4', 'sdm')
+    # get(connection_66, '10.1.7.66', '4')
     # test3 - deletel node 10.1.7.67 configuration
     print("TEST 3: DELETE")
-    delete(connection_66, '10.1.7.67')
+    # delete(connection_66, '10.1.7.67')
 
     # close
-    connection_65.close_session()
-    connection_66.close_session()
-    connection_67.close_session()
+    # connection_65.close_session()
+    # connection_66.close_session()
+    # connection_67.close_session()
