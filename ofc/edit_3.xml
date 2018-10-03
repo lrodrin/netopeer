@@ -117,10 +117,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>2</opticalchannelid>
@@ -128,10 +132,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>3</opticalchannelid>
@@ -139,10 +147,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>4</opticalchannelid>
@@ -150,10 +162,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>5</opticalchannelid>
@@ -161,10 +177,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>6</opticalchannelid>
@@ -172,10 +192,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>7</opticalchannelid>
@@ -183,10 +207,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>8</opticalchannelid>
@@ -194,10 +222,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>9</opticalchannelid>
@@ -205,10 +237,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>10</opticalchannelid>
@@ -216,10 +252,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>11</opticalchannelid>
@@ -227,10 +267,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>12</opticalchannelid>
@@ -238,10 +282,14 @@
                 <bandwidth>12000000000</bandwidth>
                 <fec>sd-fec</fec>
                 <equalization>
-                    <equalizationid>2</equalizationid>
+                    <equalizationid/>
                     <mimo>LMS 12x12</mimo>
-                    <num_taps>500</num_taps>
+                    <num_taps>201</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
         </slice>
     </transceiver-connectivity>

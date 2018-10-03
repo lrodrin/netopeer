@@ -63,6 +63,13 @@ def generate(filename, bw, n, qam, mm, taps, num_modes):
         num_taps = etree.SubElement(equalization, 'num_taps')
         num_taps.text = '%s' % taps
 
+        monitor = etree.SubElement(optical_signal, 'monitor')
+        osnr = etree.SubElement(monitor, 'osnr')
+        osnr.text = '29.875'
+        ber = etree.SubElement(monitor, 'ber')
+        ber.text = '0.0'
+
+
     xml = etree.tostring(config)
     pretty_xml = pretty_print(xml)
     with open(filename, "w") as f:
@@ -70,5 +77,5 @@ def generate(filename, bw, n, qam, mm, taps, num_modes):
 
 
 if __name__ == '__main__':
-    generate("edit_1.xml", 12000000000, 39, 'qam64', "LMS 6x6", 200, 3)
-    generate("edit_2.xml", 12000000000, 39, 'qam16', "LMS 12x12", 500, 6)
+    generate("edit_1.xml", 12000000000, 39, 'qam64', "LMS 6x6", 101, 3)
+    generate("edit_2.xml", 12000000000, 39, 'qam16', "LMS 12x12", 201, 6)

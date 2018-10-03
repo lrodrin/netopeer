@@ -65,8 +65,12 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>101</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>2</opticalchannelid>
@@ -76,8 +80,12 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>101</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>3</opticalchannelid>
@@ -87,8 +95,12 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>101</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>7</opticalchannelid>
@@ -98,8 +110,12 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>101</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>8</opticalchannelid>
@@ -109,8 +125,12 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>101</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
             <optical-signal>
                 <opticalchannelid>9</opticalchannelid>
@@ -120,8 +140,12 @@
                 <equalization>
                     <equalizationid>1</equalizationid>
                     <mimo>LMS 6x6</mimo>
-                    <num_taps>200</num_taps>
+                    <num_taps>101</num_taps>
                 </equalization>
+                <monitor>
+                    <osnr>29.875</osnr>
+                    <ber>0.0</ber>
+                </monitor>
             </optical-signal>
         </slice>
     </transceiver-connectivity>

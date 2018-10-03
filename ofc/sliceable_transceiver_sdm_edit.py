@@ -25,7 +25,6 @@ def edit_config(conn, config_file, sess, op):
 
 
 if __name__ == '__main__':
-    hostTX = '10.1.7.65'
     hostRX = '10.1.7.66'
     port = 830
     login = 'root'

@@ -22,11 +22,12 @@ def generate_template(channels, start, end):
     sliceid = etree.SubElement(slice, 'sliceid')
     sliceid.text = '1'
     for channel in range(start - 1, end):
-        optical_channel = etree.SubElement(slice, 'optical-channel')
-        opticalchannelid = etree.SubElement(optical_channel, 'opticalchannelid')
+        optical_signal = etree.SubElement(slice, 'optical-signal')
+        opticalchannelid = etree.SubElement(optical_signal, 'opticalchannelid')
         opticalchannelid.text = str(channels[channel])
-        etree.SubElement(optical_channel, 'coreid')
-        etree.SubElement(optical_channel, 'modeid')
+        monitor = etree.SubElement(optical_signal, 'monitor')
+        etree.SubElement(monitor, 'osnr')
+        etree.SubElement(monitor, 'ber')
 
     xml = etree.tostring(transceiver).decode()
     return xml
